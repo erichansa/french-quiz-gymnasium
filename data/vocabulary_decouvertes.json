@@ -1,0 +1,248 @@
+{
+  "units": [
+    {
+      "id": "unit_1_travail",
+      "title": "Unité 1 : Le monde du travail & L'avenir",
+      "subtitle": "Berufswelt, Zukunftspläne und Bewerbung (B1)",
+      "words": [
+        {
+          "id": "v1_01",
+          "french": "prendre une décision",
+          "word_type": "locution verbale",
+          "german": "eine Entscheidung treffen",
+          "chinese": "做出决定",
+          "collocations": ["prendre une décision difficile", "arriver à une décision"],
+          "word_family": ["décider (v.)", "la décision (n.f.)", "décisif / décisive (adj.)"],
+          "example_fr": "Il faut bien réfléchir avant de prendre une décision pour son avenir.",
+          "example_de": "Man muss gut nachdenken, bevor man eine Entscheidung für seine Zukunft trifft.",
+          "example_zh": "在为自己的未来做决定之前，必须深思熟虑。"
+        },
+        {
+          "id": "v1_02",
+          "french": "postuler pour un stage",
+          "word_type": "verbe + préposition",
+          "german": "sich für ein Praktikum bewerben",
+          "chinese": "申请实习",
+          "collocations": ["faire acte de candidature", "un stage en entreprise"],
+          "word_family": ["la postulation (n.f.)", "un candidat / une candidate (n.)"],
+          "example_fr": "Elle a postulé pour un stage dans un laboratoire scientifique.",
+          "example_de": "Sie hat sich für ein Praktikum in einem wissenschaftlichen Labor beworben.",
+          "example_zh": "她申请了一家科研实验室的实习机会。"
+        },
+        {
+          "id": "v1_03",
+          "french": "être responsable de",
+          "word_type": "adjectif + préposition",
+          "german": "verantwortlich sein für",
+          "chinese": "对……负责",
+          "collocations": ["assumer la responsabilité", "se sentir responsable"],
+          "word_family": ["la responsabilité (n.f.)", "irresponsable (adj.)"],
+          "example_fr": "Chaque employé est responsable de la qualité de son travail.",
+          "example_de": "Jeder Mitarbeiter ist für die Qualität seiner Arbeit verantwortlich.",
+          "example_zh": "每位员工都对自己的工作质量负责。"
+        },
+        {
+          "id": "v1_04",
+          "french": "acquérir des compétences",
+          "word_type": "locution verbale",
+          "german": "Kompetenzen / Fähigkeiten erwerben",
+          "chinese": "掌握技能/获取能力",
+          "collocations": ["des compétences linguistiques", "développer ses aptitudes"],
+          "word_family": ["l'acquisition (n.f.)", "compétent / compétente (adj.)"],
+          "example_fr": "Ce stage m'a permis d'acquérir de précieuses compétences professionnelles.",
+          "example_de": "Dieses Praktikum hat es mir ermöglicht, wertvolle berufliche Kompetenzen zu erwerben.",
+          "example_zh": "这次实习让我掌握了宝贵的职业技能。"
+        },
+        {
+          "id": "v1_05",
+          "french": "avoir l'intention de faire qch",
+          "word_type": "expression",
+          "german": "die Absicht haben, etw. zu tun",
+          "chinese": "打算做某事",
+          "collocations": ["envisager de faire", "projeter de faire"],
+          "word_family": ["l'intention (n.f.)", "intentionnel (adj.)"],
+          "example_fr": "J'ai l'intention de faire des études de médecine après le baccalauréat (Abitur).",
+          "example_de": "Ich habe die Absicht, nach dem Abitur Medizin zu studieren.",
+          "example_zh": "我打算在高中毕业后去读医学专业。"
+        },
+        {
+          "id": "v1_06",
+          "french": "surmonter un obstacle",
+          "word_type": "locution verbale",
+          "german": "ein Hindernis überwinden",
+          "chinese": "克服障碍",
+          "collocations": ["faire face aux difficultés", "relever un défi"],
+          "word_family": ["le surmontement (n.m.)", "insurmontable (adj.)"],
+          "example_fr": "Avec de la persévérance, on peut surmonter tous les obstacles.",
+          "example_de": "Mit Ausdauer kann man alle Hindernisse überwinden.",
+          "example_zh": "只要有毅力，人就能克服所有的障碍。"
+        }
+      ]
+    },
+    {
+      "id": "unit_2_environnement",
+      "title": "Unité 2 : L'environnement & Le développement durable",
+      "subtitle": "Umweltschutz, Klimawandel und Nachhaltigkeit (B1)",
+      "words": [
+        {
+          "id": "v2_01",
+          "french": "réduire son empreinte écologique",
+          "word_type": "expression",
+          "german": "seinen ökologischen Fußabdruck verringern",
+          "chinese": "减少生态碳足迹",
+          "collocations": ["l'empreinte carbone", "mesures écologiques"],
+          "word_family": ["la réduction (n.f.)", "réductible (adj.)"],
+          "example_fr": "Prendre les transports en commun permet de réduire son empreinte écologique.",
+          "example_de": "Die Nutzung öffentlicher Verkehrsmittel ermöglicht es, den ökologischen Fußabdruck zu verringern.",
+          "example_zh": "乘坐公共交通工具有助于减少个人的生态足迹。"
+        },
+        {
+          "id": "v2_02",
+          "french": "lutter contre le réchauffement climatique",
+          "word_type": "locution verbale",
+          "german": "gegen die Erderwärmung kämpfen",
+          "chinese": "对抗全球气候变暖",
+          "collocations": ["le changement climatique", "agir pour la planète"],
+          "word_family": ["la lutte (n.f.)", "un combattant / une combattante (n.)"],
+          "example_fr": "Les jeunes s'engagent activement pour lutter contre le réchauffement climatique.",
+          "example_de": "Junge Menschen engagieren sich aktiv im Kampf gegen die Erderwärmung.",
+          "example_zh": "年轻人们正积极行动，为应对全球气候变暖而抗争。"
+        },
+        {
+          "id": "v2_03",
+          "french": "renoncer à qch",
+          "word_type": "verbe + préposition",
+          "german": "auf etw. verzichten",
+          "chinese": "放弃/克制使用某物",
+          "collocations": ["renoncer au plastique à usage unique", "renoncer à la voiture"],
+          "word_family": ["le renoncement (n.m.)"],
+          "example_fr": "Il est difficile mais nécessaire de renoncer aux emballages plastiques.",
+          "example_de": "Es ist schwierig, aber notwendig, auf Plastikverpackungen zu verzichten.",
+          "example_zh": "放弃塑料包装虽然困难，但却势在必行。"
+        },
+        {
+          "id": "v2_04",
+          "french": "sensibiliser le public",
+          "word_type": "locution verbale",
+          "german": "die Öffentlichkeit sensibilisieren",
+          "chinese": "提高公众意识/让公众关注",
+          "collocations": ["une campagne de sensibilisation", "sensibiliser les jeunes aux enjeux"],
+          "word_family": ["la sensibilité (n.f.)", "sensible (adj.)"],
+          "example_fr": "Les documentaires aident à sensibiliser le public à la biodiversité.",
+          "example_de": "Dokumentarfilme helfen, die Öffentlichkeit für die Artenvielfalt zu sensibilisieren.",
+          "example_zh": "纪录片有助于让公众提高对生物多样性的关注与意识。"
+        },
+        {
+          "id": "v2_05",
+          "french": "les énergies renouvelables",
+          "word_type": "nom féminin pluriel",
+          "german": "erneuerbare Energien",
+          "chinese": "可再生能源",
+          "collocations": ["l'énergie solaire", "l'énergie éolienne"],
+          "word_family": ["renouveler (v.)", "le renouvellement (n.m.)"],
+          "example_fr": "La transition énergétique repose sur le développement des énergies renouvelables.",
+          "example_de": "Die Energiewende stützt sich auf den Ausbau erneuerbarer Energien.",
+          "example_zh": "能源转型依赖于可再生能源的发展。"
+        }
+      ]
+    },
+    {
+      "id": "unit_3_medias",
+      "title": "Unité 3 : Médias, Réseaux Sociaux & IA",
+      "subtitle": "Digitale Medien, Fake News und Künstliche Intelligenz (B1)",
+      "words": [
+        {
+          "id": "v3_01",
+          "french": "diffuser des informations fiables",
+          "word_type": "expression",
+          "german": "zuverlässige Informationen verbreiten",
+          "chinese": "传播可靠信息",
+          "collocations": ["une source fiable", "vérifier l'authenticité"],
+          "word_family": ["la diffusion (n.f.)", "la fiabilité (n.f.)", "se fier à (v.)"],
+          "example_fr": "Il est primordial de vérifier ses sources afin de diffuser des informations fiables.",
+          "example_de": "Es ist von größter Wichtigkeit, seine Quellen zu überprüfen, um verlässliche Informationen zu verbreiten.",
+          "example_zh": "必须核实来源，以确保传播的是真实可靠的信息。"
+        },
+        {
+          "id": "v3_02",
+          "french": "être accro aux écrans",
+          "word_type": "expression familière / courante",
+          "german": "bildschirmsüchtig sein",
+          "chinese": "沉迷屏幕/对电子屏幕上瘾",
+          "collocations": ["passer trop de temps devant les écrans", "l'addiction numérique"],
+          "word_family": ["l'addiction (n.f.)", "dépendant / dépendante (adj.)"],
+          "example_fr": "De nombreux adolescents admettent être accros à leur smartphone.",
+          "example_de": "Viele Jugendliche geben zu, nach ihrem Smartphone süchtig zu sein.",
+          "example_zh": "许多青少年承认自己对智能手机成瘾。"
+        },
+        {
+          "id": "v3_03",
+          "french": "manipuler l'opinion publique",
+          "word_type": "locution verbale",
+          "german": "die öffentliche Meinung manipulieren",
+          "chinese": "操纵公众舆论",
+          "collocations": ["les fausses nouvelles (fake news)", "exercer une influence"],
+          "word_family": ["la manipulation (n.f.)", "manipulateur / manipulatrice (adj./n.)"],
+          "example_fr": "Certains algorithmes peuvent facilement manipuler l'opinion publique.",
+          "example_de": "Einige Algorithmen können die öffentliche Meinung leicht manipulieren.",
+          "example_zh": "某些算法很容易操纵公众舆论。"
+        },
+        {
+          "id": "v3_04",
+          "french": "garder un esprit critique",
+          "word_type": "locution verbale",
+          "german": "eine kritische Haltung bewahren",
+          "chinese": "保持批判性思维",
+          "collocations": ["remettre en question", "faire preuve d'esprit critique"],
+          "word_family": ["critiquer (v.)", "la critique (n.f.)"],
+          "example_fr": "Face à la masse d'informations en ligne, il faut toujours garder un esprit critique.",
+          "example_de": "Angesichts der Flut an Online-Informationen muss man stets eine kritische Haltung bewahren.",
+          "example_zh": "面对海量网络信息，人们必须始终保持批判性思维。"
+        }
+      ]
+    },
+    {
+      "id": "unit_4_societe",
+      "title": "Unité 4 : Jeunesse, Société & Citoyenneté",
+      "subtitle": "Jugendkultur, Werte und gesellschaftliches Engagement (B1)",
+      "words": [
+        {
+          "id": "v4_01",
+          "french": "s'engager pour une cause",
+          "word_type": "verbe pronominal",
+          "german": "sich für ein Anliegen / eine gute Sache engagieren",
+          "chinese": "投身于一项事业/为某个理念奋斗",
+          "collocations": ["le bénévolat", "faire du volontariat"],
+          "word_family": ["l'engagement (n.m.)", "engagé / engagée (adj.)"],
+          "example_fr": "Elle s'engage pour la protection des animaux dans une association locale.",
+          "example_de": "Sie engagiert sich in einem örtlichen Verein für den Tierschutz.",
+          "example_zh": "她在当地一家协会积极投身于动物保护事业。"
+        },
+        {
+          "id": "v4_02",
+          "french": "défendre les droits de l'homme",
+          "word_type": "locution verbale",
+          "german": "die Menschenrechte verteidigen",
+          "chinese": "捍卫人权",
+          "collocations": ["l'égalité des chances", "lutter contre les discriminations"],
+          "word_family": ["la défense (n.f.)", "le défenseur (n.m.)"],
+          "example_fr": "Cette organisation a pour mission de défendre les droits de l'homme dans le monde.",
+          "example_de": "Diese Organisation hat die Aufgabe, die Menschenrechte weltweit zu verteidigen.",
+          "example_zh": "该组织的使命是在全球范围内捍卫人权。"
+        },
+        {
+          "id": "v4_03",
+          "french": "faire des compromis",
+          "word_type": "locution verbale",
+          "german": "Kompromisse eingehen / schließen",
+          "chinese": "做出妥协/达成折中",
+          "collocations": ["trouver un terrain d'entente", "négocier"],
+          "word_family": ["le compromis (n.m.)"],
+          "example_fr": "Pour vivre harmonieusement en société, chacun doit apprendre à faire des compromis.",
+          "example_de": "Um harmonisch in der Gesellschaft zu leben, muss jeder lernen, Kompromisse einzugehen.",
+          "example_zh": "为了在社会中和谐共处，每个人都必须学会妥协。"
+        }
+      ]
+    }
+  ]
+}

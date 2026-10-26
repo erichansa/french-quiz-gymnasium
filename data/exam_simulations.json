@@ -1,0 +1,113 @@
+{
+  "exams": [
+    {
+      "id": "exam_10_01",
+      "title": "Klassenarbeit 1 : Les Jeunes, l'Avenir et la Société",
+      "level": "Gymnasium Klasse 10 (Niveau B1)",
+      "time_minutes": 45,
+      "max_score": 50,
+      "sections": [
+        {
+          "type": "reading",
+          "title": "Partie I : Compréhension de l'écrit (15 points)",
+          "passage": "« Face à l'urgence climatique, de plus en plus de lycéens européens s'engagent dans des projets écologiques au sein de leur établissement. À Lyon, un groupe d'élèves de seconde a créé une commission verte : ils organisent le tri sélectif, gèrent un potager biologique et sensibilisent leurs camarades au gaspillage alimentaire.\n\n« Au début, beaucoup de gens pensaient que c'était une perte de temps », explique Clara, 15 ans. « Mais dès que nous avons montré des résultats concrets, comme la réduction de moitié du plastique à la cantine, l'ambiance a changé. Bien que nous ayons beaucoup de devoirs, nous trouvons toujours deux heures par semaine pour nous réunir. C'est essentiel pour notre avenir ! »\n\nPour le proviseur du lycée, cet engagement citoyen permet aux jeunes de développer des compétences clés qui ne s'apprennent pas seulement dans les manuels : le travail en équipe, la négociation et la prise de parole en public. »",
+          "questions": [
+            {
+              "id": "ex1_q1",
+              "prompt": "Quel est l'objectif principal de la commission verte créée par les élèves à Lyon ?",
+              "options": [
+                "Améliorer les notes des élèves en sciences naturelles",
+                "Promouvoir des actions écologiques concrètes et sensibiliser au gaspillage",
+                "Supprimer totalement les devoirs à la maison",
+                "Créer une entreprise commerciale au lycée"
+              ],
+              "answer": 1,
+              "points": 5,
+              "explanation": "Le texte indique qu'ils 'organisent le tri sélectif, gèrent un potager biologique et sensibilisent leurs camarades au gaspillage alimentaire'."
+            },
+            {
+              "id": "ex1_q2",
+              "prompt": "Comment les autres élèves ont-ils réagi au tout début du projet ?",
+              "options": [
+                "Ils ont tout de suite applaudi avec enthousiasme",
+                "Ils ont refusé de manger à la cantine",
+                "Certains considéraient d'abord que c'était une perte de temps",
+                "Ils ont demandé de l'aide au ministère de l'Éducation"
+              ],
+              "answer": 2,
+              "points": 5,
+              "explanation": "Clara explique explicitement : « Au début, beaucoup de gens pensaient que c'était une perte de temps »."
+            },
+            {
+              "id": "ex1_q3",
+              "prompt": "D'après le proviseur, quel avantage cet engagement apporte-t-il aux élèves ?",
+              "options": [
+                "Il leur fait gagner de l'argent de poche",
+                "Il leur apprend des compétences humaines et civiques (travail en équipe, prise de parole)",
+                "Il leur évite de passer les examens de fin d'année",
+                "Il réduit leur temps d'études à l'université"
+              ],
+              "answer": 1,
+              "points": 5,
+              "explanation": "Le proviseur mentionne le développement de compétences clés : 'le travail en équipe, la négociation et la prise de parole en public'."
+            }
+          ]
+        },
+        {
+          "type": "grammar_vocab",
+          "title": "Partie II : Grammaire & Vocabulaire en contexte (20 points)",
+          "questions": [
+            {
+              "id": "ex1_g1",
+              "prompt": "« Les professeurs souhaitent vivement que chaque élève ______ (participer) à cette initiative. »",
+              "options": ["participe", "participera", "participait", "ait participé"],
+              "answer": 0,
+              "points": 5,
+              "rule_tip": "'Souhaiter que' exprime un souhait et déclenche le Subjonctif présent.",
+              "explanation": "Souhaiter que + Subjonctif : participe (3e pers. du singulier)."
+            },
+            {
+              "id": "ex1_g2",
+              "prompt": "« Si nous protégions mieux notre environnement, nous ______ (sauvegarder) de nombreuses espèces menacées. »",
+              "options": ["sauvegardons", "sauvegarderons", "sauvegarderions", "avions sauvegardé"],
+              "answer": 2,
+              "points": 5,
+              "rule_tip": "Si + Imparfait ('protégions') -> Conditionnel présent ('sauvegarderions').",
+              "explanation": "Structure de l'hypothèse (Typ 2) : Si + Imparfait -> Conditionnel présent."
+            },
+            {
+              "id": "ex1_g3",
+              "prompt": "« Tu as parlé de ce projet à tes parents ? — Oui, je ______ ai parlé hier soir au dîner. »",
+              "options": ["lui", "leur en", "en leur", "les"],
+              "answer": 1,
+              "points": 5,
+              "rule_tip": "'à tes parents' (leur) + 'de ce projet' (en) -> 'je leur en ai parlé'.",
+              "explanation": "Ordre des pronoms : 'leur' (COI) précède 'en'. Donc 'je leur en ai parlé'."
+            },
+            {
+              "id": "ex1_g4",
+              "prompt": "« L'association pour ______ Clara travaille est très réputée dans toute la région. »",
+              "options": ["qui", "laquelle", "lequel", "auquel"],
+              "answer": 1,
+              "points": 5,
+              "rule_tip": "'pour' + nom féminin singulier ('l'association') -> 'pour laquelle'.",
+              "explanation": "L'association est féminin singulier : pour laquelle."
+            }
+          ]
+        },
+        {
+          "type": "writing",
+          "title": "Partie III : Expression écrite (15 points)",
+          "prompt": "« Pensez-vous que les jeunes d'aujourd'hui s'engagent suffisamment pour la société ? » Rédigez un court commentaire argumenté (environ 120 à 150 mots).",
+          "criteria": [
+            "Structure claire : Introduction, deux arguments illustrés d'exemples, conclusion.",
+            "Utilisation d'au moins 3 connecteurs logiques (ex: Tout d'abord, De plus, Cependant, En revanche, Bien que...).",
+            "Au moins une phrase au Subjonctif ou au Conditionnel.",
+            "Orthographe et accord des adjectifs/participes passés respectés."
+          ],
+          "sample_solution": "À mon avis, les jeunes d'aujourd'hui sont beaucoup plus engagés qu'on ne le croit souvent.\n\nTout d'abord, les nouvelles générations sont particulièrement sensibles aux défis environnementaux. Par exemple, de nombreux lycéens participent aux manifestations pour le climat ou nettoient les plages et les forêts pendant leur temps libre. Bien qu'ils aient un emploi du temps très chargé avec le lycée, ils trouvent le moyen d'agir concrètement.\n\nDe plus, les réseaux sociaux permettent aux adolescents de défendre des causes humanitaires et citoyennes avec une rapidité inédite. Cependant, il ne faudrait pas oublier que cet engagement virtuel doit se traduire par des actes dans la vie réelle.\n\nEn conclusion, la jeunesse fait preuve d'une grande solidarité et prouve chaque jour qu'elle est prête à façonner un avenir plus juste."
+        }
+      ]
+    }
+  ]
+}

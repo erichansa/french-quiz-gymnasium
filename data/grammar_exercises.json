@@ -1,0 +1,161 @@
+{
+  "categories": [
+    {
+      "id": "subjonctif",
+      "name": "Le Subjonctif Présent",
+      "description": "Verwendung (Wille, Gefühl, Notwendigkeit, bien que) und Formen"
+    },
+    {
+      "id": "conditionnel_si",
+      "name": "Conditionnel & Les Hypothèses (Si-Sätze)",
+      "description": "Si-Sätze Typ 1, Typ 2, Typ 3 und Höflichkeit"
+    },
+    {
+      "id": "pronoms_y_en",
+      "name": "Les Pronoms 'y' et 'en' & Double Pronoms",
+      "description": "Ersetzung von à + Sache (y), de + Sache/Menge (en) und Pronomenstellung"
+    },
+    {
+      "id": "relatifs_composes",
+      "name": "Les Pronoms Relatifs Composés",
+      "description": "lequel, laquelle, auquel, duquel, avec qui / avec lequel"
+    },
+    {
+      "id": "temps_passe",
+      "name": "Passé Composé vs Imparfait & Plus-que-parfait",
+      "description": "Handlungskette vs Hintergrund/Zustand & Vorvergangenheit"
+    }
+  ],
+  "questions": [
+    {
+      "id": "g_sbj_01",
+      "category": "subjonctif",
+      "prompt": "Complétez avec la bonne forme : « Bien qu'il ______ très fatigué, Lucas continue ses révisions pour le bac. »",
+      "options": ["est", "soit", "serait", "sera"],
+      "answer": 1,
+      "rule_tip": "Nach 'bien que' (obwohl) muss IMMER der Subjonctif folgen! (être: que je sois, qu'il soit)",
+      "explanation_de": "Die Konjunktion 'bien que' verlangt zwingend den Subjonctif. Das unregelmäßige Verb 'être' lautet im Subjonctif présent: que je sois, tu sois, il/elle soit, nous soyons, vous soyez, ils soient.",
+      "explanation_zh": "连词 'bien que'（尽管）后面必须无条件接虚拟式（Subjonctif）。动词 être 在第三人称单数的虚拟式现在时为 'soit'。"
+    },
+    {
+      "id": "g_sbj_02",
+      "category": "subjonctif",
+      "prompt": "« Mes parents exigent que nous ______ nos devoirs avant le dîner. »",
+      "options": ["faisons", "ferons", "fassions", "faisions"],
+      "answer": 2,
+      "rule_tip": "Verben des Willens und Forderns (exiger que, vouloir que) verlangen den Subjonctif! (faire -> que nous fassions)",
+      "explanation_de": "'Exiger que' drückt eine Aufforderung/einen Zwang aus und verlangt den Subjonctif. Der Stamm für 'faire' im Subjonctif ist 'fass-'. Für 'nous' lautet die Endung '-ions', also 'que nous fassions'.",
+      "explanation_zh": "动词 exiger que（要求……）表示意愿和要求，后接虚拟式。faire 的虚拟式词干为 fass-，nous 对应的变位是 fassions。"
+    },
+    {
+      "id": "g_sbj_03",
+      "category": "subjonctif",
+      "prompt": "« Je pense qu'il ______ raison, mais je doute que tout le monde ______ d'accord avec lui. »",
+      "options": ["ait / est", "a / soit", "ait / soit", "a / est"],
+      "answer": 1,
+      "rule_tip": "'Penser que' im bejahten Satz verlangt Indikatif (Gewissheit), aber 'douter que' drückt Zweifel aus und verlangt Subjonctif!",
+      "explanation_de": "Bei Meinungsverben im Aussagesatz ('penser que') steht der normale Indikatif (a). Bei Verben des Zweifels ('douter que') muss der Subjonctif (soit) stehen.",
+      "explanation_zh": "肯定句中的 penser que 表示观点和确信，用直陈式（a）；而 douter que 表示怀疑，必须使用虚拟式（soit）。"
+    },
+    {
+      "id": "g_sbj_04",
+      "category": "subjonctif",
+      "prompt": "« Il faut que tu ______ la vérité à ton professeur avant la fin du cours. »",
+      "options": ["dis", "diras", "dises", "disais"],
+      "answer": 2,
+      "rule_tip": "'Il faut que' (Es ist nötig, dass...) verlangt immer den Subjonctif! (dire: que tu dises)",
+      "explanation_de": "Die unpersönliche Wendung 'il faut que' verlangt stets den Subjonctif. Bei 'dire' bildet die 3. Person Plural Präsens 'ils disent' den Stamm 'dis-', Endung für 'tu' ist '-es' -> 'que tu dises'.",
+      "explanation_zh": "无人称句型 'il faut que'（必须……）后面必须接虚拟式。dire 的虚拟式 tu 变位是 que tu dises。"
+    },
+    {
+      "id": "g_si_01",
+      "category": "conditionnel_si",
+      "prompt": "« Si nous avions plus de temps ce week-end, nous ______ visiter le château de Versailles. »",
+      "options": ["irons", "sommes allés", "irions", "allions"],
+      "answer": 2,
+      "rule_tip": "Hypothetischer Satz (Typ 2 - Nicht-Reales der Gegenwart): Si + Imparfait -> Conditionnel présent!",
+      "explanation_de": "Hier liegt ein Si-Satz des Typs 2 vor: Bedingung in der Gegenwart, die unwahrscheinlich/irreal ist (Si + Imparfait: 'avions'). Im Hauptsatz folgt daher das Conditionnel présent ('irions').",
+      "explanation_zh": "此题为第二种假设句（Si-Satz Typ 2，对现在的虚拟假设）：Si 从句使用未完成过去时（avions），主句必须搭配现在条件式（Conditionnel présent: irions）。"
+    },
+    {
+      "id": "g_si_02",
+      "category": "conditionnel_si",
+      "prompt": "« Si tu avais révisé tes verbes hier soir, tu n'______ pas autant d'erreurs au test ce matin. »",
+      "options": ["aurais fait", "avais fait", "feras", "faisais"],
+      "answer": 0,
+      "rule_tip": "Irreale Bedingung der Vergangenheit (Typ 3): Si + Plus-que-parfait -> Conditionnel passé!",
+      "explanation_de": "Typ 3 der Si-Sätze beschreibt ein abgeschlossenes Ereignis in der Vergangenheit, das nicht mehr geändert werden kann: 'Si + Plus-que-parfait' ('avais révisé') verlangt im Folgesatz das Conditionnel passé ('aurais fait').",
+      "explanation_zh": "此题为第三种假设句（Si-Satz Typ 3，对过去的虚拟假设，木已成舟）：Si 从句使用愈过去时（avais révisé），主句必须使用过去条件式（Conditionnel passé: n'aurais pas fait）。"
+    },
+    {
+      "id": "g_si_03",
+      "category": "conditionnel_si",
+      "prompt": "« Pourriez-vous fermer la fenêtre, s'il vous plaît ? » Dans cette phrase, le conditionnel exprime :",
+      "options": ["un regret", "une demande polie", "une certitude absolue", "un ordre autoritaire"],
+      "answer": 1,
+      "rule_tip": "Das Conditionnel wird sehr häufig für höfliche Bitten verwendet (la politesse)!",
+      "explanation_de": "Das Conditionnel von 'pouvoir' ('pourriez-vous') dient hier als Höflichkeitsformel (demande polie), um eine Bitte sanfter und respektvoller zu formulieren.",
+      "explanation_zh": "动词 pouvoir 的条件式（pourriez-vous）在此处表示委婉礼貌的请求（la demande polie），而非生硬的命令。"
+    },
+    {
+      "id": "g_prn_01",
+      "category": "pronoms_y_en",
+      "prompt": "« Tu vas au cinéma avec tes camarades ? — Oui, j'______ vais dans une heure. »",
+      "options": ["y", "en", "le", "lui"],
+      "answer": 0,
+      "rule_tip": "Das Pronomen 'y' ersetzt 'à / en / dans / sur + Ortsangabe'!",
+      "explanation_de": "'Au cinéma' ist eine Ortsangabe, eingeleitet durch 'à + le'. Ein solcher Ort wird im Französischen durch das Adverbialpronomen 'y' ersetzt ('j'y vais').",
+      "explanation_zh": "'au cinéma' 是由介词 à 引导的地点状语，代词 y 用来替代 'à + 目的地/地点'，因此是 'j'y vais'。"
+    },
+    {
+      "id": "g_prn_02",
+      "category": "pronoms_y_en",
+      "prompt": "« As-tu acheté des croissants à la boulangerie ? — Oui, j'______ ai acheté trois. »",
+      "options": ["y", "en", "les", "leur"],
+      "answer": 1,
+      "rule_tip": "'en' ersetzt unbestimmte Mengen ('des', Mengenangaben wie 'trois', 'de + Nomen')!",
+      "explanation_de": "'Des croissants' ist eine Teilmenge mit unbestimmtem Artikel ('des') und Mengenangabe ('trois'). Solche Mengenergänzungen werden stets durch das Pronomen 'en' ersetzt ('j'en ai acheté trois').",
+      "explanation_zh": "'des croissants' 由部分冠词引导，并带有具体数量词 'trois'。替代数量或 'de + 事物' 必须使用副代词 'en'。"
+    },
+    {
+      "id": "g_prn_03",
+      "category": "pronoms_y_en",
+      "prompt": "« Est-ce que tu as prêté ton dictionnaire à Sophie ? — Oui, je ______ ai prêté ce matin. »",
+      "options": ["le lui", "lui le", "le la", "la lui"],
+      "answer": 0,
+      "rule_tip": "Doppelte Pronomen (3. Person): Direktes Pronomen (le/la/les) steht VOR dem indirekten Pronomen (lui/leur)!",
+      "explanation_de": "'ton dictionnaire' (le) ist das direkte Objekt (COD), 'à Sophie' (lui) ist das indirekte Objekt (COI). Bei zwei Pronomen der 3. Person steht das COD vor dem COI: 'le lui'.",
+      "explanation_zh": "双宾语代词在均为第三人称时的位置规则：直接宾语代词（le/la/les）排在间接宾语代词（lui/leur）的前面，因此是 'le lui ai prêté'。"
+    },
+    {
+      "id": "g_rel_01",
+      "category": "relatifs_composes",
+      "prompt": "« C'est une question très délicate à ______ je n'avais pas encore pensé. »",
+      "options": ["laquelle", "lequel", "auquel", "qui"],
+      "answer": 0,
+      "rule_tip": "'penser à qch': 'à + laquelle' (féminin singulier, car 'une question')",
+      "explanation_de": "Das Verb heißt 'penser à qch'. Das Bezugswort 'une question' ist weiblich Singular. Die Zusammensetzung aus Präposition 'à' und Relativpronomen ergibt 'à laquelle'.",
+      "explanation_zh": "动词固定搭配为 penser à qch（考虑某事）。先行词 'une question' 是阴性单数名词，因此 'à + laquelle' 构成 'à laquelle'。"
+    },
+    {
+      "id": "g_rel_02",
+      "category": "relatifs_composes",
+      "prompt": "« L'immeuble près ______ se trouve notre école a été entièrement rénové l'année dernière. »",
+      "options": ["duquel", "de laquelle", "auquel", "lequel"],
+      "answer": 0,
+      "rule_tip": "'près de' + maskulin Singular ('l'immeuble') -> 'près de + lequel' = 'près duquel'!",
+      "explanation_de": "Die Präpositionalphrase lautet 'près de'. Da 'l'immeuble' männlich Singular ist, verschmilzt 'de + lequel' zu 'duquel' ('près duquel').",
+      "explanation_zh": "介词短语为 près de（在……附近）。先行词 'l'immeuble' 是阳性单数名词，'de + lequel' 缩合为 'duquel'。"
+    },
+    {
+      "id": "g_tps_01",
+      "category": "temps_passe",
+      "prompt": "« Pendant que nous ______ le dîner tranquillement, le téléphone a soudainement sonné. »",
+      "options": ["avons préparé", "préparions", "avions préparé", "préparerons"],
+      "answer": 1,
+      "rule_tip": "Hintergrundhandlung / andauernder Zustand in der Vergangenheit verlangt das Imparfait!",
+      "explanation_de": "'Pendant que' leitet eine andauernde Hintergrundhandlung ein ('wir bereiteten gerade das Essen zu' -> Imparfait: 'préparions'). Das plötzliche Ereignis ('le téléphone a sonné') steht im Passé composé.",
+      "explanation_zh": "'pendant que' 引导过去正在持续进行的背景动作（当时正在做晚饭），必须用未完成过去时（Imparfait: préparions）；而突发性瞬间动作（电话突然响了）用复合过去时（a sonné）。"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "writing_guide": {
+    "title": "Gymnasium 10e : Guide de l'Expression Écrite",
+    "target_level": "B1 / B1+",
+    "rules_summary": [
+      "Toujours structurer en 3 parties : Introduction (problématique), Développement (2 paragraphes avec PEE), Conclusion.",
+      "Le principe PEE : Point (argument) -> Explication (pourquoi) -> Exemple (cas concret).",
+      "Éviter les répétitions en utilisant les pronoms (y, en, le/la/les, lui/leur).",
+      "Placer au moins une structure avec 'Bien que + Subjonctif' pour valoriser la note de grammaire."
+    ]
+  },
+  "connecteurs": [
+    {
+      "category": "Exprimer son opinion (Meinung äußern)",
+      "items": [
+        {"fr": "À mon avis, ...", "de": "Meiner Meinung nach...", "zh": "依我之见……"},
+        {"fr": "En ce qui me concerne, ...", "de": "Was mich betrifft...", "zh": "就我个人而言……"},
+        {"fr": "Je suis convaincu(e) que + indicatif", "de": "Ich bin überzeugt, dass...", "zh": "我确信……"},
+        {"fr": "Il me semble que + indicatif", "de": "Mir scheint, dass...", "zh": "在我看来……"}
+      ]
+    },
+    {
+      "category": "Ordonner et ajouter (Reihenfolge & Ergänzung)",
+      "items": [
+        {"fr": "Tout d'abord, ... / En premier lieu, ...", "de": "Zuerst / An erster Stelle...", "zh": "首先 / 第一步……"},
+        {"fr": "De plus, ... / En outre, ...", "de": "Außerdem / Darüber hinaus...", "zh": "此外 / 而且……"},
+        {"fr": "Non seulement..., mais aussi...", "de": "Nicht nur..., sondern auch...", "zh": "不仅……而且……"},
+        {"fr": "D'une part..., d'autre part...", "de": "Einerseits..., andererseits...", "zh": "一方面……另一方面……"}
+      ]
+    },
+    {
+      "category": "Opposition et Concession (Gegensatz & Einräumung)",
+      "items": [
+        {"fr": "Cependant, ... / Néanmoins, ...", "de": "Jedoch / Dennoch...", "zh": "然而 / 尽管如此……"},
+        {"fr": "En revanche, ... / Par contre, ...", "de": "Dagegen / Im Gegensatz dazu...", "zh": "相反 / 相比之下……"},
+        {"fr": "Bien que + subjonctif", "de": "Obwohl + Subjonctif...", "zh": "尽管……（后接虚拟式，高分金句）"},
+        {"fr": "Malgré + nom", "de": "Trotz + Nomen...", "zh": "尽管……（后接名词）"}
+      ]
+    },
+    {
+      "category": "Cause et Conséquence (Ursache & Folge)",
+      "items": [
+        {"fr": "Puisque / Étant donné que...", "de": "Da / In Anbetracht dessen, dass...", "zh": "鉴于 / 既然……"},
+        {"fr": "Par conséquent, ... / C'est pourquoi...", "de": "Folglich / Deshalb...", "zh": "因此 / 正因如此……"},
+        {"fr": "Il en résulte que...", "de": "Daraus folgt, dass...", "zh": "其结果是……"}
+      ]
+    },
+    {
+      "category": "Conclure (Schlussfolgerung)",
+      "items": [
+        {"fr": "En conclusion, ... / Pour conclure, ...", "de": "Zusammenfassend / Zum Abschluss...", "zh": "总而言之 / 最后……"},
+        {"fr": "En fin de compte, ...", "de": "Letztendlich / Schließlich...", "zh": "归根结底……"}
+      ]
+    }
+  ],
+  "sentence_upgrades": [
+    {
+      "basic": "Il pleut mais nous allons sortir. (Basic A2)",
+      "advanced": "Bien qu'il pleuve, nous avons décidé de sortir nous promener. (B1+ avec Subjonctif)",
+      "comment": "Remplacement de 'mais' par 'Bien que + Subjonctif'."
+    },
+    {
+      "basic": "Les gens doivent faire attention à la nature. (Basic A2)",
+      "advanced": "Il est impératif que chacun prenne conscience de l'urgence écologique. (B1+ avec Subjonctif)",
+      "comment": "Remplacement d'une formule banale par une structure soutenue."
+    },
+    {
+      "basic": "Si j'ai le temps, je vais t'aider. (Basic A2)",
+      "advanced": "Si j'avais eu davantage de temps libre, je t'aurais aidé avec plaisir. (B1+ Hypothèse passée)",
+      "comment": "Utilisation d'un Si-Satz Typ 3 (Conditionnel passé)."
+    }
+  ],
+  "essay_prompts": [
+    {
+      "id": "prompt_1",
+      "title": "Faut-il interdire l'usage des smartphones au lycée ?",
+      "theme": "Médias & École",
+      "starter_tips": "Pensez aux distractions en classe versus l'utilité des outils pédagogiques numériques."
+    },
+    {
+      "id": "prompt_2",
+      "title": "Faire une année sabbatique (Gap Year) après le bac : bonne ou mauvaise idée ?",
+      "theme": "Avenir & Projets de vie",
+      "starter_tips": "Comparez le gain de maturité et d'expérience avec le risque de perdre le rythme scolaire."
+    },
+    {
+      "id": "prompt_3",
+      "title": "Chacun peut-il sauver la planète à son échelle ?",
+      "theme": "Environnement",
+      "starter_tips": "Examinez les gestes du quotidien (tri, transports) face aux responsabilités des gouvernements et des industries."
+    }
+  ]
+}

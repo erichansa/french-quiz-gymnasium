@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gymnasium 10e : Français - Studio d'Apprentissage & Quiz</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-icon">🇫🇷</span>
+        <div class="brand-title">
+          <h1>Gymnasium 10e : Français Studio</h1>
+          <p>Entraînement intelligent • Découvertes B1 • Klassenarbeiten • Atelier d'écriture</p>
+        </div>
+      </div>
+
+      <nav>
+        <button class="nav-btn active" data-target="tab-practice">
+          <span>🎯</span> Grammaire & Quiz
+        </button>
+        <button class="nav-btn" data-target="tab-vocab">
+          <span>📚</span> Vokabeln & Kollokationen
+        </button>
+        <button class="nav-btn" data-target="tab-exam">
+          <span>⏱️</span> Klassenarbeit (45 Min)
+        </button>
+        <button class="nav-btn" data-target="tab-writing">
+          <span>✍️</span> Atelier d'Écriture (AI)
+        </button>
+        <button class="nav-btn" data-target="tab-mistakes">
+          <span>📖</span> Carnet d'Erreurs
+          <span class="badge-count" id="badge-mistakes" style="display:none;">0</span>
+        </button>
+        <button class="nav-btn" data-target="tab-import">
+          <span>⚡</span> Notizen ➔ Quiz
+        </button>
+        <button class="nav-btn" data-target="tab-settings">
+          <span>⚙️</span> Einstellungen
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Top Statistics Bar -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-icon">📝</div>
+        <div class="stat-info">
+          <h4>Beantwortete Fragen</h4>
+          <p id="stat-total">0</p>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">🎯</div>
+        <div class="stat-info">
+          <h4>Erfolgsquote</h4>
+          <p id="stat-accuracy">0%</p>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">🔥</div>
+        <div class="stat-info">
+          <h4>Lern-Streak</h4>
+          <p id="stat-streak">1 Tag</p>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">📌</div>
+        <div class="stat-info">
+          <h4>Fehler im Notizbuch</h4>
+          <p id="stat-wrong">0</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 1: Grammar & Practice -->
+    <div id="tab-practice" class="tab-pane active">
+      <div class="card">
+        <h3 style="margin-bottom: 0.75rem;">Wähle ein Grammatik- oder Übungsthema:</h3>
+        <div id="grammar-filter" style="display: flex; gap: 0.5rem; flex-wrap: wrap;"></div>
+      </div>
+      <div id="quiz-container"></div>
+    </div>
+
+    <!-- TAB 2: Vocabulary & Collocations (SRS) -->
+    <div id="tab-vocab" class="tab-pane">
+      <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h3>Découvertes Vokabelkarten & Kollokationen</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            Wortverbindungen, Wortfamilien und Beispielsätze mit Spaced-Repetition-Wiederholungsplan (SRS).
+          </p>
+        </div>
+        <div>
+          <select id="vocab-unit-select" style="padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid var(--border); font-size: 1rem; font-weight: 500;"></select>
+        </div>
+      </div>
+      <div id="vocab-container"></div>
+    </div>
+
+    <!-- TAB 3: Exam Simulation (Klassenarbeit) -->
+    <div id="tab-exam" class="tab-pane">
+      <div id="exam-selector"></div>
+      <div id="exam-active-stage" style="display: none;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+          <button class="btn btn-outline" onclick="location.reload()">Abbrechen & Zurück</button>
+          <div class="timer-badge">
+            <span>⏱️ Verbleibende Zeit:</span>
+            <span id="exam-timer">45:00</span>
+          </div>
+        </div>
+        <div id="exam-sections-content"></div>
+      </div>
+    </div>
+
+    <!-- TAB 4: Writing Studio (Expression Écrite) -->
+    <div id="tab-writing" class="tab-pane">
+      <div class="card">
+        <h2 style="color: var(--secondary); margin-bottom: 0.5rem;">Atelier d'Écriture : Aufsatztraining 10. Klasse</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">
+          Schreibe deinen Text zu typischen Themen der Oberstufenvorbereitung. Der KI-Tutor bewertet nach Gymnasiums-Kriterien (15 Punkte), korrigiert Grammatikfehler und zeigt dir, wie du Sätze auf B1+/B2 aufwertest!
+        </p>
+      </div>
+
+      <div class="writing-layout">
+        <div>
+          <div class="card">
+            <label style="font-weight: 600; font-size: 1rem; display: block; margin-bottom: 0.5rem;">
+              1. Wähle eine Aufgabenstellung / Thema:
+            </label>
+            <select id="essay-prompt-select" style="width: 100%; padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid var(--border); font-size: 1rem; margin-bottom: 1rem;"></select>
+            <div id="prompt-info" style="margin-bottom: 1rem;"></div>
+
+            <label style="font-weight: 600; font-size: 1rem; display: flex; justify-content: space-between; align-items: center;">
+              <span>2. Dein französischer Text:</span>
+              <span style="font-size: 0.85rem; color: var(--text-muted);">
+                Wörter: <strong id="essay-word-count">0</strong> (Empfohlen: 120-150)
+              </span>
+            </label>
+            <textarea id="essay-textarea" class="essay-input" placeholder="Rédigez votre texte ici... Par exemple : À mon avis..."></textarea>
+
+            <button id="btn-grade-essay" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 0.75rem;" onclick="submitEssayForGrading()">
+              Aufsatz zur Korrektur einreichen 📝
+            </button>
+          </div>
+
+          <div id="essay-result"></div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h4 style="color: var(--secondary); margin-bottom: 0.5rem;">💡 Klickbare Konnektoren-Bank</h4>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem;">
+              Klicke auf einen Baustein, um ihn direkt in deinen Aufsatz einzufügen!
+            </p>
+            <div id="connectors-bank"></div>
+          </div>
+
+          <div class="card" style="background: #fdfbf7; border-color: #fde68a;">
+            <h4 style="color: #b45309; margin-bottom: 0.5rem;">🎯 Gymnasium 10 Checkliste</h4>
+            <ul style="font-size: 0.85rem; line-height: 1.6; padding-left: 1.25rem; color: #78350f;">
+              <li><strong>PEE-Prinzip:</strong> Behauptung ➔ Erklärung ➔ Beispiel.</li>
+              <li><strong>Subjonctif:</strong> Mindestens 1x <em>« Bien que + Subj. »</em> verwenden!</li>
+              <li><strong>Pronomen:</strong> Vermeide Wortwiederholungen mit <em>y</em> oder <em>en</em>.</li>
+              <li><strong>Hypothese:</strong> Ein <em>Si-Satz Typ 2 oder 3</em> bringt Extrapunkte!</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: Mistakes Notebook (Carnet d'Erreurs) -->
+    <div id="tab-mistakes" class="tab-pane">
+      <div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h2>🧠 Carnet d'Erreurs : 错题与薄弱点记忆库</h2>
+          <p style="color: var(--text-muted); margin-top: 0.25rem;">
+            所有做错的题会自动存入记忆库。您可以随时调用重复练习，完全掌握后点击“删除此记忆”。
+          </p>
+        </div>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button class="btn btn-primary" onclick="startMistakesDrill()">🔁 专项重练所有错题</button>
+          <button class="btn btn-outline" onclick="openAddMistakeModal()">➕ 手动录入易错点</button>
+          <button class="btn btn-outline" onclick="exportProgress()">📥 备份/导出记忆</button>
+          <label class="btn btn-outline" style="cursor: pointer; margin-bottom: 0;">
+            📤 导入记忆
+            <input type="file" id="import-progress-file" style="display: none;" onchange="importProgress(event)">
+          </label>
+        </div>
+      </div>
+
+      <!-- Add Manual Mistake Card Form (hidden by default) -->
+      <div id="add-mistake-form" class="card" style="display: none; border-left: 4px solid var(--primary); background: #f8fafc;">
+        <h4 style="margin-bottom: 0.75rem;">➕ 手动添加易错题目或词汇短语到记忆库</h4>
+        <input type="text" id="manual-prompt" placeholder="题目或例句（如：Bien qu'il ______ (faire) froid...）" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid var(--border); margin-bottom: 0.5rem;">
+        <input type="text" id="manual-tip" placeholder="核心考点 / 记忆提醒（如：Bien que 后面必须接虚拟式 fasse）" style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid var(--border); margin-bottom: 0.5rem;">
+        <textarea id="manual-exp" placeholder="详细语法或中文解释..." style="width: 100%; height: 60px; padding: 0.6rem; border-radius: 6px; border: 1px solid var(--border); margin-bottom: 0.75rem;"></textarea>
+        <div style="display: flex; gap: 0.5rem;">
+          <button class="btn btn-primary" onclick="saveManualMistake()">确认存入记忆库</button>
+          <button class="btn btn-outline" onclick="closeAddMistakeModal()">取消</button>
+        </div>
+      </div>
+
+      <div id="mistakes-container"></div>
+    </div>
+
+    <!-- TAB 6: Notes to Quiz Generator -->
+    <div id="tab-import" class="tab-pane">
+      <div class="card">
+        <h2>⚡ Aus Schulnotizen & Folien automatisch Fragen erstellen</h2>
+        <p style="color: var(--text-muted); margin-top: 0.25rem;">
+          Füge hier Notizen aus dem Unterricht, Tafelbilder oder Vokabellisten ein. Die KI generiert daraus maßgeschneiderte Übungsfragen für die 10. Klasse und fügt sie direkt deiner Übungsliste hinzu!
+        </p>
+      </div>
+
+      <div class="card">
+        <textarea id="lecture-notes-input" style="width: 100%; height: 180px; padding: 1rem; border-radius: var(--radius); border: 1px solid var(--border); font-size: 1rem; line-height: 1.5;" placeholder="Füge hier Unterrichtstexte oder Notizen ein..."></textarea>
+        
+        <div style="margin-top: 1rem; display: flex; justify-content: flex-end;">
+          <button id="btn-generate-quiz" class="btn btn-primary" onclick="generateQuizFromInput()">
+            Automatisch Fragen generieren ⚡
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 7: Settings -->
+    <div id="tab-settings" class="tab-pane">
+      <div class="card">
+        <h2>⚙️ 系统设置与进度管理</h2>
+        
+        <div style="margin-top: 1.5rem; max-width: 650px;">
+          <h4 style="margin-bottom: 0.5rem;">🌐 网站部署说明 (useful-finds-daily.com)</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.5rem; background: #f8fafc; padding: 1rem; border-radius: 8px; border: 1px solid var(--border);">
+            本程序完全支持<strong>纯静态无服务器部署</strong>！网页上的所有做题统计、艾宾浩斯复习卡、错题记忆库均保存在浏览器的 <code>localStorage</code> 中。
+            您只需将该文件夹上传至网站目录（如 <code>/tools/french/</code>），任何手机、平板、电脑均可直接打开使用并自动记忆做题进度。
+          </p>
+
+          <h4 style="margin-bottom: 0.5rem;">💾 学习档案与错题备份</h4>
+          <div style="display: flex; gap: 0.75rem; margin-bottom: 1.5rem;">
+            <button class="btn btn-outline" onclick="exportProgress()">📥 导出做题档案 (JSON)</button>
+            <label class="btn btn-outline" style="cursor: pointer; margin-bottom: 0;">
+              📤 导入历史档案 (JSON)
+              <input type="file" style="display: none;" onchange="importProgress(event)">
+            </label>
+          </div>
+
+          <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">
+            Google Gemini API-Key (可选，用于实时 AI 写作批阅与课件出题):
+          </label>
+          <input type="password" id="setting-gemini-key" placeholder="AIzaSy..." style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid var(--border); font-size: 1rem; margin-bottom: 0.5rem;">
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+            * 提示：若未设置 API Key，系统会自动启用内置的 10 年级专家语法启发式分析，依然支持语法检查与句式升级！
+          </p>
+
+          <button class="btn btn-primary" onclick="saveSettings()">保存设置</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Gymnasium 10e Français Studio • Découvertes 5 / Niveau B1 • Entwickelt für optimalen Lernerfolg</p>
+  </footer>
+
+  <script src="static/js/app.js"></script>
+</body>
+</html>

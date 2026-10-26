@@ -1,0 +1,18 @@
+{
+  "app_name": "Gymnasium 10e Français - Studio d'Apprentissage & Quiz",
+  "version": "1.0.0",
+  "port": 8765,
+  "ai_provider": "gemini",
+  "gemini_api_key": "",
+  "gemini_model": "gemini-2.5-flash",
+  "default_mode": "practice",
+  "language_hint": "de_zh",
+  "srs_intervals_days": [
+    1,
+    2,
+    4,
+    7,
+    15,
+    30
+  ]
+}
