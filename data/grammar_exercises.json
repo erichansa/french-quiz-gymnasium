@@ -1,34 +1,156 @@
 {
+  "grades": [
+    {"id": "9", "name": "Klasse 9", "level": "Niveau A2+/B1- (Grundlagen-Wiederholung)"},
+    {"id": "10", "name": "Klasse 10", "level": "Niveau B1 (Mittelstufe / Découvertes 5)"},
+    {"id": "11", "name": "Klasse 11", "level": "Niveau B1+/B2 (Einführungsphase Oberstufe)"},
+    {"id": "12", "name": "Klasse 12", "level": "Niveau B2 (Abitur-Vorbereitung / Qualifikationsphase)"}
+  ],
   "categories": [
     {
+      "id": "g9_passé",
+      "grade": "9",
+      "name": "Passé Composé vs Imparfait",
+      "description": "Signalwörter (soudain vs d'habitude) und Unterscheidung"
+    },
+    {
+      "id": "g9_futur",
+      "grade": "9",
+      "name": "Le Futur simple",
+      "description": "Unregelmäßige Stämme (irai, ferai, aurai) und Verwendung"
+    },
+    {
+      "id": "g9_pronoms",
+      "grade": "9",
+      "name": "Pronoms COD & COI",
+      "description": "Direkte und indirekte Objektpronomen (le, la, les, lui, leur)"
+    },
+    {
+      "id": "g9_si1",
+      "grade": "9",
+      "name": "Si-Sätze Typ 1",
+      "description": "Reale Bedingung der Gegenwart: Si + présent -> Futur simple"
+    },
+    {
       "id": "subjonctif",
+      "grade": "10",
       "name": "Le Subjonctif Présent",
       "description": "Verwendung (Wille, Gefühl, Notwendigkeit, bien que) und Formen"
     },
     {
       "id": "conditionnel_si",
-      "name": "Conditionnel & Les Hypothèses (Si-Sätze)",
-      "description": "Si-Sätze Typ 1, Typ 2, Typ 3 und Höflichkeit"
+      "grade": "10",
+      "name": "Conditionnel & Si-Sätze (Typ 2 & 3)",
+      "description": "Si-Sätze Typ 2 & Typ 3 und Höflichkeit"
     },
     {
       "id": "pronoms_y_en",
-      "name": "Les Pronoms 'y' et 'en' & Double Pronoms",
-      "description": "Ersetzung von à + Sache (y), de + Sache/Menge (en) und Pronomenstellung"
+      "grade": "10",
+      "name": "Pronoms 'y' & 'en' & Doppelpronomen",
+      "description": "Ersetzung von à + Sache (y), de + Sache/Menge (en) und Stellung"
     },
     {
       "id": "relatifs_composes",
-      "name": "Les Pronoms Relatifs Composés",
-      "description": "lequel, laquelle, auquel, duquel, avec qui / avec lequel"
+      "grade": "10",
+      "name": "Pronoms Relatifs Composés",
+      "description": "lequel, laquelle, auquel, duquel, avec lequel"
     },
     {
       "id": "temps_passe",
+      "grade": "10",
       "name": "Passé Composé vs Imparfait & Plus-que-parfait",
-      "description": "Handlungskette vs Hintergrund/Zustand & Vorvergangenheit"
+      "description": "Handlungskette vs Hintergrund & Vorvergangenheit"
+    },
+    {
+      "id": "g11_passif",
+      "grade": "11",
+      "name": "La Voix Passive & Passiversatz",
+      "description": "Passivbildung mit être und Ersatzformen (on, se faire + inf)"
+    },
+    {
+      "id": "g11_participe",
+      "grade": "11",
+      "name": "Participe Présent & Gérondif",
+      "description": "Partizipialkonstruktionen zur Satzverknüpfung und Verkürzung"
+    },
+    {
+      "id": "g11_discours",
+      "grade": "11",
+      "name": "Discours Indirect au Passé",
+      "description": "Zeitenfolge (Concordance des temps): présent -> imp, futur -> cond"
+    },
+    {
+      "id": "g11_sbj_inf",
+      "grade": "11",
+      "name": "Subjonctif vs Infinitif",
+      "description": "Subjektgleichheit: pour que + subj vs pour + inf, avant de vs avant que"
+    },
+    {
+      "id": "g12_sbj_passe",
+      "grade": "12",
+      "name": "Le Subjonctif Passé",
+      "description": "Vorzeitigkeit im Subjonctif (ait fait, soit allé)"
+    },
+    {
+      "id": "g12_nuances",
+      "grade": "12",
+      "name": "Nuances Modales & Regret",
+      "description": "Ausdruck von Vorwurf, Bedauern und Nicht-Realem (aurais dû, aurais pu)"
+    },
+    {
+      "id": "g12_style",
+      "grade": "12",
+      "name": "Registres de Langue & Figures de Style",
+      "description": "Soutenu / littéraire vs familier, antithèse, métaphore, euphémisme"
     }
   ],
   "questions": [
     {
+      "id": "g9_q01",
+      "grade": "9",
+      "category": "g9_passé",
+      "prompt": "« Hier matin, je marchais tranquillement dans la rue quand soudain ______ un grand bruit. »",
+      "options": ["j'ai entendu", "j'entendais", "j'avais entendu", "j'entendrai"],
+      "answer": 0,
+      "rule_tip": "'soudain / tout à coup' signalisiert ein plötzliches Ereignis -> Passé composé!",
+      "explanation_de": "'Quand soudain' unterbricht eine andauernde Hintergrundhandlung (Imparfait: marchais) durch ein plötzliches, punktuelles Ereignis. Dafür verwendet man das Passé composé: 'j'ai entendu'.",
+      "explanation_zh": "'quand soudain'（突然间）打断了正在进行的背景动作（未完成过去时 marchais），表示突发的瞬间动作，必须用复合过去时：'j'ai entendu'。"
+    },
+    {
+      "id": "g9_q02",
+      "grade": "9",
+      "category": "g9_futur",
+      "prompt": "Complétez avec le Futur simple du verbe 'faire' : « L'année prochaine, nous ______ un échange scolaire en France. »",
+      "options": ["faisons", "ferons", "faisions", "ferions"],
+      "answer": 1,
+      "rule_tip": "Der Stamm von 'faire' im Futur simple lautet 'fer-'! (nous ferons)",
+      "explanation_de": "Das unregelmäßige Verb 'faire' bildet das Futur simple mit dem Stamm 'fer-' und den Endungen -ai, -as, -a, -ons, -ez, -ont. Für 'nous' heißt es 'nous ferons'.",
+      "explanation_zh": "不规则动词 faire 在简单将来时的词干是 'fer-'，加上 nous 的词尾 '-ons'，正确变位是 'nous ferons'。"
+    },
+    {
+      "id": "g9_q03",
+      "grade": "9",
+      "category": "g9_pronoms",
+      "prompt": "« Est-ce que tu as envoyé la lettre à tes grands-parents ? — Oui, je ______ ai envoyée hier. »",
+      "options": ["la leur", "leur la", "la lui", "l'y"],
+      "answer": 0,
+      "rule_tip": "Stellung der Pronomen: Direktes Pronomen (la) vor indirektem Pronomen (leur)!",
+      "explanation_de": "'La lettre' ist direktes Objekt (la), 'à tes grands-parents' ist indirektes Objekt (leur). Bei zwei Pronomen steht das COD (la) vor dem COI (leur): 'la leur'.",
+      "explanation_zh": "'la lettre' 是直接宾语（la），'à tes grands-parents' 是间接宾语（leur）。直接宾语代词排在间接宾语代词前面，因此是 'la leur'。"
+    },
+    {
+      "id": "g9_q04",
+      "grade": "9",
+      "category": "g9_si1",
+      "prompt": "« Si vous travaillez régulièrement, vous ______ de très bonnes notes. »",
+      "options": ["aurez", "avez", "auriez", "aviez"],
+      "answer": 0,
+      "rule_tip": "Si-Satz Typ 1 (Reale Bedingung): Si + Présent -> Futur simple im Hauptsatz!",
+      "explanation_de": "Typ 1 drückt eine Bedingung aus, die erfüllbar ist: Nach 'Si + Présent' ('travaillez') steht im Hauptsatz das Futur simple ('aurez').",
+      "explanation_zh": "第一类条件句（可能实现的条件）：Si 从句使用直陈式现在时（travaillez），主句必须搭配简单将来时（aurez）。"
+    },
+    {
       "id": "g_sbj_01",
+      "grade": "10",
       "category": "subjonctif",
       "prompt": "Complétez avec la bonne forme : « Bien qu'il ______ très fatigué, Lucas continue ses révisions pour le bac. »",
       "options": ["est", "soit", "serait", "sera"],
@@ -39,6 +161,7 @@
     },
     {
       "id": "g_sbj_02",
+      "grade": "10",
       "category": "subjonctif",
       "prompt": "« Mes parents exigent que nous ______ nos devoirs avant le dîner. »",
       "options": ["faisons", "ferons", "fassions", "faisions"],
@@ -49,6 +172,7 @@
     },
     {
       "id": "g_sbj_03",
+      "grade": "10",
       "category": "subjonctif",
       "prompt": "« Je pense qu'il ______ raison, mais je doute que tout le monde ______ d'accord avec lui. »",
       "options": ["ait / est", "a / soit", "ait / soit", "a / est"],
@@ -59,6 +183,7 @@
     },
     {
       "id": "g_sbj_04",
+      "grade": "10",
       "category": "subjonctif",
       "prompt": "« Il faut que tu ______ la vérité à ton professeur avant la fin du cours. »",
       "options": ["dis", "diras", "dises", "disais"],
@@ -69,6 +194,7 @@
     },
     {
       "id": "g_si_01",
+      "grade": "10",
       "category": "conditionnel_si",
       "prompt": "« Si nous avions plus de temps ce week-end, nous ______ visiter le château de Versailles. »",
       "options": ["irons", "sommes allés", "irions", "allions"],
@@ -79,6 +205,7 @@
     },
     {
       "id": "g_si_02",
+      "grade": "10",
       "category": "conditionnel_si",
       "prompt": "« Si tu avais révisé tes verbes hier soir, tu n'______ pas autant d'erreurs au test ce matin. »",
       "options": ["aurais fait", "avais fait", "feras", "faisais"],
@@ -88,17 +215,8 @@
       "explanation_zh": "此题为第三种假设句（Si-Satz Typ 3，对过去的虚拟假设，木已成舟）：Si 从句使用愈过去时（avais révisé），主句必须使用过去条件式（Conditionnel passé: n'aurais pas fait）。"
     },
     {
-      "id": "g_si_03",
-      "category": "conditionnel_si",
-      "prompt": "« Pourriez-vous fermer la fenêtre, s'il vous plaît ? » Dans cette phrase, le conditionnel exprime :",
-      "options": ["un regret", "une demande polie", "une certitude absolue", "un ordre autoritaire"],
-      "answer": 1,
-      "rule_tip": "Das Conditionnel wird sehr häufig für höfliche Bitten verwendet (la politesse)!",
-      "explanation_de": "Das Conditionnel von 'pouvoir' ('pourriez-vous') dient hier als Höflichkeitsformel (demande polie), um eine Bitte sanfter und respektvoller zu formulieren.",
-      "explanation_zh": "动词 pouvoir 的条件式（pourriez-vous）在此处表示委婉礼貌的请求（la demande polie），而非生硬的命令。"
-    },
-    {
       "id": "g_prn_01",
+      "grade": "10",
       "category": "pronoms_y_en",
       "prompt": "« Tu vas au cinéma avec tes camarades ? — Oui, j'______ vais dans une heure. »",
       "options": ["y", "en", "le", "lui"],
@@ -109,6 +227,7 @@
     },
     {
       "id": "g_prn_02",
+      "grade": "10",
       "category": "pronoms_y_en",
       "prompt": "« As-tu acheté des croissants à la boulangerie ? — Oui, j'______ ai acheté trois. »",
       "options": ["y", "en", "les", "leur"],
@@ -118,17 +237,8 @@
       "explanation_zh": "'des croissants' 由部分冠词引导，并带有具体数量词 'trois'。替代数量或 'de + 事物' 必须使用副代词 'en'。"
     },
     {
-      "id": "g_prn_03",
-      "category": "pronoms_y_en",
-      "prompt": "« Est-ce que tu as prêté ton dictionnaire à Sophie ? — Oui, je ______ ai prêté ce matin. »",
-      "options": ["le lui", "lui le", "le la", "la lui"],
-      "answer": 0,
-      "rule_tip": "Doppelte Pronomen (3. Person): Direktes Pronomen (le/la/les) steht VOR dem indirekten Pronomen (lui/leur)!",
-      "explanation_de": "'ton dictionnaire' (le) ist das direkte Objekt (COD), 'à Sophie' (lui) ist das indirekte Objekt (COI). Bei zwei Pronomen der 3. Person steht das COD vor dem COI: 'le lui'.",
-      "explanation_zh": "双宾语代词在均为第三人称时的位置规则：直接宾语代词（le/la/les）排在间接宾语代词（lui/leur）的前面，因此是 'le lui ai prêté'。"
-    },
-    {
       "id": "g_rel_01",
+      "grade": "10",
       "category": "relatifs_composes",
       "prompt": "« C'est une question très délicate à ______ je n'avais pas encore pensé. »",
       "options": ["laquelle", "lequel", "auquel", "qui"],
@@ -138,24 +248,81 @@
       "explanation_zh": "动词固定搭配为 penser à qch（考虑某事）。先行词 'une question' 是阴性单数名词，因此 'à + laquelle' 构成 'à laquelle'。"
     },
     {
-      "id": "g_rel_02",
-      "category": "relatifs_composes",
-      "prompt": "« L'immeuble près ______ se trouve notre école a été entièrement rénové l'année dernière. »",
-      "options": ["duquel", "de laquelle", "auquel", "lequel"],
+      "id": "g11_q01",
+      "grade": "11",
+      "category": "g11_passif",
+      "prompt": "Transformez à la voix passive : « Les ministres européens ont signé ce traité hier. » -> « Ce traité ______ hier par les ministres européens. »",
+      "options": ["a été signé", "a signé", "avait été signé", "serait signé"],
       "answer": 0,
-      "rule_tip": "'près de' + maskulin Singular ('l'immeuble') -> 'près de + lequel' = 'près duquel'!",
-      "explanation_de": "Die Präpositionalphrase lautet 'près de'. Da 'l'immeuble' männlich Singular ist, verschmilzt 'de + lequel' zu 'duquel' ('près duquel').",
-      "explanation_zh": "介词短语为 près de（在……附近）。先行词 'l'immeuble' 是阳性单数名词，'de + lequel' 缩合为 'duquel'。"
+      "rule_tip": "Passé composé im Aktiv ('ont signé') -> Passé composé von être ('a été') + Participe passé ('signé')!",
+      "explanation_de": "Das Passiv im Passé composé wird gebildet mit 'avoir été' + Participe passé des Hauptverbs: 'a été signé'. Das Participe stimmt mit dem neuen Subjekt 'ce traité' (m.sg.) überein.",
+      "explanation_zh": "主动态复合过去时（ont signé）变成被动态时，用 être 的复合过去时（a été）+ 过去分词（signé）：'a été signé'。"
     },
     {
-      "id": "g_tps_01",
-      "category": "temps_passe",
-      "prompt": "« Pendant que nous ______ le dîner tranquillement, le téléphone a soudainement sonné. »",
-      "options": ["avons préparé", "préparions", "avions préparé", "préparerons"],
-      "answer": 1,
-      "rule_tip": "Hintergrundhandlung / andauernder Zustand in der Vergangenheit verlangt das Imparfait!",
-      "explanation_de": "'Pendant que' leitet eine andauernde Hintergrundhandlung ein ('wir bereiteten gerade das Essen zu' -> Imparfait: 'préparions'). Das plötzliche Ereignis ('le téléphone a sonné') steht im Passé composé.",
-      "explanation_zh": "'pendant que' 引导过去正在持续进行的背景动作（当时正在做晚饭），必须用未完成过去时（Imparfait: préparions）；而突发性瞬间动作（电话突然响了）用复合过去时（a sonné）。"
+      "id": "g11_q02",
+      "grade": "11",
+      "category": "g11_participe",
+      "prompt": "« ______ ses valises à la hâte, Sophie s'est précipitée vers la gare pour ne pas rater son train. »",
+      "options": ["Bouclant", "En bouclant", "Bouclé", "Avoir bouclé"],
+      "answer": 0,
+      "rule_tip": "Das Participe présent ('bouclant') verkürzt einen Relativsatz oder Kausalsatz ohne 'en'!",
+      "explanation_de": "'Bouclant' ist das Participe présent und beschreibt den Grund / die Begleitumstand der Haupthandlung. Das Gérondif ('en bouclant') würde Gleichzeitigkeit / Mittel betonen ('während/indem sie packte').",
+      "explanation_zh": "现在分词 'Bouclant'（收拾妥当）用于句首分词短语，简化从句，修饰主语 Sophie。加 'en' 则变为副动词表示方式或同时性。"
+    },
+    {
+      "id": "g11_q03",
+      "grade": "11",
+      "category": "g11_discours",
+      "prompt": "Discours direct : « Julien m'a dit : 'Je partirai demain pour Paris.' » -> Discours indirect au passé : « Julien m'a dit qu'il ______ le lendemain pour Paris. »",
+      "options": ["partira", "partait", "partirait", "soit parti"],
+      "answer": 2,
+      "rule_tip": "Concordance des temps: Wenn das einleitende Verb in der Vergangenheit steht, wird Futur simple zum Conditionnel présent!",
+      "explanation_de": "In der indirekten Rede der Vergangenheit ('a dit') verschiebt sich die Zeit: Futur simple ('partirai') wird zum Conditionnel présent ('partirait'), und 'demain' wird zu 'le lendemain'.",
+      "explanation_zh": "过去时态的间接引语（Concordance des temps）：主句是过去时（a dit），从句的简单将来时（partirai）必须变为现在条件式（partirait），'demain' 变为 'le lendemain'。"
+    },
+    {
+      "id": "g11_q04",
+      "grade": "11",
+      "category": "g11_sbj_inf",
+      "prompt": "« Nous devons réserver nos billets ______ la hausse des prix. (avant que / avant de) »",
+      "options": ["avant de constater", "avant que nous constations", "avant d'avoir constaté", "avant que constater"],
+      "answer": 0,
+      "rule_tip": "Bei Subjektgleichheit ('nous'...'nous') MUSS im Französischen der Infinitif mit 'avant de' bevorzugt werden!",
+      "explanation_de": "Da das Subjekt im Haupt- und Nebensatz identisch ist (nous), verwendet man im gehobenen Französisch die Infinitivkonstruktion 'avant de + Infinitif' statt 'avant que + Subjonctif'.",
+      "explanation_zh": "主从句主语相同时（都是 nous），法语语法规范要求必须使用不定式结构 'avant de + 动词原形'，而不是繁琐的虚拟式从句。"
+    },
+    {
+      "id": "g12_q01",
+      "grade": "12",
+      "category": "g12_sbj_passe",
+      "prompt": "« Bien qu'elle ______ ses examens avec brio le mois dernier, Léa hésite encore sur le choix de sa filière universitaire. »",
+      "options": ["ait réussi", "a réussi", "réussisse", "eût réussi"],
+      "answer": 0,
+      "rule_tip": "Subjonctif passé drückt Vorzeitigkeit gegenüber der Haupthandlung aus! (avoir/être im Subjonctif + Participe passé)",
+      "explanation_de": "'Bien que' verlangt Subjonctif. Da das Bestehen der Prüfung ('le mois dernier') vor dem gegenwärtigen Zögern ('hésite encore') stattfand (Vorzeitigkeit), steht das Subjonctif passé: 'ait réussi'.",
+      "explanation_zh": "连词 'bien que' 要求虚拟式。由于通过考试发生在过去（上个月，先于现在的迟疑），表示先时性（Vorzeitigkeit），必须用过去虚拟式（Subjonctif passé: ait réussi）。"
+    },
+    {
+      "id": "g12_q02",
+      "grade": "12",
+      "category": "g12_nuances",
+      "prompt": "« Tu ______ nous prévenir de ton retard ! Nous nous sommes inquiétés pour rien. »",
+      "options": ["aurais dû", "avais dû", "devras", "doives"],
+      "answer": 0,
+      "rule_tip": "'devoir' im Conditionnel passé ('tu aurais dû') drückt einen Vorwurf / ein Bedauern in der Vergangenheit aus!",
+      "explanation_de": "Das Conditionnel passé des Modalverbs 'devoir' ('tu aurais dû + Infinitif') ist die Standardwendung für einen Vorwurf oder ein Bedauern über eine nicht erfolgte Handlung ('du hättest uns vorwarnen müssen').",
+      "explanation_zh": "动词 devoir 的过去条件式 'aurais dû + 动词原形' 是法语表达对过去事情的责备（le reproche）或遗憾（le regret）的标准句型（'你本应该事先提醒我们的！'）。"
+    },
+    {
+      "id": "g12_q03",
+      "grade": "12",
+      "category": "g12_style",
+      "prompt": "Dans la phrase : « Paris est un véritable océan où l'on plonge sans jamais en sonder la profondeur », quelle figure de style est employée ?",
+      "options": ["Une métaphore", "Un euphémisme", "Une litote", "Un oxymore"],
+      "answer": 0,
+      "rule_tip": "Ein direkter Vergleich ohne Vergleichswort (wie 'comme') ist eine Métaphore!",
+      "explanation_de": "Paris wird hier direkt mit einem Ozean gleichgesetzt, ohne das Vergleichswort 'comme' zu benutzen. Dies ist die Definition einer Metapher (la métaphore), ein zentrales Stilelement für die Textanalyse im Abitur.",
+      "explanation_zh": "此处直接将巴黎比作大洋，省略了比喻词 comme，这是典型的隐喻/暗喻（la métaphore），是高中毕业考（Abitur）文学文本分析中的核心修辞手法。"
     }
   ]
 }

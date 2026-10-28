@@ -1,6 +1,120 @@
 {
   "exams": [
     {
+      "id": "exam_09_01",
+      "grade": "9",
+      "title": "Klassenarbeit 9 : Amitié et Échange Scolaire",
+      "level": "Gymnasium Klasse 9 (Niveau A2+/B1-)",
+      "time_minutes": 35,
+      "max_score": 40,
+      "sections": [
+        {
+          "type": "reading",
+          "title": "Partie I : Compréhension de l'écrit (15 points)",
+          "passage": "« Chère Sarah,\nJe t'écris depuis Nantes où je passe deux semaines chez ma correspondante française, Camille. Au début, j'avais un peu peur de ne pas comprendre les gens, mais sa famille est formidable. Hier, nous sommes allées au marché et j'ai commandé des crêpes toute seule en français ! Demain, nous visiterons le château des ducs de Bretagne. Si tout se passe bien, Camille viendra en Allemagne l'automne prochain.\nÀ très bientôt,\nLukas »",
+          "questions": [
+            {
+              "id": "ex9_q1",
+              "prompt": "Où Lukas passe-t-il son séjour d'échange ?",
+              "options": [
+                "À Paris",
+                "À Nantes",
+                "À Marseille",
+                "À Lyon"
+              ],
+              "answer": 1,
+              "points": 5,
+              "explanation": "Lukas écrit : « Je t'écris depuis Nantes »."
+            },
+            {
+              "id": "ex9_q2",
+              "prompt": "Qu'est-ce que Lukas a réussi à faire hier au marché ?",
+              "options": [
+                "Acheter des souvenirs pour toute sa classe",
+                "Commander des crêpes tout seul en français",
+                "Perdre son dictionnaire",
+                "Rencontrer son professeur de français"
+              ],
+              "answer": 1,
+              "points": 5,
+              "explanation": "Il mentionne : « j'ai commandé des crêpes toute seule en français ! »."
+            },
+            {
+              "id": "ex9_q3",
+              "prompt": "Quel est le projet pour l'automne prochain ?",
+              "options": [
+                "Lukas retournera à Nantes",
+                "Camille viendra en Allemagne",
+                "Ils partiront tous les deux au Canada",
+                "Ils arrêteront d'apprendre le français"
+              ],
+              "answer": 1,
+              "points": 5,
+              "explanation": "Le texte indique : « Camille viendra en Allemagne l'automne prochain »."
+            }
+          ]
+        },
+        {
+          "type": "grammar_vocab",
+          "title": "Partie II : Grammaire & Vocabulaire (15 points)",
+          "questions": [
+            {
+              "id": "ex9_g1",
+              "prompt": "« Pendant que Lukas ______ ses devoirs, Camille est entrée dans la chambre. »",
+              "options": [
+                "faisait",
+                "a fait",
+                "fera",
+                "ferait"
+              ],
+              "answer": 0,
+              "points": 5,
+              "rule_tip": "'Pendant que' leitet eine andauernde Hintergrundhandlung ein -> Imparfait!",
+              "explanation": "Andauernde Handlung im Hintergrund verlangt das Imparfait (faisait)."
+            },
+            {
+              "id": "ex9_g2",
+              "prompt": "« Si nous avons du temps demain, nous ______ le musée d'art moderne. »",
+              "options": [
+                "visiterons",
+                "visitions",
+                "visiterions",
+                "avons visité"
+              ],
+              "answer": 0,
+              "points": 5,
+              "rule_tip": "Si + Présent -> Futur simple!",
+              "explanation": "Si-Satz Typ 1: Si + Présent -> Futur simple (visiterons)."
+            },
+            {
+              "id": "ex9_g3",
+              "prompt": "« Tu as donné les clés à Camille ? — Oui, je ______ ai données ce matin. »",
+              "options": [
+                "les lui",
+                "lui les",
+                "la leur",
+                "les y"
+              ],
+              "answer": 0,
+              "points": 5,
+              "rule_tip": "COD (les) vor COI (lui)!",
+              "explanation": "Direktes Objektpronomen steht vor indirektem: les lui."
+            }
+          ]
+        },
+        {
+          "type": "writing",
+          "title": "Partie III : Expression écrite (10 points)",
+          "prompt": "Écrivez une courte lettre à un ami pour lui raconter vos projets pour le week-end (environ 80 à 100 mots).",
+          "criteria": [
+            "Utiliser le futur simple",
+            "Employer au moins 2 connecteurs temporels (d'abord, ensuite, enfin)"
+          ],
+          "sample_solution": "Salut Théo,\nCe week-end, je vais faire beaucoup d'activités. Tout d'abord, samedi matin, je ferai du vélo avec mon frère au bord de la rivière. Si le soleil brille, nous pique-niquerons dans le parc. Ensuite, dimanche après-midi, nous irons au cinéma voir le nouveau film d'aventure. Et toi, quels sont tes projets ?\nÀ plus,\nMaxime"
+        }
+      ]
+    },
+    {
       "id": "exam_10_01",
       "title": "Klassenarbeit 1 : Les Jeunes, l'Avenir et la Société",
       "level": "Gymnasium Klasse 10 (Niveau B1)",
@@ -60,7 +174,12 @@
             {
               "id": "ex1_g1",
               "prompt": "« Les professeurs souhaitent vivement que chaque élève ______ (participer) à cette initiative. »",
-              "options": ["participe", "participera", "participait", "ait participé"],
+              "options": [
+                "participe",
+                "participera",
+                "participait",
+                "ait participé"
+              ],
               "answer": 0,
               "points": 5,
               "rule_tip": "'Souhaiter que' exprime un souhait et déclenche le Subjonctif présent.",
@@ -69,7 +188,12 @@
             {
               "id": "ex1_g2",
               "prompt": "« Si nous protégions mieux notre environnement, nous ______ (sauvegarder) de nombreuses espèces menacées. »",
-              "options": ["sauvegardons", "sauvegarderons", "sauvegarderions", "avions sauvegardé"],
+              "options": [
+                "sauvegardons",
+                "sauvegarderons",
+                "sauvegarderions",
+                "avions sauvegardé"
+              ],
               "answer": 2,
               "points": 5,
               "rule_tip": "Si + Imparfait ('protégions') -> Conditionnel présent ('sauvegarderions').",
@@ -78,7 +202,12 @@
             {
               "id": "ex1_g3",
               "prompt": "« Tu as parlé de ce projet à tes parents ? — Oui, je ______ ai parlé hier soir au dîner. »",
-              "options": ["lui", "leur en", "en leur", "les"],
+              "options": [
+                "lui",
+                "leur en",
+                "en leur",
+                "les"
+              ],
               "answer": 1,
               "points": 5,
               "rule_tip": "'à tes parents' (leur) + 'de ce projet' (en) -> 'je leur en ai parlé'.",
@@ -87,7 +216,12 @@
             {
               "id": "ex1_g4",
               "prompt": "« L'association pour ______ Clara travaille est très réputée dans toute la région. »",
-              "options": ["qui", "laquelle", "lequel", "auquel"],
+              "options": [
+                "qui",
+                "laquelle",
+                "lequel",
+                "auquel"
+              ],
               "answer": 1,
               "points": 5,
               "rule_tip": "'pour' + nom féminin singulier ('l'association') -> 'pour laquelle'.",
@@ -106,6 +240,225 @@
             "Orthographe et accord des adjectifs/participes passés respectés."
           ],
           "sample_solution": "À mon avis, les jeunes d'aujourd'hui sont beaucoup plus engagés qu'on ne le croit souvent.\n\nTout d'abord, les nouvelles générations sont particulièrement sensibles aux défis environnementaux. Par exemple, de nombreux lycéens participent aux manifestations pour le climat ou nettoient les plages et les forêts pendant leur temps libre. Bien qu'ils aient un emploi du temps très chargé avec le lycée, ils trouvent le moyen d'agir concrètement.\n\nDe plus, les réseaux sociaux permettent aux adolescents de défendre des causes humanitaires et citoyennes avec une rapidité inédite. Cependant, il ne faudrait pas oublier que cet engagement virtuel doit se traduire par des actes dans la vie réelle.\n\nEn conclusion, la jeunesse fait preuve d'une grande solidarité et prouve chaque jour qu'elle est prête à façonner un avenir plus juste."
+        }
+      ],
+      "grade": "10"
+    },
+    {
+      "id": "exam_11_01",
+      "grade": "11",
+      "title": "Klausur 11 : L'Europe et les Défis Éthiques du Progrès",
+      "level": "Gymnasium Klasse 11 / Einführungsphase (Niveau B1+/B2)",
+      "time_minutes": 60,
+      "max_score": 60,
+      "sections": [
+        {
+          "type": "reading",
+          "title": "Partie I : Analyse de texte (20 points)",
+          "passage": "« L'intelligence artificielle s'immisce désormais dans tous les pans de notre société. Si elle offre des opportunités médicales et industrielles incontestables, elle pose avec acuité la question de l'autonomie humaine et du respect de la vie privée.\n\nEn Europe, les législateurs tentent d'établir un cadre juridique rigoureux pour encadrer ces technologies émergentes. Bien que certains observateurs craignent un frein à l'innovation économique, la majorité des citoyens exige que des limites éthiques soient clairement fixées. Face à la désinformation de masse et aux algorithmes opaques, il est devenu impératif d'éduquer les jeunes générations au discernement et à la pensée critique. »",
+          "questions": [
+            {
+              "id": "ex11_q1",
+              "prompt": "Quelle tension majeure le texte soulève-t-il à propos de l'IA ?",
+              "options": [
+                "Le coût financier élevé des ordinateurs portables",
+                "Les opportunités médicales/industrielles face aux risques éthiques et à l'autonomie humaine",
+                "La disparition complète des emplois manuels",
+                "Le conflit entre la France et l'Allemagne sur les brevets"
+              ],
+              "answer": 1,
+              "points": 10,
+              "explanation": "Le texte oppose les opportunités incontestables aux risques pour l'autonomie et la vie privée."
+            },
+            {
+              "id": "ex11_q2",
+              "prompt": "Que préconise l'auteur pour faire face à la désinformation de masse ?",
+              "options": [
+                "Interdire tout accès à Internet aux lycéens",
+                "Éduquer les jeunes générations au discernement et à l'esprit critique",
+                "Faire confiance aveuglément aux algorithmes",
+                "Laisser les entreprises technologiques s'autoréguler"
+              ],
+              "answer": 1,
+              "points": 10,
+              "explanation": "L'auteur écrit : « il est devenu impératif d'éduquer les jeunes générations au discernement et à la pensée critique »."
+            }
+          ]
+        },
+        {
+          "type": "grammar_vocab",
+          "title": "Partie II : Compétences linguistiques & Structures avancées (20 points)",
+          "questions": [
+            {
+              "id": "ex11_g1",
+              "prompt": "« Il est indispensable que les gouvernements ______ (adopter) des règles éthiques strictes. »",
+              "options": [
+                "adoptent",
+                "adopteront",
+                "adoptaient",
+                "aient adopté"
+              ],
+              "answer": 0,
+              "points": 5,
+              "rule_tip": "'Il est indispensable que' verlangt den Subjonctif présent!",
+              "explanation": "Unpersönliche Notwendigkeit verlangt Subjonctif: adoptent."
+            },
+            {
+              "id": "ex11_g2",
+              "prompt": "« Ce cadre juridique ______ (voter) par le Parlement européen le mois dernier. »",
+              "options": [
+                "a été voté",
+                "avait voté",
+                "serait voté",
+                "a voté"
+              ],
+              "answer": 0,
+              "points": 5,
+              "rule_tip": "Passiv im Passé composé: a été + Participe passé!",
+              "explanation": "Voix passive: a été voté."
+            },
+            {
+              "id": "ex11_g3",
+              "prompt": "« Le journaliste a affirmé qu'il ______ (publier) son enquête dans les prochains jours. »",
+              "options": [
+                "publierait",
+                "publiera",
+                "publiait",
+                "ait publié"
+              ],
+              "answer": 0,
+              "points": 5,
+              "rule_tip": "Concordance des temps: a affirmé (passé) -> Futur wird Conditionnel présent!",
+              "explanation": "Indirekte Rede der Vergangenheit: publierait."
+            },
+            {
+              "id": "ex11_g4",
+              "prompt": "« ______ (analyser) les données avec minutie, les chercheurs ont pu confirmer leur hypothèse. »",
+              "options": [
+                "En analysant",
+                "Analysé",
+                "Pour analyser",
+                "Ayant analysant"
+              ],
+              "answer": 0,
+              "points": 5,
+              "rule_tip": "Gérondif drückt das Mittel / die Art und Weise aus ('indem sie analysierten')!",
+              "explanation": "Le gérondif 'En analysant' exprime le moyen."
+            }
+          ]
+        },
+        {
+          "type": "writing",
+          "title": "Partie III : Commentaire argumenté (20 points)",
+          "prompt": "« Le progrès technologique est-il toujours synonyme de progrès humain ? » Rédigez un commentaire argumenté structuré (environ 180 à 220 mots).",
+          "criteria": [
+            "Introduction avec problématique",
+            "Thèse et antithèse avec exemples précis",
+            "Conclusion nuancée avec connecteurs logiques avancés"
+          ],
+          "sample_solution": "De nos jours, le développement exponentiel des technologies suscite autant d'admiration que d'inquiétudes.\n\nD'un côté, il est indéniable que les innovations scientifiques ont considérablement amélioré les conditions de vie humaine, notamment dans le domaine médical où des pathologies jadis incurables sont désormais traitées efficacement.\n\nNéanmoins, force est de constater que le progrès technique ne s'accompagne pas automatiquement d'une élévation morale ou sociale. Bien que nous disposions d'outils de communication instantanés, l'isolement et la polarisation des opinions n'ont jamais été aussi prégnants.\n\nEn conclusion, la technologie demeure un formidable levier d'émancipation à condition que l'éthique guide son déploiement au service du bien commun."
+        }
+      ]
+    },
+    {
+      "id": "exam_12_01",
+      "grade": "12",
+      "title": "Abitur-Musterklausur 12 : Francophonie, Mémoire et Identité",
+      "level": "Gymnasium Klasse 12 / Abiturvorbereitung (Niveau B2)",
+      "time_minutes": 90,
+      "max_score": 80,
+      "sections": [
+        {
+          "type": "reading",
+          "title": "Partie I : Analyse littéraire et stylistique (30 points)",
+          "passage": "« Dans son chef-d'œuvre, l'auteur franco-sénégalais explore les méandres de la double appartenance culturelle. Tiraillé entre les traditions séculaires de son village natal et les sirènes de la modernité occidentale, le narrateur cherche à réconcilier deux mondes que l'Histoire a longtemps opposés.\n\n« Écrire en français », confiait-il lors d'un entretien, « ce n'est pas renier mon identité africaine, mais enrichir la langue de Molière des rythmes et des images de ma terre natale. » Cette démarche illustre la vitalité d'une Francophonie plurielle, où la langue devient une passerelle universelle plutôt qu'un instrument de domination. »",
+          "questions": [
+            {
+              "id": "ex12_q1",
+              "prompt": "Comment le narrateur définit-il son rapport à la langue française ?",
+              "options": [
+                "Comme une rupture brutale avec ses racines sénégalaises",
+                "Comme un enrichissement mutuel apportant de nouvelles sonorités à la langue de Molière",
+                "Comme une obligation scolaire imposée par l'administration",
+                "Comme un rejet catégorique de la modernité occidentale"
+              ],
+              "answer": 1,
+              "points": 15,
+              "explanation": "L'auteur explique qu'il cherche à « enrichir la langue de Molière des rythmes et des images de sa terre natale »."
+            },
+            {
+              "id": "ex12_q2",
+              "prompt": "Quelle est la vision de la Francophonie défendue dans cet extrait ?",
+              "options": [
+                "Une structure politique centralisée à Paris",
+                "Un espace pluriel où la langue sert de passerelle universelle et d'échange",
+                "Un mouvement visant à faire disparaître les langues locales",
+                "Un simple souvenir nostalgique de l'ère coloniale"
+              ],
+              "answer": 1,
+              "points": 15,
+              "explanation": "Le texte souligne : « une Francophonie plurielle, où la langue devient une passerelle universelle »."
+            }
+          ]
+        },
+        {
+          "type": "grammar_vocab",
+          "title": "Partie II : Maîtrise des nuances de la langue (25 points)",
+          "questions": [
+            {
+              "id": "ex12_g1",
+              "prompt": "« Bien que cet écrivain ______ (recevoir) le prix Goncourt l'année passée, il continue de vivre en toute simplicité. »",
+              "options": [
+                "ait reçu",
+                "a reçu",
+                "eût reçu",
+                "recevait"
+              ],
+              "answer": 0,
+              "points": 8,
+              "rule_tip": "Subjonctif passé (Vorzeitigkeit gegenüber der Gegenwart): ait reçu!",
+              "explanation": "Vorzeitigkeit im Subjonctif verlangt das Subjonctif passé: ait reçu."
+            },
+            {
+              "id": "ex12_g2",
+              "prompt": "« Vous ______ (devoir) consulter les archives historiques avant de formuler une telle conclusion. (Expression du reproche) »",
+              "options": [
+                "auriez dû",
+                "aviez dû",
+                "deviez",
+                "auriez eu dû"
+              ],
+              "answer": 0,
+              "points": 8,
+              "rule_tip": "Conditionnel passé von devoir: 'auriez dû + inf' für einen Vorwurf!",
+              "explanation": "Conditionnel passé: auriez dû."
+            },
+            {
+              "id": "ex12_g3",
+              "prompt": "Identifiez la figure de style : « Cette obscure clarté qui tombe des étoiles » (Corneille)",
+              "options": [
+                "Un oxymore",
+                "Une anaphore",
+                "Une métonymie",
+                "Une hyperbole"
+              ],
+              "answer": 0,
+              "points": 9,
+              "rule_tip": "Zwei sich scheinbar widersprechende Begriffe eng miteinander verbunden = Oxymore!",
+              "explanation": "Oxymore (obscure clarté)."
+            }
+          ]
+        },
+        {
+          "type": "writing",
+          "title": "Partie III : Essai / Dissertation d'Abitur (25 points)",
+          "prompt": "« Dans quelle mesure la littérature permet-elle de bâtir des ponts entre les cultures ? » Rédigez un essai argumenté (220 à 280 mots).",
+          "criteria": [
+            "Introduction avec amorce, définition et problématique",
+            "Développement rigoureux en 3 parties avec exemples littéraires",
+            "Vocabulaire soutenu et connecteurs d'Abitur"
+          ],
+          "sample_solution": "Depuis toujours, les récits littéraires constituent un miroir privilégié des consciences et un vecteur d'altérité.\n\nEn premier lieu, la lecture offre une immersion intime dans l'univers d'autrui, transcendant les frontières géographiques et temporelles. Découvrir une œuvre issue d'un autre continent permet au lecteur de surmonter les préjugés en s'identifiant aux émotions universelles des personnages.\n\nEn outre, la littérature francophone postcoloniale illustre magistralement comment la réappropriation d'une langue partagée peut métamorphoser un passé douloureux en un dialogue fraternel et émancipateur.\n\nEn définitive, loin de diviser les hommes, les grands textes tissent des liens invisibles mais indestructibles entre les civilisations."
         }
       ]
     }

@@ -13,43 +13,111 @@
     {
       "category": "Exprimer son opinion (Meinung äußern)",
       "items": [
-        {"fr": "À mon avis, ...", "de": "Meiner Meinung nach...", "zh": "依我之见……"},
-        {"fr": "En ce qui me concerne, ...", "de": "Was mich betrifft...", "zh": "就我个人而言……"},
-        {"fr": "Je suis convaincu(e) que + indicatif", "de": "Ich bin überzeugt, dass...", "zh": "我确信……"},
-        {"fr": "Il me semble que + indicatif", "de": "Mir scheint, dass...", "zh": "在我看来……"}
+        {
+          "fr": "À mon avis, ...",
+          "de": "Meiner Meinung nach...",
+          "zh": "依我之见……"
+        },
+        {
+          "fr": "En ce qui me concerne, ...",
+          "de": "Was mich betrifft...",
+          "zh": "就我个人而言……"
+        },
+        {
+          "fr": "Je suis convaincu(e) que + indicatif",
+          "de": "Ich bin überzeugt, dass...",
+          "zh": "我确信……"
+        },
+        {
+          "fr": "Il me semble que + indicatif",
+          "de": "Mir scheint, dass...",
+          "zh": "在我看来……"
+        }
       ]
     },
     {
       "category": "Ordonner et ajouter (Reihenfolge & Ergänzung)",
       "items": [
-        {"fr": "Tout d'abord, ... / En premier lieu, ...", "de": "Zuerst / An erster Stelle...", "zh": "首先 / 第一步……"},
-        {"fr": "De plus, ... / En outre, ...", "de": "Außerdem / Darüber hinaus...", "zh": "此外 / 而且……"},
-        {"fr": "Non seulement..., mais aussi...", "de": "Nicht nur..., sondern auch...", "zh": "不仅……而且……"},
-        {"fr": "D'une part..., d'autre part...", "de": "Einerseits..., andererseits...", "zh": "一方面……另一方面……"}
+        {
+          "fr": "Tout d'abord, ... / En premier lieu, ...",
+          "de": "Zuerst / An erster Stelle...",
+          "zh": "首先 / 第一步……"
+        },
+        {
+          "fr": "De plus, ... / En outre, ...",
+          "de": "Außerdem / Darüber hinaus...",
+          "zh": "此外 / 而且……"
+        },
+        {
+          "fr": "Non seulement..., mais aussi...",
+          "de": "Nicht nur..., sondern auch...",
+          "zh": "不仅……而且……"
+        },
+        {
+          "fr": "D'une part..., d'autre part...",
+          "de": "Einerseits..., andererseits...",
+          "zh": "一方面……另一方面……"
+        }
       ]
     },
     {
       "category": "Opposition et Concession (Gegensatz & Einräumung)",
       "items": [
-        {"fr": "Cependant, ... / Néanmoins, ...", "de": "Jedoch / Dennoch...", "zh": "然而 / 尽管如此……"},
-        {"fr": "En revanche, ... / Par contre, ...", "de": "Dagegen / Im Gegensatz dazu...", "zh": "相反 / 相比之下……"},
-        {"fr": "Bien que + subjonctif", "de": "Obwohl + Subjonctif...", "zh": "尽管……（后接虚拟式，高分金句）"},
-        {"fr": "Malgré + nom", "de": "Trotz + Nomen...", "zh": "尽管……（后接名词）"}
+        {
+          "fr": "Cependant, ... / Néanmoins, ...",
+          "de": "Jedoch / Dennoch...",
+          "zh": "然而 / 尽管如此……"
+        },
+        {
+          "fr": "En revanche, ... / Par contre, ...",
+          "de": "Dagegen / Im Gegensatz dazu...",
+          "zh": "相反 / 相比之下……"
+        },
+        {
+          "fr": "Bien que + subjonctif",
+          "de": "Obwohl + Subjonctif...",
+          "zh": "尽管……（后接虚拟式，高分金句）"
+        },
+        {
+          "fr": "Malgré + nom",
+          "de": "Trotz + Nomen...",
+          "zh": "尽管……（后接名词）"
+        }
       ]
     },
     {
       "category": "Cause et Conséquence (Ursache & Folge)",
       "items": [
-        {"fr": "Puisque / Étant donné que...", "de": "Da / In Anbetracht dessen, dass...", "zh": "鉴于 / 既然……"},
-        {"fr": "Par conséquent, ... / C'est pourquoi...", "de": "Folglich / Deshalb...", "zh": "因此 / 正因如此……"},
-        {"fr": "Il en résulte que...", "de": "Daraus folgt, dass...", "zh": "其结果是……"}
+        {
+          "fr": "Puisque / Étant donné que...",
+          "de": "Da / In Anbetracht dessen, dass...",
+          "zh": "鉴于 / 既然……"
+        },
+        {
+          "fr": "Par conséquent, ... / C'est pourquoi...",
+          "de": "Folglich / Deshalb...",
+          "zh": "因此 / 正因如此……"
+        },
+        {
+          "fr": "Il en résulte que...",
+          "de": "Daraus folgt, dass...",
+          "zh": "其结果是……"
+        }
       ]
     },
     {
       "category": "Conclure (Schlussfolgerung)",
       "items": [
-        {"fr": "En conclusion, ... / Pour conclure, ...", "de": "Zusammenfassend / Zum Abschluss...", "zh": "总而言之 / 最后……"},
-        {"fr": "En fin de compte, ...", "de": "Letztendlich / Schließlich...", "zh": "归根结底……"}
+        {
+          "fr": "En conclusion, ... / Pour conclure, ...",
+          "de": "Zusammenfassend / Zum Abschluss...",
+          "zh": "总而言之 / 最后……"
+        },
+        {
+          "fr": "En fin de compte, ...",
+          "de": "Letztendlich / Schließlich...",
+          "zh": "归根结底……"
+        }
       ]
     }
   ],
@@ -72,22 +140,67 @@
   ],
   "essay_prompts": [
     {
+      "id": "prompt_9_1",
+      "grade": "9",
+      "title": "Klasse 9 : Racontez votre meilleur souvenir de vacances",
+      "theme": "Récit & Voyage",
+      "starter_tips": "Utilisez le passé composé pour les actions et l'imparfait pour le décor et la météo (80-100 mots)."
+    },
+    {
+      "id": "prompt_9_2",
+      "grade": "9",
+      "title": "Klasse 9 : Pourquoi apprendre le français est-il une chance ?",
+      "theme": "Langues & Avenir",
+      "starter_tips": "Exprimez votre avis avec 'À mon avis' et imaginez vos voyages futurs au futur simple."
+    },
+    {
       "id": "prompt_1",
       "title": "Faut-il interdire l'usage des smartphones au lycée ?",
       "theme": "Médias & École",
-      "starter_tips": "Pensez aux distractions en classe versus l'utilité des outils pédagogiques numériques."
+      "starter_tips": "Pensez aux distractions en classe versus l'utilité des outils pédagogiques numériques.",
+      "grade": "10"
     },
     {
       "id": "prompt_2",
       "title": "Faire une année sabbatique (Gap Year) après le bac : bonne ou mauvaise idée ?",
       "theme": "Avenir & Projets de vie",
-      "starter_tips": "Comparez le gain de maturité et d'expérience avec le risque de perdre le rythme scolaire."
+      "starter_tips": "Comparez le gain de maturité et d'expérience avec le risque de perdre le rythme scolaire.",
+      "grade": "10"
     },
     {
       "id": "prompt_3",
       "title": "Chacun peut-il sauver la planète à son échelle ?",
       "theme": "Environnement",
-      "starter_tips": "Examinez les gestes du quotidien (tri, transports) face aux responsabilités des gouvernements et des industries."
+      "starter_tips": "Examinez les gestes du quotidien (tri, transports) face aux responsabilités des gouvernements et des industries.",
+      "grade": "10"
+    },
+    {
+      "id": "prompt_11_1",
+      "grade": "11",
+      "title": "Klasse 11 : L'intelligence artificielle menace-t-elle la créativité ?",
+      "theme": "Science & Éthique",
+      "starter_tips": "Pesez les bénéfices techniques face aux risques d'uniformisation culturelle (180-220 mots)."
+    },
+    {
+      "id": "prompt_11_2",
+      "grade": "11",
+      "title": "Klasse 11 : Le couple franco-allemand a-t-il encore un rôle moteur en Europe ?",
+      "theme": "Europe & Histoire",
+      "starter_tips": "Rappelez le traité de l'Élysée et analysez les défis géopolitiques contemporains."
+    },
+    {
+      "id": "prompt_12_1",
+      "grade": "12",
+      "title": "Klasse 12 : La littérature doit-elle nécessairement être engagée ?",
+      "theme": "Littérature & Société (Abitur)",
+      "starter_tips": "Opposez l'art pour l'art (l'esthétique pure) à la conception sartrienne de la responsabilité de l'écrivain (250+ mots)."
+    },
+    {
+      "id": "prompt_12_2",
+      "grade": "12",
+      "title": "Klasse 12 : Dans quelle mesure la diversité culturelle renforce-t-elle la démocratie ?",
+      "theme": "Identité & Francophonie",
+      "starter_tips": "Analysez la notion d'appartenance plurielle et le dialogue interculturel avec un registre soutenu."
     }
   ]
 }

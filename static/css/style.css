@@ -76,6 +76,38 @@ header {
   color: var(--text-muted);
 }
 
+.grade-selector-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--primary-light);
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #bfdbfe;
+}
+
+.grade-selector-container label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+.grade-select {
+  border: 1.5px solid var(--primary);
+  background: white;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+  outline: none;
+}
+.grade-select:hover, .grade-select:focus {
+  border-color: var(--primary-hover);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
 nav {
   display: flex;
   gap: 0.5rem;

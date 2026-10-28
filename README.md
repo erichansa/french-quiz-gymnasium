@@ -1,6 +1,17 @@
-# Gymnasium 10e Français Studio (Studio d'Apprentissage & Quiz)
+# Gymnasium Français Studio (Klasse 9 - 12)
 
-专门为德国/瑞士 **Gymnasium 10年级（初三/高一，6年级起步二外，对应 Découvertes 5 / 欧标 B1 水平）** 定制开发的法语多功能学习与测评系统。
+专门为德国/瑞士 **Gymnasium 初高中（6年级起步二外，覆盖 9年级基础复习、10年级过渡冲刺，以及 11-12年级 Oberstufe / Abitur 毕业备考）** 定制开发的法语多功能学习与测评系统。
+
+---
+
+## 🎓 支持年级（一键动态无缝切换）
+
+系统顶部导航栏内置 **Jahrgangsstufe（年级切换器）**，随时自由切换，自动适配对应年级的考纲知识点、词汇库、模拟卷与写作要求：
+
+* **Klasse 9（欧标 A2+/B1-）**：基础巩固与初中复习（Passé composé vs Imparfait 辨析、Futur simple、COD/COI 代词、Si-Satz Typ 1、日常交往与交换生词汇）。
+* **Klasse 10（欧标 B1）**：中高级核心过渡（Subjonctif présent、Conditionnel & Si-Satz Typ 2/3、代词 y/en、关系代词 composé、职场/环保/媒体/公民社会专题）。
+* **Klasse 11（欧标 B1+/B2 / Oberstufe Einführungsphase）**：高中高级语法与论证（被动态及替代句型、现在分词与副动词、过去时引语时态配合、法德和解与欧洲议题、科技伦理 Commentaire）。
+* **Klasse 12（欧标 B2 / Abiturvorbereitung）**：毕业会考冲刺（Subjonctif passé、虚拟语气细微情态、修辞手法与文学文本分析、殖民与后殖民历史遗产、使命文学 Essai）。
 
 ---
 

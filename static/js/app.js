@@ -1,5 +1,5 @@
 /**
- * Gymnasium 10e Français - Interactive Web Application
+ * Gymnasium Français Studio (Klasse 9 - 12) - Interactive Web Application
  */
 
 const state = {
@@ -11,6 +11,9 @@ const state = {
   progress: {},
   customQuizzes: [],
   
+  // Grade state (Klasse 9, 10, 11, 12)
+  currentGrade: localStorage.getItem('french_selected_grade') || '10',
+
   // Quiz running state
   currentQuizList: [],
   currentQuizIndex: 0,
@@ -28,6 +31,7 @@ const state = {
 document.addEventListener('DOMContentLoaded', async () => {
   setupNavigation();
   await loadAllData();
+  applySelectedGrade();
   renderDashboardStats();
   initPracticeModule();
   initVocabModule();
@@ -36,6 +40,24 @@ document.addEventListener('DOMContentLoaded', async () => {
   initMistakesModule();
   initSettingsModule();
 });
+
+function applySelectedGrade() {
+  const select = document.getElementById('global-grade-select');
+  if (select) select.value = state.currentGrade;
+  const gradeLabel = document.getElementById('active-grade-label');
+  if (gradeLabel) gradeLabel.innerText = `Klasse ${state.currentGrade}`;
+}
+
+function switchGrade(grade) {
+  state.currentGrade = String(grade);
+  localStorage.setItem('french_selected_grade', state.currentGrade);
+  applySelectedGrade();
+
+  initPracticeModule();
+  initVocabModule();
+  initExamModule();
+  initWritingModule();
+}
 
 // --- Speech Synthesis (Native French Audio) ---
 function speakFrench(text) {
@@ -168,10 +190,12 @@ function initPracticeModule() {
   if (!filterContainer) return;
 
   filterContainer.innerHTML = `
-    <button class="btn btn-outline active-filter" data-cat="all" onclick="filterQuizCategory('all', this)">Alle Themen</button>
+    <button class="btn btn-outline active-filter btn-primary" data-cat="all" onclick="filterQuizCategory('all', this)">Alle Themen (Klasse ${state.currentGrade})</button>
   `;
 
-  (state.grammar.categories || []).forEach(cat => {
+  const gradeCats = (state.grammar.categories || []).filter(cat => !cat.grade || String(cat.grade) === String(state.currentGrade));
+
+  gradeCats.forEach(cat => {
     const btn = document.createElement('button');
     btn.className = 'btn btn-outline';
     btn.dataset.cat = cat.id;
@@ -200,7 +224,7 @@ function filterQuizCategory(catId, btnElement) {
     btnElement.classList.add('btn-primary');
   }
 
-  let questions = [...(state.grammar.questions || [])];
+  let questions = (state.grammar.questions || []).filter(q => !q.grade || String(q.grade) === String(state.currentGrade));
   
   if (catId === 'custom') {
     questions = [];
@@ -379,16 +403,28 @@ function nextQuestion() {
 // ==========================================
 function initVocabModule() {
   const unitSelect = document.getElementById('vocab-unit-select');
-  if (!unitSelect) return;
+  const container = document.getElementById('vocab-container');
+  if (!unitSelect || !container) return;
 
-  unitSelect.innerHTML = (state.vocabulary.units || []).map((u, i) => `
+  const gradeUnits = (state.vocabulary.units || []).filter(u => !u.grade || String(u.grade) === String(state.currentGrade));
+
+  if (gradeUnits.length === 0) {
+    unitSelect.innerHTML = `<option value="">Keine Einheiten für Klasse ${state.currentGrade}</option>`;
+    container.innerHTML = `
+      <div class="card" style="text-align: center; padding: 2rem;">
+        <h4>Für Klasse ${state.currentGrade} sind aktuell keine gesonderten Vokabellisten hinterlegt.</h4>
+        <p style="color: var(--text-muted); margin-top: 0.5rem;">Du kannst im Tab "Notizen ➔ Quiz" eigene Schulvokabeln direkt einfügen!</p>
+      </div>
+    `;
+    return;
+  }
+
+  unitSelect.innerHTML = gradeUnits.map((u, i) => `
     <option value="${u.id}">${u.title}</option>
   `).join('');
 
   unitSelect.onchange = () => renderVocabCards(unitSelect.value);
-  if (state.vocabulary.units.length > 0) {
-    renderVocabCards(state.vocabulary.units[0].id);
-  }
+  renderVocabCards(gradeUnits[0].id);
 }
 
 function renderVocabCards(unitId) {
@@ -484,13 +520,23 @@ function initWritingModule() {
   const connectorContainer = document.getElementById('connectors-bank');
   if (!promptSelect || !connectorContainer) return;
 
-  const prompts = state.writing.essay_prompts || [];
-  promptSelect.innerHTML = prompts.map(p => `
+  const allPrompts = state.writing.essay_prompts || [];
+  const gradePrompts = allPrompts.filter(p => !p.grade || String(p.grade) === String(state.currentGrade));
+  const activePrompts = gradePrompts.length > 0 ? gradePrompts : allPrompts;
+
+  promptSelect.innerHTML = activePrompts.map(p => `
     <option value="${p.id}">${p.title}</option>
   `).join('');
 
   promptSelect.onchange = () => updateSelectedPrompt();
   updateSelectedPrompt();
+
+  // Update recommended words text based on grade
+  const wordGuide = document.getElementById('essay-word-guide');
+  if (wordGuide) {
+    const guides = { '9': '80-100', '10': '120-150', '11': '180-220', '12': '220-280' };
+    wordGuide.innerText = guides[state.currentGrade] || '120-150';
+  }
 
   // Render connectors bank
   const categories = state.writing.connecteurs || [];
@@ -693,14 +739,18 @@ function initExamModule() {
   const container = document.getElementById('exam-selector');
   if (!container) return;
 
-  container.innerHTML = state.exams.map(exam => `
+  const allExams = state.exams || [];
+  const gradeExams = allExams.filter(e => !e.grade || String(e.grade) === String(state.currentGrade));
+  const activeExams = gradeExams.length > 0 ? gradeExams : allExams;
+
+  container.innerHTML = activeExams.map(exam => `
     <div class="card">
-      <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
         <div>
           <h3>${exam.title}</h3>
           <p style="color: var(--text-muted); font-size: 0.9rem;">${exam.level} • ${exam.time_minutes} Minuten • Max. ${exam.max_score} Punkte</p>
         </div>
-        <button class="btn btn-primary" onclick="startExam('${exam.id}')">Klassenarbeit starten ⏱️</button>
+        <button class="btn btn-primary" onclick="startExam('${exam.id}')">Prüfung / Klassenarbeit starten ⏱️</button>
       </div>
     </div>
   `).join('');

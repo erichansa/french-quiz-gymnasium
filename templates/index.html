@@ -14,9 +14,19 @@
       <div class="brand">
         <span class="brand-icon">🇫🇷</span>
         <div class="brand-title">
-          <h1>Gymnasium 10e : Français Studio</h1>
-          <p>Entraînement intelligent • Découvertes B1 • Klassenarbeiten • Atelier d'écriture</p>
+          <h1 id="app-title-display">Gymnasium Français Studio (<span id="active-grade-label">Klasse 10</span>)</h1>
+          <p id="app-subtitle-display">Entraînement intelligent • Découvertes & Oberstufe (Klasse 9 - 12)</p>
         </div>
+      </div>
+
+      <div class="grade-selector-container">
+        <label for="global-grade-select">🎓 Jahrgangsstufe:</label>
+        <select id="global-grade-select" class="grade-select" onchange="switchGrade(this.value)">
+          <option value="9">Klasse 9 (Niveau A2+/B1-)</option>
+          <option value="10" selected>Klasse 10 (Niveau B1 / Aktuell)</option>
+          <option value="11">Klasse 11 (Niveau B1+/B2 / Oberstufe)</option>
+          <option value="12">Klasse 12 (Niveau B2 / Abitur)</option>
+        </select>
       </div>
 
       <nav>
@@ -140,7 +150,7 @@
             <label style="font-weight: 600; font-size: 1rem; display: flex; justify-content: space-between; align-items: center;">
               <span>2. Dein französischer Text:</span>
               <span style="font-size: 0.85rem; color: var(--text-muted);">
-                Wörter: <strong id="essay-word-count">0</strong> (Empfohlen: 120-150)
+                Wörter: <strong id="essay-word-count">0</strong> (Empfohlen: <span id="essay-word-guide">120-150</span>)
               </span>
             </label>
             <textarea id="essay-textarea" class="essay-input" placeholder="Rédigez votre texte ici... Par exemple : À mon avis..."></textarea>
