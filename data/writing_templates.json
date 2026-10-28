@@ -140,6 +140,13 @@
   ],
   "essay_prompts": [
     {
+      "id": "prompt_8_1",
+      "grade": "8",
+      "title": "Klasse 8 : Présentez votre collège et vos matières préférées",
+      "theme": "Vie quotidienne & École (A2)",
+      "starter_tips": "Décrivez votre journée type, vos amis et pourquoi vous aimez certaines matières (60-80 mots)."
+    },
+    {
       "id": "prompt_9_1",
       "grade": "9",
       "title": "Klasse 9 : Racontez votre meilleur souvenir de vacances",
@@ -201,6 +208,27 @@
       "title": "Klasse 12 : Dans quelle mesure la diversité culturelle renforce-t-elle la démocratie ?",
       "theme": "Identité & Francophonie",
       "starter_tips": "Analysez la notion d'appartenance plurielle et le dialogue interculturel avec un registre soutenu."
+    },
+    {
+      "id": "prompt_13_1",
+      "grade": "13",
+      "title": "Klasse 13 : La souveraineté européenne est-elle un mythe ou une nécessité ?",
+      "theme": "Géopolitique & Citoyenneté (G9 Abitur)",
+      "starter_tips": "Analysez l'autonomie stratégique de l'Europe face aux crises mondiales actuelles (240-300 mots)."
+    },
+    {
+      "id": "prompt_c1_1",
+      "grade": "C1",
+      "title": "Niveau C1 : Les algorithmes et la reconfiguration du débat démocratique",
+      "theme": "Sociologie & Philosophie politique (DALF C1)",
+      "starter_tips": "Examinez les effets des bulles cognitives et de la modélisation prédictive avec un vocabulaire conceptuel soutenu (350-450 mots)."
+    },
+    {
+      "id": "prompt_c2_1",
+      "grade": "C2",
+      "title": "Niveau C2 : L'art et la poésie face à l'indicible",
+      "theme": "Esthétique & Critique littéraire (DALF C2)",
+      "starter_tips": "Rédigez une dissertation magistrale articulant tension poétique, exigence stylistique et limites du langage (400-500 mots)."
     }
   ]
 }

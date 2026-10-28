@@ -1,6 +1,121 @@
 {
   "exams": [
     {
+      "id": "exam_08_01",
+      "grade": "8",
+      "title": "Klassenarbeit 8 : Le Collège, les Amis et les Loisirs",
+      "level": "Gymnasium Klasse 8 (Niveau A2)",
+      "time_minutes": 30,
+      "max_score": 35,
+      "sections": [
+        {
+          "type": "reading",
+          "title": "Partie I : Compréhension écrite (15 points)",
+          "passage": "« Bonjour ! Je m'appelle Thomas, j'ai 13 ans et je suis en classe de quatrième à Bordeaux. Dans mon collège, les cours commencent à 8h30. Ma matière préférée, c'est l'histoire, parce que notre professeur raconte des histoires passionnantes. À midi, je mange à la cantine avec mes meilleurs amis, Léa et Maxime. Après l'école, je fais du judo deux fois par semaine. Le samedi, nous allons souvent au cinéma ensemble. »",
+          "questions": [
+            {
+              "id": "ex8_q1",
+              "prompt": "Quelle est la matière préférée de Thomas au collège ?",
+              "options": [
+                "Les mathématiques",
+                "L'histoire",
+                "L'anglais",
+                "L'éducation physique"
+              ],
+              "answer": 1,
+              "points": 5,
+              "explanation": "Thomas dit : « Ma matière préférée, c'est l'histoire »."
+            },
+            {
+              "id": "ex8_q2",
+              "prompt": "Quel sport Thomas pratique-t-il après l'école ?",
+              "options": [
+                "Le football",
+                "Le judo",
+                "La natation",
+                "Le tennis"
+              ],
+              "answer": 1,
+              "points": 5,
+              "explanation": "Il précise : « je fais du judo deux fois par semaine »."
+            },
+            {
+              "id": "ex8_q3",
+              "prompt": "Que fait Thomas le samedi avec ses amis ?",
+              "options": [
+                "Ils restent à la maison",
+                "Ils vont souvent au cinéma",
+                "Ils font du vélo",
+                "Ils révisent leurs devoirs"
+              ],
+              "answer": 1,
+              "points": 5,
+              "explanation": "Le texte indique : « Le samedi, nous allons souvent au cinéma ensemble »."
+            }
+          ]
+        },
+        {
+          "type": "grammar_vocab",
+          "title": "Partie II : Grammaire & Vocabulaire (15 points)",
+          "questions": [
+            {
+              "id": "ex8_g1",
+              "prompt": "« Hier, Thomas et Léa ______ (arriver) à l'heure au collège. »",
+              "options": [
+                "sont arrivés",
+                "ont arrivé",
+                "sont arrivées",
+                "ont arrivés"
+              ],
+              "answer": 0,
+              "points": 5,
+              "rule_tip": "'arriver' bildet Passé composé mit 'être' -> maskulin Plural 'arrivés'!",
+              "explanation": "Thomas (m) + Léa (f) = männlich Plural: sont arrivés."
+            },
+            {
+              "id": "ex8_g2",
+              "prompt": "« Est-ce que tu as encore faim ? — Non merci, je n'ai ______ faim. »",
+              "options": [
+                "plus",
+                "rien",
+                "jamais",
+                "personne"
+              ],
+              "answer": 0,
+              "points": 5,
+              "rule_tip": "'encore' wird verneint mit 'ne... plus' (nicht mehr)!",
+              "explanation": "Gegenteil von encore ist ne... plus."
+            },
+            {
+              "id": "ex8_g3",
+              "prompt": "« C'est le livre ______ j'ai lu pendant les vacances. »",
+              "options": [
+                "que",
+                "qui",
+                "où",
+                "dont"
+              ],
+              "answer": 0,
+              "points": 5,
+              "rule_tip": "COD für eine Sache -> 'que'!",
+              "explanation": "Relativpronomen als direktes Objekt ist 'que'."
+            }
+          ]
+        },
+        {
+          "type": "writing",
+          "title": "Partie III : Expression écrite (5 points)",
+          "prompt": "Présentez brièvement votre journée type au collège (environ 60 à 80 mots).",
+          "criteria": [
+            "Utiliser l'heure",
+            "Mentionner deux activités",
+            "Vocabulaire du collège"
+          ],
+          "sample_solution": "Tous les jours, je me lève à sept heures. Je pars au collège à huit heures en bus. À midi, je mange à la cantine avec mes camarades. L'après-midi, nous avons souvent des cours de sciences ou de sport. À dix-sept heures, je rentre chez moi pour faire mes devoirs."
+        }
+      ]
+    },
+    {
       "id": "exam_09_01",
       "grade": "9",
       "title": "Klassenarbeit 9 : Amitié et Échange Scolaire",
@@ -459,6 +574,216 @@
             "Vocabulaire soutenu et connecteurs d'Abitur"
           ],
           "sample_solution": "Depuis toujours, les récits littéraires constituent un miroir privilégié des consciences et un vecteur d'altérité.\n\nEn premier lieu, la lecture offre une immersion intime dans l'univers d'autrui, transcendant les frontières géographiques et temporelles. Découvrir une œuvre issue d'un autre continent permet au lecteur de surmonter les préjugés en s'identifiant aux émotions universelles des personnages.\n\nEn outre, la littérature francophone postcoloniale illustre magistralement comment la réappropriation d'une langue partagée peut métamorphoser un passé douloureux en un dialogue fraternel et émancipateur.\n\nEn définitive, loin de diviser les hommes, les grands textes tissent des liens invisibles mais indestructibles entre les civilisations."
+        }
+      ]
+    },
+    {
+      "id": "exam_13_01",
+      "grade": "13",
+      "title": "G9 Abiturprüfung 13 : Souveraineté, Citoyenneté et Modèle Social",
+      "level": "Gymnasium Klasse 13 / G9 Abiturprüfung (Niveau B2+)",
+      "time_minutes": 90,
+      "max_score": 80,
+      "sections": [
+        {
+          "type": "reading",
+          "title": "Partie I : Analyse de texte géopolitique (30 points)",
+          "passage": "« À l'ère des crises géopolitiques récurrentes, l'Union européenne est sommée de repenser son modèle de gouvernance. Longtemps perçue comme un simple marché commun fondé sur la libre circulation des biens, elle doit désormais affirmer une véritable souveraineté politique et industrielle face aux superpuissances.\n\nMais cette ambition se heurte à des visions divergentes entre les États membres. Alors que certains réclament une intégration fédérale renforcée pour peser sur la scène internationale, d'autres craignent un affaiblissement de leur souveraineté nationale. La réussite de ce projet dépendra de la capacité des Européens à conjuguer solidarité démocratique et efficacité stratégique. »",
+          "questions": [
+            {
+              "id": "ex13_q1",
+              "prompt": "Quelle mutation majeure l'Union européenne est-elle appelée à accomplir selon l'extrait ?",
+              "options": [
+                "Passer d'un simple marché économique à une véritable puissance souveraine et politique",
+                "Abandonner complètement l'euro pour revenir aux monnaies nationales",
+                "Supprimer les frontières extérieures avec tous les continents",
+                "Réduire son budget de recherche et de développement"
+              ],
+              "answer": 0,
+              "points": 15,
+              "explanation": "Le texte indique qu'elle doit « affirmer une véritable souveraineté politique et industrielle »."
+            },
+            {
+              "id": "ex13_q2",
+              "prompt": "Quel obstacle interne freine cette ambition européenne ?",
+              "options": [
+                "L'absence totale de diplomates formés",
+                "Les divergences entre partisans d'une intégration fédérale et défenseurs de la souveraineté nationale",
+                "Le refus des jeunes de voyager au sein de l'Europe",
+                "L'impossibilité de communiquer en plusieurs langues officielles"
+              ],
+              "answer": 1,
+              "points": 15,
+              "explanation": "L'auteur met en avant les visions divergentes entre intégration fédérale et souveraineté nationale."
+            }
+          ]
+        },
+        {
+          "type": "grammar_vocab",
+          "title": "Partie II : Maîtrise syntaxique et registre soutenu (25 points)",
+          "questions": [
+            {
+              "id": "ex13_g1",
+              "prompt": "« C'est le seul traité qui ______ (pouvoir) garantir la stabilité du continent. »",
+              "options": [
+                "puisse",
+                "peut",
+                "pourra",
+                "pouvait"
+              ],
+              "answer": 0,
+              "points": 8,
+              "rule_tip": "Nach 'le seul qui' steht im anspruchsvollen Französisch der Subjonctif (puisse)!",
+              "explanation": "Subjonctif après 'le seul': puisse."
+            },
+            {
+              "id": "ex13_g2",
+              "prompt": "« Dès que les chefs d'État ______ (trouver) un accord, la conférence prendrait fin. »",
+              "options": [
+                "auraient trouvé",
+                "avaient trouvé",
+                "ont trouvé",
+                "trouveraient"
+              ],
+              "answer": 0,
+              "points": 8,
+              "rule_tip": "Conditionnel passé im Nebensatz drückt Vorzeitigkeit vor dem Conditionnel présent aus!",
+              "explanation": "Futur antérieur du passé: auraient trouvé."
+            },
+            {
+              "id": "ex13_g3",
+              "prompt": "« À peine la nouvelle fut-elle annoncée ______ les marchés financiers ont réagi. »",
+              "options": [
+                "que",
+                "quand",
+                "dont",
+                "comme"
+              ],
+              "answer": 0,
+              "points": 9,
+              "rule_tip": "'À peine + inversion... QUE' ist die feste gehobene Wendung!",
+              "explanation": "Tournure soutenue: À peine... que."
+            }
+          ]
+        },
+        {
+          "type": "writing",
+          "title": "Partie III : Essai d'Abitur (25 points)",
+          "prompt": "« La souveraineté européenne est-elle compatible avec les identités nationales ? » Rédigez une dissertation argumentée (240 à 300 mots).",
+          "criteria": [
+            "Structure PEE complète",
+            "Connecteurs d'opposition avancés (Néanmoins, En revanche, Force est de constater)",
+            "Registre soutenu"
+          ],
+          "sample_solution": "Dans un monde multipolaire dominé par des tensions géopolitiques aiguës, la conciliation entre projet européen et souveraineté nationale constitue un défi existentiel.\n\nD'une part, face aux défis climatiques et aux pressions économiques globales, aucun État européen ne dispose de la taille critique pour négocier isolément. Une souveraineté partagée permet ainsi de démultiplier la puissance d'action de chaque nation.\n\nD'autre part, cette intégration ne saurait effacer la richesse des cultures et des histoires singulières. L'Europe des peuples repose précisément sur sa devise 'Unie dans la diversité'.\n\nEn définitive, loin d'être antinomiques, souveraineté européenne et identités nationales se complètent mutuellement pour garantir notre indépendance commune."
+        }
+      ]
+    },
+    {
+      "id": "exam_c1_01",
+      "grade": "C1",
+      "title": "Épreuve Blanche DALF C1 : Synthèse & Essai Argumenté",
+      "level": "Niveau C1 (DALF C1 / Utilisateur Autonome)",
+      "time_minutes": 120,
+      "max_score": 100,
+      "sections": [
+        {
+          "type": "reading",
+          "title": "Partie I : Compréhension et Synthèse de Documents (50 points)",
+          "passage": "« La prolifération des algorithmes de recommandation a profondément reconfiguré la formation du jugement esthétique et politique. Si ces dispositifs optimisent l'accès immédiat à l'information, ils enferment insidieusement les internautes dans des 'bulles cognitives' étanches. En privilégiant les contenus sensationnels au détriment de la nuance, la logique marchande des plateformes tend à fragiliser le socle délibératif indispensable aux démocraties contemporaines. »",
+          "questions": [
+            {
+              "id": "exc1_q1",
+              "prompt": "Quel effet pervers majeur des algorithmes de recommandation est souligné dans cet extrait ?",
+              "options": [
+                "L'enfermement dans des bulles cognitives et la polarisation au détriment de la délibération démocratique",
+                "La hausse continue des tarifs d'électricité liés aux serveurs",
+                "L'abandon généralisé des ordinateurs au profit des tablettes tactiles",
+                "La diminution du temps de travail dans les entreprises numériques"
+              ],
+              "answer": 0,
+              "points": 25,
+              "explanation": "L'auteur explicite l'enfermement dans des 'bulles cognitives étanches' et la fragilisation du socle délibératif."
+            },
+            {
+              "id": "exc1_q2",
+              "prompt": "Pourquoi la logique marchande des plateformes entre-t-elle en conflit avec le débat citoyen ?",
+              "options": [
+                "Parce qu'elle valorise le sensationnalisme immédiat plutôt que la confrontation rigoureuse des arguments",
+                "Parce qu'elle empêche la traduction automatique des langues",
+                "Parce qu'elle interdit les discussions politiques en ligne",
+                "Parce qu'elle réserve l'accès aux réseaux aux seuls universitaires"
+              ],
+              "answer": 0,
+              "points": 25,
+              "explanation": "Le texte indique qu'elle privilégie « les contenus sensationnels au détriment de la nuance »."
+            }
+          ]
+        },
+        {
+          "type": "writing",
+          "title": "Partie II : Production Écrite Argumentée C1 (50 points)",
+          "prompt": "« Le règne des algorithmes signe-t-il la mort du libre arbitre ? » Rédigez un essai argumenté approfondi (350 à 450 mots) mobilisant un vocabulaire abstrait, des figures de style et des arguments philosophiques.",
+          "criteria": [
+            "Analyse dialectique",
+            "Vocabulaire conceptuel soutenu",
+            "Maniement des nuances syntaxiques"
+          ],
+          "sample_solution": "L'avènement d'une société algorithmique rebat les cartes de la condition humaine. D'un côté, la modélisation prédictive des comportements confère à la technique une emprise sans précédent sur les inclinations individuelles. Néanmoins, l'émancipation demeure envisageable dès lors que la conscience critique s'empare des outils numériques pour en subvertir la logique marchande."
+        }
+      ]
+    },
+    {
+      "id": "exam_c2_01",
+      "grade": "C2",
+      "title": "Épreuve de Haut Niveau DALF C2 : Rhétorique & Stylistique Critique",
+      "level": "Niveau C2 (DALF C2 / Maîtrise Totale)",
+      "time_minutes": 150,
+      "max_score": 100,
+      "sections": [
+        {
+          "type": "reading",
+          "title": "Partie I : Exégèse Stylistique et Textuelle (50 points)",
+          "passage": "« Dans sa préface monumentale, le poète revendique une langue dépouillée de tout ornement parasite, tendue comme un arc vers l'absolu du verbe. Rejetant les métaphores convenues et les truismes éculés de ses contemporains, il assigne à la poésie le devoir téméraire de nommer l'indicible. C'est dans ce déchirement fécond entre le silence originel et la parole incandescente que s'enracine la grandeur tragique de l'œuvre. »",
+          "questions": [
+            {
+              "id": "exc2_q1",
+              "prompt": "Quelle est l'ambition ultime assignée à la poésie dans cette préface ?",
+              "options": [
+                "Nommer l'indicible par une parole dépouillée et incandescente",
+                "Divertir le public par des rimes faciles et des récits d'aventures",
+                "Servir fidèlement la propagande gouvernementale de son temps",
+                "Reproduire à l'identique les canons de l'Antiquité sans innovation"
+              ],
+              "answer": 0,
+              "points": 25,
+              "explanation": "Le poète assigne à l'art « le devoir téméraire de nommer l'indicible »."
+            },
+            {
+              "id": "exc2_q2",
+              "prompt": "Identifiez la tension centrale qui traverse la poétique de l'auteur :",
+              "options": [
+                "Le déchirement fécond entre le silence originel et la parole créatrice",
+                "Le conflit salarial avec sa maison d'édition",
+                "La rivalité entre la peinture et la sculpture",
+                "L'hésitation entre la langue française et le latin d'église"
+              ],
+              "answer": 0,
+              "points": 25,
+              "explanation": "L'exégèse souligne « ce déchirement fécond entre le silence originel et la parole incandescente »."
+            }
+          ]
+        },
+        {
+          "type": "writing",
+          "title": "Partie II : Essai Littéraire et Philosophique C2 (50 points)",
+          "prompt": "« Toute grande œuvre est-elle un combat contre les limites du langage ? » Développez votre réflexion dans une dissertation magistrale (400 à 500 mots).",
+          "criteria": [
+            "Rigueur conceptuelle souveraine",
+            "Élégance stylistique",
+            "Maîtrise des registres de langue"
+          ],
+          "sample_solution": "Écrire, c'est éprouver vertigineusement l'inadéquation congénitale entre la fulgurance de la pensée et la matérialité rétive du verbe. Comme le soulignait Mallarmé, le poème procède d'un travail d'orfèvre où chaque vocable doit être conquis de haute lutte sur le silence."
         }
       ]
     }

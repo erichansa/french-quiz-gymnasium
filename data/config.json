@@ -1,9 +1,18 @@
 {
-  "app_name": "Gymnasium Français Studio (Klasse 9 - 12)",
-  "version": "2.0.0",
+  "app_name": "Gymnasium Français Studio (Klasse 8 - 13 & C1/C2)",
+  "version": "2.1.0",
   "port": 8765,
   "selected_grade": "10",
-  "supported_grades": ["9", "10", "11", "12"],
+  "supported_grades": [
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "C1",
+    "C2"
+  ],
   "ai_provider": "gemini",
   "gemini_api_key": "",
   "gemini_model": "gemini-2.5-flash",

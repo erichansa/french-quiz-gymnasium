@@ -45,7 +45,9 @@ function applySelectedGrade() {
   const select = document.getElementById('global-grade-select');
   if (select) select.value = state.currentGrade;
   const gradeLabel = document.getElementById('active-grade-label');
-  if (gradeLabel) gradeLabel.innerText = `Klasse ${state.currentGrade}`;
+  if (gradeLabel) {
+    gradeLabel.innerText = state.currentGrade.startsWith('C') ? `Niveau ${state.currentGrade}` : `Klasse ${state.currentGrade}`;
+  }
 }
 
 function switchGrade(grade) {
@@ -534,7 +536,16 @@ function initWritingModule() {
   // Update recommended words text based on grade
   const wordGuide = document.getElementById('essay-word-guide');
   if (wordGuide) {
-    const guides = { '9': '80-100', '10': '120-150', '11': '180-220', '12': '220-280' };
+    const guides = {
+      '8': '60-80',
+      '9': '80-100',
+      '10': '120-150',
+      '11': '180-220',
+      '12': '220-280',
+      '13': '240-300',
+      'C1': '350-450',
+      'C2': '400-500'
+    };
     wordGuide.innerText = guides[state.currentGrade] || '120-150';
   }
 

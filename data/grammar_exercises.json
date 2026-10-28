@@ -1,9 +1,45 @@
 {
   "grades": [
-    {"id": "9", "name": "Klasse 9", "level": "Niveau A2+/B1- (Grundlagen-Wiederholung)"},
-    {"id": "10", "name": "Klasse 10", "level": "Niveau B1 (Mittelstufe / Découvertes 5)"},
-    {"id": "11", "name": "Klasse 11", "level": "Niveau B1+/B2 (Einführungsphase Oberstufe)"},
-    {"id": "12", "name": "Klasse 12", "level": "Niveau B2 (Abitur-Vorbereitung / Qualifikationsphase)"}
+    {
+      "id": "8",
+      "name": "Klasse 8",
+      "level": "Niveau A2 (Mittelstufe Grundlagen / Découvertes 3)"
+    },
+    {
+      "id": "9",
+      "name": "Klasse 9",
+      "level": "Niveau A2+/B1- (Festigung & Vorbereitung)"
+    },
+    {
+      "id": "10",
+      "name": "Klasse 10",
+      "level": "Niveau B1 (Mittlerer Schulabschluss / Découvertes 5)"
+    },
+    {
+      "id": "11",
+      "name": "Klasse 11",
+      "level": "Niveau B1+/B2 (Einführungsphase Oberstufe)"
+    },
+    {
+      "id": "12",
+      "name": "Klasse 12",
+      "level": "Niveau B2 (Abitur G8 / Qualifikationsphase)"
+    },
+    {
+      "id": "13",
+      "name": "Klasse 13",
+      "level": "Niveau B2+/C1- (Abitur G9 / Vertiefung)"
+    },
+    {
+      "id": "C1",
+      "name": "Niveau C1",
+      "level": "DALF C1 (Fachkompetente Sprachverwendung / Universität)"
+    },
+    {
+      "id": "C2",
+      "name": "Niveau C2",
+      "level": "DALF C2 (Annähernd muttersprachliche Beherrschung)"
+    }
   ],
   "categories": [
     {
@@ -101,6 +137,78 @@
       "grade": "12",
       "name": "Registres de Langue & Figures de Style",
       "description": "Soutenu / littéraire vs familier, antithèse, métaphore, euphémisme"
+    },
+    {
+      "id": "g8_pc_accord",
+      "grade": "8",
+      "name": "Passé Composé & Participe Passé",
+      "description": "Accord mit être vs avoir, Grundregeln der Vergangenheitsbildung"
+    },
+    {
+      "id": "g8_negation",
+      "grade": "8",
+      "name": "Négations Composées",
+      "description": "ne... rien, ne... jamais, ne... plus, ne... personne"
+    },
+    {
+      "id": "g8_relatifs",
+      "grade": "8",
+      "name": "Pronoms Relatifs: qui vs que",
+      "description": "Subjekt (qui) vs direktes Objekt (que/qu')"
+    },
+    {
+      "id": "g13_concordance",
+      "grade": "13",
+      "name": "Concordance des Temps Complexe",
+      "description": "Futur antérieur dans le passé, Vorzeitigkeit in der Oberstufe"
+    },
+    {
+      "id": "g13_passif_se",
+      "grade": "13",
+      "name": "Passivformen & Pronominale Wendungen",
+      "description": "se faire + inf, tournures impersonnelles et pronominales"
+    },
+    {
+      "id": "g13_sbj_sup",
+      "grade": "13",
+      "name": "Subjonctif nach Superlativen",
+      "description": "Le seul qui sache, le plus beau qui soit"
+    },
+    {
+      "id": "c1_formes_lit",
+      "grade": "C1",
+      "name": "Conditionnel Passé 2e Forme & Littéraire",
+      "description": "Klassische literarische Formen (eût fait, fît) und Syntax"
+    },
+    {
+      "id": "c1_inversion",
+      "grade": "C1",
+      "name": "Inversions Syntaxiques Soutenues",
+      "description": "À peine... que, Peut-être est-il, Sans doute viendra-t-il"
+    },
+    {
+      "id": "c1_rhetorique",
+      "grade": "C1",
+      "name": "Rhétorique & Stylistique Avancée",
+      "description": "Synecdoque, chiasme, anaphore, litote"
+    },
+    {
+      "id": "c2_ne_expletif",
+      "grade": "C2",
+      "name": "Le 'ne' Explétif & Finesses Académiques",
+      "description": "Avant qu'il ne vienne, de peur qu'il ne parte, à moins que"
+    },
+    {
+      "id": "c2_accords_complexes",
+      "grade": "C2",
+      "name": "Accords Délicats & Exceptionnels",
+      "description": "Participe passé suivi d'un infinitif (fait faire, laissé partir)"
+    },
+    {
+      "id": "c2_concession_sup",
+      "grade": "C2",
+      "name": "Tournures Concessives Soutenues",
+      "description": "Si... que + subj, tout... que + ind/subj, quel que soit"
     }
   ],
   "questions": [
@@ -109,7 +217,12 @@
       "grade": "9",
       "category": "g9_passé",
       "prompt": "« Hier matin, je marchais tranquillement dans la rue quand soudain ______ un grand bruit. »",
-      "options": ["j'ai entendu", "j'entendais", "j'avais entendu", "j'entendrai"],
+      "options": [
+        "j'ai entendu",
+        "j'entendais",
+        "j'avais entendu",
+        "j'entendrai"
+      ],
       "answer": 0,
       "rule_tip": "'soudain / tout à coup' signalisiert ein plötzliches Ereignis -> Passé composé!",
       "explanation_de": "'Quand soudain' unterbricht eine andauernde Hintergrundhandlung (Imparfait: marchais) durch ein plötzliches, punktuelles Ereignis. Dafür verwendet man das Passé composé: 'j'ai entendu'.",
@@ -120,7 +233,12 @@
       "grade": "9",
       "category": "g9_futur",
       "prompt": "Complétez avec le Futur simple du verbe 'faire' : « L'année prochaine, nous ______ un échange scolaire en France. »",
-      "options": ["faisons", "ferons", "faisions", "ferions"],
+      "options": [
+        "faisons",
+        "ferons",
+        "faisions",
+        "ferions"
+      ],
       "answer": 1,
       "rule_tip": "Der Stamm von 'faire' im Futur simple lautet 'fer-'! (nous ferons)",
       "explanation_de": "Das unregelmäßige Verb 'faire' bildet das Futur simple mit dem Stamm 'fer-' und den Endungen -ai, -as, -a, -ons, -ez, -ont. Für 'nous' heißt es 'nous ferons'.",
@@ -131,7 +249,12 @@
       "grade": "9",
       "category": "g9_pronoms",
       "prompt": "« Est-ce que tu as envoyé la lettre à tes grands-parents ? — Oui, je ______ ai envoyée hier. »",
-      "options": ["la leur", "leur la", "la lui", "l'y"],
+      "options": [
+        "la leur",
+        "leur la",
+        "la lui",
+        "l'y"
+      ],
       "answer": 0,
       "rule_tip": "Stellung der Pronomen: Direktes Pronomen (la) vor indirektem Pronomen (leur)!",
       "explanation_de": "'La lettre' ist direktes Objekt (la), 'à tes grands-parents' ist indirektes Objekt (leur). Bei zwei Pronomen steht das COD (la) vor dem COI (leur): 'la leur'.",
@@ -142,7 +265,12 @@
       "grade": "9",
       "category": "g9_si1",
       "prompt": "« Si vous travaillez régulièrement, vous ______ de très bonnes notes. »",
-      "options": ["aurez", "avez", "auriez", "aviez"],
+      "options": [
+        "aurez",
+        "avez",
+        "auriez",
+        "aviez"
+      ],
       "answer": 0,
       "rule_tip": "Si-Satz Typ 1 (Reale Bedingung): Si + Présent -> Futur simple im Hauptsatz!",
       "explanation_de": "Typ 1 drückt eine Bedingung aus, die erfüllbar ist: Nach 'Si + Présent' ('travaillez') steht im Hauptsatz das Futur simple ('aurez').",
@@ -153,7 +281,12 @@
       "grade": "10",
       "category": "subjonctif",
       "prompt": "Complétez avec la bonne forme : « Bien qu'il ______ très fatigué, Lucas continue ses révisions pour le bac. »",
-      "options": ["est", "soit", "serait", "sera"],
+      "options": [
+        "est",
+        "soit",
+        "serait",
+        "sera"
+      ],
       "answer": 1,
       "rule_tip": "Nach 'bien que' (obwohl) muss IMMER der Subjonctif folgen! (être: que je sois, qu'il soit)",
       "explanation_de": "Die Konjunktion 'bien que' verlangt zwingend den Subjonctif. Das unregelmäßige Verb 'être' lautet im Subjonctif présent: que je sois, tu sois, il/elle soit, nous soyons, vous soyez, ils soient.",
@@ -164,7 +297,12 @@
       "grade": "10",
       "category": "subjonctif",
       "prompt": "« Mes parents exigent que nous ______ nos devoirs avant le dîner. »",
-      "options": ["faisons", "ferons", "fassions", "faisions"],
+      "options": [
+        "faisons",
+        "ferons",
+        "fassions",
+        "faisions"
+      ],
       "answer": 2,
       "rule_tip": "Verben des Willens und Forderns (exiger que, vouloir que) verlangen den Subjonctif! (faire -> que nous fassions)",
       "explanation_de": "'Exiger que' drückt eine Aufforderung/einen Zwang aus und verlangt den Subjonctif. Der Stamm für 'faire' im Subjonctif ist 'fass-'. Für 'nous' lautet die Endung '-ions', also 'que nous fassions'.",
@@ -175,7 +313,12 @@
       "grade": "10",
       "category": "subjonctif",
       "prompt": "« Je pense qu'il ______ raison, mais je doute que tout le monde ______ d'accord avec lui. »",
-      "options": ["ait / est", "a / soit", "ait / soit", "a / est"],
+      "options": [
+        "ait / est",
+        "a / soit",
+        "ait / soit",
+        "a / est"
+      ],
       "answer": 1,
       "rule_tip": "'Penser que' im bejahten Satz verlangt Indikatif (Gewissheit), aber 'douter que' drückt Zweifel aus und verlangt Subjonctif!",
       "explanation_de": "Bei Meinungsverben im Aussagesatz ('penser que') steht der normale Indikatif (a). Bei Verben des Zweifels ('douter que') muss der Subjonctif (soit) stehen.",
@@ -186,7 +329,12 @@
       "grade": "10",
       "category": "subjonctif",
       "prompt": "« Il faut que tu ______ la vérité à ton professeur avant la fin du cours. »",
-      "options": ["dis", "diras", "dises", "disais"],
+      "options": [
+        "dis",
+        "diras",
+        "dises",
+        "disais"
+      ],
       "answer": 2,
       "rule_tip": "'Il faut que' (Es ist nötig, dass...) verlangt immer den Subjonctif! (dire: que tu dises)",
       "explanation_de": "Die unpersönliche Wendung 'il faut que' verlangt stets den Subjonctif. Bei 'dire' bildet die 3. Person Plural Präsens 'ils disent' den Stamm 'dis-', Endung für 'tu' ist '-es' -> 'que tu dises'.",
@@ -197,7 +345,12 @@
       "grade": "10",
       "category": "conditionnel_si",
       "prompt": "« Si nous avions plus de temps ce week-end, nous ______ visiter le château de Versailles. »",
-      "options": ["irons", "sommes allés", "irions", "allions"],
+      "options": [
+        "irons",
+        "sommes allés",
+        "irions",
+        "allions"
+      ],
       "answer": 2,
       "rule_tip": "Hypothetischer Satz (Typ 2 - Nicht-Reales der Gegenwart): Si + Imparfait -> Conditionnel présent!",
       "explanation_de": "Hier liegt ein Si-Satz des Typs 2 vor: Bedingung in der Gegenwart, die unwahrscheinlich/irreal ist (Si + Imparfait: 'avions'). Im Hauptsatz folgt daher das Conditionnel présent ('irions').",
@@ -208,7 +361,12 @@
       "grade": "10",
       "category": "conditionnel_si",
       "prompt": "« Si tu avais révisé tes verbes hier soir, tu n'______ pas autant d'erreurs au test ce matin. »",
-      "options": ["aurais fait", "avais fait", "feras", "faisais"],
+      "options": [
+        "aurais fait",
+        "avais fait",
+        "feras",
+        "faisais"
+      ],
       "answer": 0,
       "rule_tip": "Irreale Bedingung der Vergangenheit (Typ 3): Si + Plus-que-parfait -> Conditionnel passé!",
       "explanation_de": "Typ 3 der Si-Sätze beschreibt ein abgeschlossenes Ereignis in der Vergangenheit, das nicht mehr geändert werden kann: 'Si + Plus-que-parfait' ('avais révisé') verlangt im Folgesatz das Conditionnel passé ('aurais fait').",
@@ -219,7 +377,12 @@
       "grade": "10",
       "category": "pronoms_y_en",
       "prompt": "« Tu vas au cinéma avec tes camarades ? — Oui, j'______ vais dans une heure. »",
-      "options": ["y", "en", "le", "lui"],
+      "options": [
+        "y",
+        "en",
+        "le",
+        "lui"
+      ],
       "answer": 0,
       "rule_tip": "Das Pronomen 'y' ersetzt 'à / en / dans / sur + Ortsangabe'!",
       "explanation_de": "'Au cinéma' ist eine Ortsangabe, eingeleitet durch 'à + le'. Ein solcher Ort wird im Französischen durch das Adverbialpronomen 'y' ersetzt ('j'y vais').",
@@ -230,7 +393,12 @@
       "grade": "10",
       "category": "pronoms_y_en",
       "prompt": "« As-tu acheté des croissants à la boulangerie ? — Oui, j'______ ai acheté trois. »",
-      "options": ["y", "en", "les", "leur"],
+      "options": [
+        "y",
+        "en",
+        "les",
+        "leur"
+      ],
       "answer": 1,
       "rule_tip": "'en' ersetzt unbestimmte Mengen ('des', Mengenangaben wie 'trois', 'de + Nomen')!",
       "explanation_de": "'Des croissants' ist eine Teilmenge mit unbestimmtem Artikel ('des') und Mengenangabe ('trois'). Solche Mengenergänzungen werden stets durch das Pronomen 'en' ersetzt ('j'en ai acheté trois').",
@@ -241,7 +409,12 @@
       "grade": "10",
       "category": "relatifs_composes",
       "prompt": "« C'est une question très délicate à ______ je n'avais pas encore pensé. »",
-      "options": ["laquelle", "lequel", "auquel", "qui"],
+      "options": [
+        "laquelle",
+        "lequel",
+        "auquel",
+        "qui"
+      ],
       "answer": 0,
       "rule_tip": "'penser à qch': 'à + laquelle' (féminin singulier, car 'une question')",
       "explanation_de": "Das Verb heißt 'penser à qch'. Das Bezugswort 'une question' ist weiblich Singular. Die Zusammensetzung aus Präposition 'à' und Relativpronomen ergibt 'à laquelle'.",
@@ -252,7 +425,12 @@
       "grade": "11",
       "category": "g11_passif",
       "prompt": "Transformez à la voix passive : « Les ministres européens ont signé ce traité hier. » -> « Ce traité ______ hier par les ministres européens. »",
-      "options": ["a été signé", "a signé", "avait été signé", "serait signé"],
+      "options": [
+        "a été signé",
+        "a signé",
+        "avait été signé",
+        "serait signé"
+      ],
       "answer": 0,
       "rule_tip": "Passé composé im Aktiv ('ont signé') -> Passé composé von être ('a été') + Participe passé ('signé')!",
       "explanation_de": "Das Passiv im Passé composé wird gebildet mit 'avoir été' + Participe passé des Hauptverbs: 'a été signé'. Das Participe stimmt mit dem neuen Subjekt 'ce traité' (m.sg.) überein.",
@@ -263,7 +441,12 @@
       "grade": "11",
       "category": "g11_participe",
       "prompt": "« ______ ses valises à la hâte, Sophie s'est précipitée vers la gare pour ne pas rater son train. »",
-      "options": ["Bouclant", "En bouclant", "Bouclé", "Avoir bouclé"],
+      "options": [
+        "Bouclant",
+        "En bouclant",
+        "Bouclé",
+        "Avoir bouclé"
+      ],
       "answer": 0,
       "rule_tip": "Das Participe présent ('bouclant') verkürzt einen Relativsatz oder Kausalsatz ohne 'en'!",
       "explanation_de": "'Bouclant' ist das Participe présent und beschreibt den Grund / die Begleitumstand der Haupthandlung. Das Gérondif ('en bouclant') würde Gleichzeitigkeit / Mittel betonen ('während/indem sie packte').",
@@ -274,7 +457,12 @@
       "grade": "11",
       "category": "g11_discours",
       "prompt": "Discours direct : « Julien m'a dit : 'Je partirai demain pour Paris.' » -> Discours indirect au passé : « Julien m'a dit qu'il ______ le lendemain pour Paris. »",
-      "options": ["partira", "partait", "partirait", "soit parti"],
+      "options": [
+        "partira",
+        "partait",
+        "partirait",
+        "soit parti"
+      ],
       "answer": 2,
       "rule_tip": "Concordance des temps: Wenn das einleitende Verb in der Vergangenheit steht, wird Futur simple zum Conditionnel présent!",
       "explanation_de": "In der indirekten Rede der Vergangenheit ('a dit') verschiebt sich die Zeit: Futur simple ('partirai') wird zum Conditionnel présent ('partirait'), und 'demain' wird zu 'le lendemain'.",
@@ -285,7 +473,12 @@
       "grade": "11",
       "category": "g11_sbj_inf",
       "prompt": "« Nous devons réserver nos billets ______ la hausse des prix. (avant que / avant de) »",
-      "options": ["avant de constater", "avant que nous constations", "avant d'avoir constaté", "avant que constater"],
+      "options": [
+        "avant de constater",
+        "avant que nous constations",
+        "avant d'avoir constaté",
+        "avant que constater"
+      ],
       "answer": 0,
       "rule_tip": "Bei Subjektgleichheit ('nous'...'nous') MUSS im Französischen der Infinitif mit 'avant de' bevorzugt werden!",
       "explanation_de": "Da das Subjekt im Haupt- und Nebensatz identisch ist (nous), verwendet man im gehobenen Französisch die Infinitivkonstruktion 'avant de + Infinitif' statt 'avant que + Subjonctif'.",
@@ -296,7 +489,12 @@
       "grade": "12",
       "category": "g12_sbj_passe",
       "prompt": "« Bien qu'elle ______ ses examens avec brio le mois dernier, Léa hésite encore sur le choix de sa filière universitaire. »",
-      "options": ["ait réussi", "a réussi", "réussisse", "eût réussi"],
+      "options": [
+        "ait réussi",
+        "a réussi",
+        "réussisse",
+        "eût réussi"
+      ],
       "answer": 0,
       "rule_tip": "Subjonctif passé drückt Vorzeitigkeit gegenüber der Haupthandlung aus! (avoir/être im Subjonctif + Participe passé)",
       "explanation_de": "'Bien que' verlangt Subjonctif. Da das Bestehen der Prüfung ('le mois dernier') vor dem gegenwärtigen Zögern ('hésite encore') stattfand (Vorzeitigkeit), steht das Subjonctif passé: 'ait réussi'.",
@@ -307,7 +505,12 @@
       "grade": "12",
       "category": "g12_nuances",
       "prompt": "« Tu ______ nous prévenir de ton retard ! Nous nous sommes inquiétés pour rien. »",
-      "options": ["aurais dû", "avais dû", "devras", "doives"],
+      "options": [
+        "aurais dû",
+        "avais dû",
+        "devras",
+        "doives"
+      ],
       "answer": 0,
       "rule_tip": "'devoir' im Conditionnel passé ('tu aurais dû') drückt einen Vorwurf / ein Bedauern in der Vergangenheit aus!",
       "explanation_de": "Das Conditionnel passé des Modalverbs 'devoir' ('tu aurais dû + Infinitif') ist die Standardwendung für einen Vorwurf oder ein Bedauern über eine nicht erfolgte Handlung ('du hättest uns vorwarnen müssen').",
@@ -318,11 +521,176 @@
       "grade": "12",
       "category": "g12_style",
       "prompt": "Dans la phrase : « Paris est un véritable océan où l'on plonge sans jamais en sonder la profondeur », quelle figure de style est employée ?",
-      "options": ["Une métaphore", "Un euphémisme", "Une litote", "Un oxymore"],
+      "options": [
+        "Une métaphore",
+        "Un euphémisme",
+        "Une litote",
+        "Un oxymore"
+      ],
       "answer": 0,
       "rule_tip": "Ein direkter Vergleich ohne Vergleichswort (wie 'comme') ist eine Métaphore!",
       "explanation_de": "Paris wird hier direkt mit einem Ozean gleichgesetzt, ohne das Vergleichswort 'comme' zu benutzen. Dies ist die Definition einer Metapher (la métaphore), ein zentrales Stilelement für die Textanalyse im Abitur.",
       "explanation_zh": "此处直接将巴黎比作大洋，省略了比喻词 comme，这是典型的隐喻/暗喻（la métaphore），是高中毕业考（Abitur）文学文本分析中的核心修辞手法。"
+    },
+    {
+      "id": "g8_q01",
+      "grade": "8",
+      "category": "g8_pc_accord",
+      "prompt": "Complétez : « Mes deux sœurs ______ à Paris le week-end dernier. (aller au passé composé) »",
+      "options": [
+        "sont allées",
+        "ont allé",
+        "sont allés",
+        "ont allée"
+      ],
+      "answer": 0,
+      "rule_tip": "'aller' bildet das Passé composé mit 'être'! Das Participe passé passt sich an das Subjekt (weiblich Plural: -ées) an!",
+      "explanation_de": "Bewegungsverben wie 'aller' bilden das Passé composé mit 'être'. Da das Subjekt 'mes deux sœurs' weiblich Plural ist, erhält das Participe passé die Endung '-ées': 'sont allées'.",
+      "explanation_zh": "位移动词 aller 必须用助动词 être 构成复合过去时。主语 'mes deux sœurs' 为阴性复数，过去分词必须进行性数配合加上 '-ées'，因此是 'sont allées'。"
+    },
+    {
+      "id": "g8_q02",
+      "grade": "8",
+      "category": "g8_negation",
+      "prompt": "« Tu as acheté quelque chose au supermarché ? — Non, je n'ai ______ acheté. »",
+      "options": [
+        "rien",
+        "jamais",
+        "personne",
+        "plus"
+      ],
+      "answer": 0,
+      "rule_tip": "Das Gegenteil von 'quelque chose' (etwas) ist 'ne... rien' (nichts)!",
+      "explanation_de": "Auf die Frage nach 'quelque chose' (etwas) verneint man im Französischen mit 'ne... rien' (nichts): 'je n'ai rien acheté'.",
+      "explanation_zh": "'quelque chose'（某事/某物）的否定形式是 'ne... rien'（什么都没有）：'je n'ai rien acheté'。"
+    },
+    {
+      "id": "g8_q03",
+      "grade": "8",
+      "category": "g8_relatifs",
+      "prompt": "« C'est le professeur ______ nous enseigne le français cette année. (qui ou que ?) »",
+      "options": [
+        "qui",
+        "que",
+        "où",
+        "dont"
+      ],
+      "answer": 0,
+      "rule_tip": "'qui' steht für das Subjekt des Nebensatzes (gefolgt von einem Verb: 'qui enseigne')!",
+      "explanation_de": "Auf die Lücke folgt direkt das konjugierte Verb 'enseigne'. Wenn das Relativpronomen das Subjekt des Relativsatzes vertritt, muss immer 'qui' verwendet werden.",
+      "explanation_zh": "横线后紧接共轭动词 enseigne（教）。关系代词在从句中作主语时代替人或物必须用 'qui'；作直接宾语才用 'que'。"
+    },
+    {
+      "id": "g13_q01",
+      "grade": "13",
+      "category": "g13_concordance",
+      "prompt": "« Le ministre a déclaré que dès que le projet ______ voté, les aides financières seraient débloquées. »",
+      "options": [
+        "aurait été",
+        "avait été",
+        "sera",
+        "serait"
+      ],
+      "answer": 0,
+      "rule_tip": "Futur antérieur dans le passé: Drückt Vorzeitigkeit vor einem Conditionnel présent aus!",
+      "explanation_de": "In der Zeitenfolge der indirekten Rede im Passé ('a déclaré') drückt das Conditionnel passé ('aurait été') die Vorzeitigkeit vor dem nachfolgenden Hauptsatz im Conditionnel présent ('seraient débloquées') aus.",
+      "explanation_zh": "过去时态序列中的先时将来（Futur antérieur dans le passé，形式上采用过去条件式 aurait été）：表示在主句条件式动作（seraient débloquées）发生之前必须先完成的事项。"
+    },
+    {
+      "id": "g13_q02",
+      "grade": "13",
+      "category": "g13_sbj_sup",
+      "prompt": "« C'est incontestablement le plus beau poème qu'il ______ jamais écrit. »",
+      "options": [
+        "ait",
+        "a",
+        "aura",
+        "avait"
+      ],
+      "answer": 0,
+      "rule_tip": "Nach einem Superlatif ('le plus beau... que') steht im anspruchsvollen Französisch der Subjonctif!",
+      "explanation_de": "Nach einschränkenden Superlativen ('le plus...', 'le meilleur...') oder Wörtern wie 'le seul', 'l'unique' verlangt der Relativsatz traditionell den Subjonctif (hier Subjonctif passé: 'qu'il ait jamais écrit').",
+      "explanation_zh": "在最高级结构（le plus beau... que）或表示独一性的词后，从句通常要求使用虚拟式（此处为过去虚拟式 qu'il ait jamais écrit），体现主观赞叹与极致评价。"
+    },
+    {
+      "id": "g13_q03",
+      "grade": "13",
+      "category": "g13_inversion",
+      "prompt": "« Sans doute ______ -elle raison, mais sa proposition manque encore de clarté. »",
+      "options": [
+        "a",
+        "ait",
+        "aura",
+        "avait"
+      ],
+      "answer": 0,
+      "rule_tip": "Nach 'Sans doute', 'Peut-être' am Satzanfang erfolgt zwingend eine Subjekt-Verb-Inversion: 'a-t-elle'!",
+      "explanation_de": "Stehen Adverbien wie 'Sans doute', 'Peut-être', 'Aussi' am Satzanfang, verlangt das gehobene Französisch die Inversion von Verb und Subjektpronomen ('Sans doute a-t-elle...').",
+      "explanation_zh": "副词短语 'Sans doute'（无疑/大概）位于句首时，书面语必须进行主谓倒装，第三人称单数加连字符和辅音 t：'Sans doute a-t-elle raison'。"
+    },
+    {
+      "id": "c1_q01",
+      "grade": "C1",
+      "category": "c1_formes_lit",
+      "prompt": "Dans un texte littéraire du XIXe siècle : « S'il eût écouté mes conseils, il n'______ point péri dans cette expédition. » (Conditionnel passé 2e forme)",
+      "options": [
+        "eût",
+        "aurait",
+        "avait",
+        "ait"
+      ],
+      "answer": 0,
+      "rule_tip": "Le Conditionnel passé deuxième forme se conjugue avec l'Imparfait du Subjonctif d'avoir/être!",
+      "explanation_de": "Die sogenannte 'deuxième forme du conditionnel passé' ist eine elegante, archaische Variante, die in der gehobenen Literatur identisch mit dem Plus-que-parfait du subjonctif ist ('il n'eût point péri' = 'il ne serait point mort').",
+      "explanation_zh": "条件式过去时第二形式（Conditionnel passé 2e forme）是高级文学体裁中的典雅用法，形式与虚拟式愈过去时相同（il n'eût point péri = il ne serait pas péri），体现极高的文学修养。"
+    },
+    {
+      "id": "c1_q02",
+      "grade": "C1",
+      "category": "c1_rhetorique",
+      "prompt": "« La Maison-Blanche a publié un communiqué ce matin. » Quelle figure de style désigne ici le gouvernement américain par son siège ?",
+      "options": [
+        "Une métonymie",
+        "Une anaphore",
+        "Une allitération",
+        "Un pléonasme"
+      ],
+      "answer": 0,
+      "rule_tip": "Ersetzung des Bewohners/Amtes durch den Ort/das Gebäude = Métonymie!",
+      "explanation_de": "Die Ersetzung des Inhalts durch das Gefäß bzw. der Regierenden durch ihren Amtssitz ('Maison-Blanche' für die US-Regierung) ist eine klassische Metonymie (la métonymie).",
+      "explanation_zh": "借代/转喻（la métonymie）：用白宫（建筑物/处所）指代其背后的美国总统及其行政权力团队，是学术论述中高频使用的修辞手笔。"
+    },
+    {
+      "id": "c2_q01",
+      "grade": "C2",
+      "category": "c2_ne_expletif",
+      "prompt": "« Il est plus compétent que vous ______ pensiez. (Choix du 'ne' explétif soutenu) »",
+      "options": [
+        "ne le",
+        "le",
+        "ne",
+        "en"
+      ],
+      "answer": 0,
+      "rule_tip": "Nach einem vergleichenden Hauptsatz ('plus... que') verlangt das sehr gehobene Französisch das 'ne explétif'!",
+      "explanation_de": "Das 'ne explétif' hat keine verneinende Bedeutung, sondern ist ein reines Stilelement der gehobenen Hochsprache nach Komparativen ('plus que vous ne le pensiez') und bestimmten Konjunktionen ('avant que', 'à moins que').",
+      "explanation_zh": "赘词 'ne'（ne explétif）：在比较级主句之后（plus... que），书面极典雅法语要求加入不含否定意义的冗词 'ne'（'que vous ne le pensiez'），体现 C2 母语级纯正典雅语感。"
+    },
+    {
+      "id": "c2_q02",
+      "grade": "C2",
+      "category": "c2_accords_complexes",
+      "prompt": "Accord du participe passé avec l'infinitif : « Les musiciens que j'ai ______ chanter ont enchanté le public. »",
+      "options": [
+        "entendus",
+        "entendu",
+        "entendue",
+        "entendant"
+      ],
+      "answer": 0,
+      "rule_tip": "Das vorausgehende COD ('les musiciens') führt die Handlung des Infinitivs selbst aus ('ils chantent') -> Accord!",
+      "explanation_de": "Wenn das vorangestellte direkte Objekt (COD: que = les musiciens) das Subjekt der Handlung des Infinitivs ist (die Musiker singen selbst), stimmt das Participe passé überein: 'entendus'. Wenn das COD das Objekt des Infinitivs wäre ('les chansons que j'ai entendu chanter'), bliebe es unveränderlich.",
+      "explanation_zh": "过去分词与后续动词不定式的配合高难法则：先行词 COD（les musiciens）自身是不定式动作的施动者（音乐家自己在演唱），过去分词必须配合变为复数 'entendus'！"
     }
   ]
 }

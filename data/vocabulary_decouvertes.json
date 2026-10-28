@@ -1,6 +1,66 @@
 {
   "units": [
     {
+      "id": "unit_8_college",
+      "grade": "8",
+      "title": "Klasse 8 : La Vie au Collège, Famille & Loisirs",
+      "subtitle": "Schulalltag, Freizeitaktivitäten und Familie (A2 / Découvertes 3)",
+      "words": [
+        {
+          "id": "v8_01",
+          "french": "avoir de bonnes notes",
+          "word_type": "expression",
+          "german": "gute Noten haben",
+          "chinese": "取得好成绩",
+          "collocations": [
+            "un bulletin scolaire",
+            "réviser ses leçons"
+          ],
+          "word_family": [
+            "la note (n.f.)",
+            "noter (v.)"
+          ],
+          "example_fr": "Elle travaille sérieusement pour avoir de bonnes notes au collège.",
+          "example_de": "Sie lernt fleißig, um gute Noten in der Schule zu bekommen.",
+          "example_zh": "她在初中认真用功，以便取得优异的成绩。"
+        },
+        {
+          "id": "v8_02",
+          "french": "s'entendre bien avec qn",
+          "word_type": "verbe pronominal",
+          "german": "sich gut mit jdm. verstehen",
+          "chinese": "与某人相处融洽",
+          "collocations": [
+            "être en bons termes",
+            "partager des secrets"
+          ],
+          "word_family": [
+            "l'entente (n.f.)"
+          ],
+          "example_fr": "Je m'entends très bien avec tous mes camarades de classe.",
+          "example_de": "Ich verstehe mich sehr gut mit all meinen Mitschülern.",
+          "example_zh": "我和班里的每一位同学都相处得非常融洽。"
+        },
+        {
+          "id": "v8_03",
+          "french": "passer du temps ensemble",
+          "word_type": "locution verbale",
+          "german": "Zeit miteinander verbringen",
+          "chinese": "一起度过时光",
+          "collocations": [
+            "des activités communes",
+            "se retrouver après les cours"
+          ],
+          "word_family": [
+            "le passe-temps (n.m.)"
+          ],
+          "example_fr": "Le samedi après-midi, nous aimons passer du temps ensemble au skatepark.",
+          "example_de": "Am Samstagnachmittag verbringen wir gerne Zeit miteinander im Skatepark.",
+          "example_zh": "周六下午，我们喜欢在滑板公园一起度过快乐时光。"
+        }
+      ]
+    },
+    {
       "id": "unit_9_quotidien",
       "grade": "9",
       "title": "Klasse 9 : Amitié, Projets & Vie Quotidienne",
@@ -539,6 +599,135 @@
           "example_fr": "Dans un monde globalisé, beaucoup d'individus revendiquent leur appartenance à une double culture.",
           "example_de": "In einer globalisierten Welt bekennen sich viele Menschen selbstbewusst zu einer doppelten kulturellen Identität.",
           "example_zh": "在全球化的世界中，许多人自豪地主张自己兼具双重文化的归属感。"
+        }
+      ]
+    },
+    {
+      "id": "unit_13_debats",
+      "grade": "13",
+      "title": "Klasse 13 : Débats Sociétaux & Géopolitique (G9 Abitur)",
+      "subtitle": "Abitur-Vertiefung: Souveraineté, mondialisation et démocratie (B2+)",
+      "words": [
+        {
+          "id": "v13_01",
+          "french": "exercer sa souveraineté",
+          "word_type": "locution verbale",
+          "german": "seine Souveränität ausüben",
+          "chinese": "行使国家主权",
+          "collocations": [
+            "la souveraineté populaire",
+            "l'autonomie stratégique"
+          ],
+          "word_family": [
+            "la souveraineté (n.f.)",
+            "souverain (adj./n.)"
+          ],
+          "example_fr": "L'Europe cherche à renforcer sa souveraineté économique et énergétique.",
+          "example_de": "Europa strebt danach, seine wirtschaftliche und energetische Souveränität zu stärken.",
+          "example_zh": "欧洲正在力求强化其经济与能源的战略自主权。"
+        },
+        {
+          "id": "v13_02",
+          "french": "la cohésion sociale",
+          "word_type": "nom féminin",
+          "german": "der soziale Zusammenhalt",
+          "chinese": "社会凝聚力",
+          "collocations": [
+            "renforcer la solidarité",
+            "réduire les inégalités"
+          ],
+          "word_family": [
+            "cohésif/-ve (adj.)"
+          ],
+          "example_fr": "Les services publics jouent un rôle fondamental pour maintenir la cohésion sociale.",
+          "example_de": "Öffentliche Dienste spielen eine grundlegende Rolle bei der Aufrechterhaltung des sozialen Zusammenhalts.",
+          "example_zh": "公共服务部门在维系社会凝聚力方面发挥着至关重要的作用。"
+        }
+      ]
+    },
+    {
+      "id": "unit_c1_philosophie",
+      "grade": "C1",
+      "title": "Niveau C1 : Épistémologie, Rhétorique & Concepts Abstraits",
+      "subtitle": "DALF C1 & Université: Discours philosophique et critique (C1)",
+      "words": [
+        {
+          "id": "vc1_01",
+          "french": "élucider une aporie",
+          "word_type": "locution verbale soutenue",
+          "german": "eine Aporie / scheinbar unlösbare Denkschwierigkeit aufklären",
+          "chinese": "阐明/破解哲学疑难与逻辑悖论",
+          "collocations": [
+            "une contradiction insurmontable",
+            "un questionnement métaphysique"
+          ],
+          "word_family": [
+            "l'aporie (n.f.)",
+            "aporétique (adj.)"
+          ],
+          "example_fr": "Le philosophe s'efforce d'élucider une aporie conceptuelle au cœur du débat éthique.",
+          "example_de": "Der Philosoph bemüht sich, eine gedankliche Aporie im Zentrum der Ethikdebatte aufzuklären.",
+          "example_zh": "哲学家竭力阐明这场伦理辩论核心处的概念疑难。"
+        },
+        {
+          "id": "vc1_02",
+          "french": "corroborer une assertion",
+          "word_type": "locution verbale académique",
+          "german": "eine Behauptung untermauern / belegen",
+          "chinese": "证实/有力佐证一项论断",
+          "collocations": [
+            "des données empiriques",
+            "étayer une argumentation"
+          ],
+          "word_family": [
+            "la corroboration (n.f.)"
+          ],
+          "example_fr": "De nombreuses études scientifiques récentes sont venues corroborer son assertion.",
+          "example_de": "Zahlreiche neuere wissenschaftliche Studien haben seine Behauptung untermauert.",
+          "example_zh": "近期的多项科学研究有力佐证了他的这一学术主张。"
+        }
+      ]
+    },
+    {
+      "id": "unit_c2_maitrise",
+      "grade": "C2",
+      "title": "Niveau C2 : Haute Stylistique, Philologie & Nuance Lexicale",
+      "subtitle": "DALF C2 & Agrégation: Subtilité esthétique et maîtrise souveraine (C2)",
+      "words": [
+        {
+          "id": "vc2_01",
+          "french": "une prose ciselée",
+          "word_type": "locution nominale littéraire",
+          "german": "eine feinsinnig gemeißelte / hochvirtuose Prosa",
+          "chinese": "精雕细琢的优美散文/大家手笔",
+          "collocations": [
+            "la maestria stylistique",
+            "une cadence mélodieuse"
+          ],
+          "word_family": [
+            "ciseler (v.)",
+            "le ciseau (n.m.)"
+          ],
+          "example_fr": "Ce roman éblouit le lecteur par sa prose ciselée et son lyrisme sobre.",
+          "example_de": "Dieser Roman verzaubert den Leser durch seine meisterhaft gemeißelte Prosa und seine dezente Poesie.",
+          "example_zh": "这部小说以其精雕细琢的典雅行文和深沉内敛的抒情性令读者赞叹不已。"
+        },
+        {
+          "id": "vc2_02",
+          "french": "un truisme éculé",
+          "word_type": "locution nominale",
+          "german": "eine abgedroschene Binsenweisheit / Platitüde",
+          "chinese": "陈腐陈词滥调/不言自明的老生常谈",
+          "collocations": [
+            "sombrer dans le cliché",
+            "dépasser les banalités"
+          ],
+          "word_family": [
+            "l'éculage (n.m.)"
+          ],
+          "example_fr": "Loin de ressasser des truismes éculés, son essai apporte un regard novateur sur notre époque.",
+          "example_de": "Fernab vom Wiederholen abgedroschener Binsenweisheiten bietet sein Essay einen frischen Blick auf unsere Epoche.",
+          "example_zh": "他的散文论著绝不重复陈腐套话，而是为我们所处的时代注入了极具前瞻性的新视角。"
         }
       ]
     }
