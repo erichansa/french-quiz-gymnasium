@@ -1,0 +1,222 @@
+{
+  "verb_database": [
+    {
+      "verb": "faire",
+      "meaning_de": "machen / tun",
+      "meaning_zh": "做",
+      "forms": {
+        "je_subj": "fasse", "tu_subj": "fasses", "il_subj": "fasse", "nous_subj": "fassions", "vous_subj": "fassiez", "ils_subj": "fassent",
+        "je_cond": "ferais", "tu_cond": "ferais", "il_cond": "ferait", "nous_cond": "ferions", "vous_cond": "feriez", "ils_cond": "feraient",
+        "je_fut": "ferai", "tu_fut": "feras", "il_fut": "fera", "nous_fut": "ferons", "vous_fut": "ferez", "ils_fut": "feront",
+        "je_imp": "faisais", "il_imp": "faisait", "nous_imp": "faisions", "ils_imp": "faisaient",
+        "pc": "a fait", "pc_suj_je": "ai fait", "pc_suj_nous": "avons fait", "pc_suj_ils": "ont fait",
+        "participe": "faisant"
+      }
+    },
+    {
+      "verb": "aller",
+      "meaning_de": "gehen / fahren",
+      "meaning_zh": "去/前往",
+      "forms": {
+        "je_subj": "aille", "tu_subj": "ailles", "il_subj": "aille", "nous_subj": "allions", "vous_subj": "alliez", "ils_subj": "aillent",
+        "je_cond": "irais", "tu_cond": "irais", "il_cond": "irait", "nous_cond": "irions", "vous_cond": "iriez", "ils_cond": "iraient",
+        "je_fut": "irai", "tu_fut": "iras", "il_fut": "ira", "nous_fut": "irons", "vous_fut": "irez", "ils_fut": "iront",
+        "je_imp": "allais", "il_imp": "allait", "nous_imp": "allions", "ils_imp": "allaient",
+        "pc": "est allé", "pc_fem": "est allée", "pc_suj_nous": "sommes allés", "pc_suj_ils": "sont allés", "pc_suj_elles": "sont allées",
+        "participe": "allant"
+      }
+    },
+    {
+      "verb": "avoir",
+      "meaning_de": "haben",
+      "meaning_zh": "有",
+      "forms": {
+        "je_subj": "aie", "tu_subj": "aies", "il_subj": "ait", "nous_subj": "ayons", "vous_subj": "ayez", "ils_subj": "aient",
+        "je_cond": "aurais", "tu_cond": "aurais", "il_cond": "aurait", "nous_cond": "aurions", "vous_cond": "auriez", "ils_cond": "auraient",
+        "je_fut": "aurai", "tu_fut": "auras", "il_fut": "aura", "nous_fut": "aurons", "vous_fut": "aurez", "ils_fut": "auront",
+        "je_imp": "avais", "il_imp": "avait", "nous_imp": "avions", "ils_imp": "avaient",
+        "pc": "a eu", "pc_suj_je": "ai eu", "pc_suj_nous": "avons eu", "pc_suj_ils": "ont eu",
+        "participe": "ayant"
+      }
+    },
+    {
+      "verb": "être",
+      "meaning_de": "sein",
+      "meaning_zh": "是",
+      "forms": {
+        "je_subj": "sois", "tu_subj": "sois", "il_subj": "soit", "nous_subj": "soyons", "vous_subj": "soyez", "ils_subj": "soient",
+        "je_cond": "serais", "tu_cond": "serais", "il_cond": "serait", "nous_cond": "serions", "vous_cond": "seriez", "ils_cond": "seraient",
+        "je_fut": "serai", "tu_fut": "seras", "il_fut": "sera", "nous_fut": "serons", "vous_fut": "serez", "ils_fut": "seront",
+        "je_imp": "étais", "il_imp": "était", "nous_imp": "étions", "ils_imp": "étaient",
+        "pc": "a été", "pc_suj_je": "ai été", "pc_suj_nous": "avons été", "pc_suj_ils": "ont été",
+        "participe": "étant"
+      }
+    },
+    {
+      "verb": "pouvoir",
+      "meaning_de": "können",
+      "meaning_zh": "能够",
+      "forms": {
+        "je_subj": "puisse", "tu_subj": "puisses", "il_subj": "puisse", "nous_subj": "puissions", "vous_subj": "puissiez", "ils_subj": "puissent",
+        "je_cond": "pourrais", "tu_cond": "pourrais", "il_cond": "pourrait", "nous_cond": "pourrions", "vous_cond": "pourriez", "ils_cond": "pourraient",
+        "je_fut": "pourrai", "tu_fut": "pourras", "il_fut": "pourra", "nous_fut": "pourrons", "vous_fut": "pourrez", "ils_fut": "pourront",
+        "je_imp": "pouvais", "il_imp": "pouvait", "nous_imp": "pouvions", "ils_imp": "pouvaient",
+        "pc": "a pu", "pc_suj_je": "ai pu", "pc_suj_nous": "avons pu", "pc_suj_ils": "ont pu",
+        "participe": "pouvant"
+      }
+    },
+    {
+      "verb": "savoir",
+      "meaning_de": "wissen",
+      "meaning_zh": "知道",
+      "forms": {
+        "je_subj": "sache", "tu_subj": "saches", "il_subj": "sache", "nous_subj": "sachions", "vous_subj": "sachiez", "ils_subj": "sachent",
+        "je_cond": "saurais", "tu_cond": "saurais", "il_cond": "saurait", "nous_cond": "saurions", "vous_cond": "sauriez", "ils_cond": "saurient",
+        "je_fut": "saurai", "tu_fut": "sauras", "il_fut": "saura", "nous_fut": "saurons", "vous_fut": "saurez", "ils_fut": "sauront",
+        "je_imp": "savais", "il_imp": "savait", "nous_imp": "savions", "ils_imp": "savaient",
+        "pc": "a su", "pc_suj_je": "ai su", "pc_suj_nous": "avons su", "pc_suj_ils": "ont su",
+        "participe": "sachant"
+      }
+    },
+    {
+      "verb": "prendre",
+      "meaning_de": "nehmen",
+      "meaning_zh": "拿/乘/采取",
+      "forms": {
+        "je_subj": "prenne", "tu_subj": "prennes", "il_subj": "prenne", "nous_subj": "prenions", "vous_subj": "preniez", "ils_subj": "prennent",
+        "je_cond": "prendrais", "tu_cond": "prendrais", "il_cond": "prendrait", "nous_cond": "prendrions", "vous_cond": "prendriez", "ils_cond": "prendraient",
+        "je_fut": "prendrai", "tu_fut": "prendras", "il_fut": "prendra", "nous_fut": "prendrons", "vous_fut": "prendrez", "ils_fut": "prendront",
+        "je_imp": "prenais", "il_imp": "prenait", "nous_imp": "prenions", "ils_imp": "prenaient",
+        "pc": "a pris", "pc_suj_je": "ai pris", "pc_suj_nous": "avons pris", "pc_suj_ils": "ont pris",
+        "participe": "prenant"
+      }
+    },
+    {
+      "verb": "venir",
+      "meaning_de": "kommen",
+      "meaning_zh": "来",
+      "forms": {
+        "je_subj": "vienne", "tu_subj": "viennes", "il_subj": "vienne", "nous_subj": "venions", "vous_subj": "veniez", "ils_subj": "viennent",
+        "je_cond": "viendrais", "tu_cond": "viendrais", "il_cond": "viendrait", "nous_cond": "viendrions", "vous_cond": "viendriez", "ils_cond": "viendraient",
+        "je_fut": "viendrai", "tu_fut": "viendras", "il_fut": "viendra", "nous_fut": "viendrons", "vous_fut": "viendrez", "ils_fut": "viendront",
+        "je_imp": "venais", "il_imp": "venait", "nous_imp": "venions", "ils_imp": "venaient",
+        "pc": "est venu", "pc_fem": "est venue", "pc_suj_nous": "sommes venus", "pc_suj_ils": "sont venus", "pc_suj_elles": "sont venues",
+        "participe": "venant"
+      }
+    }
+  ],
+  "procedural_templates": [
+    {
+      "id": "tpl_subjonctif_conjonction",
+      "grade": "10",
+      "category": "subjonctif",
+      "conjunctions": [
+        {"fr": "Bien que", "de": "obwohl", "zh": "尽管"},
+        {"fr": "Pour que", "de": "damit", "zh": "为了使"},
+        {"fr": "Avant que", "de": "bevor", "zh": "在……之前"},
+        {"fr": "À condition que", "de": "unter der Bedingung, dass", "zh": "只要/在……条件下"}
+      ],
+      "subjects": [
+        {"prn": "tu", "key": "tu_subj", "wrong_ind": "tu_ind", "lbl": "tu"},
+        {"prn": "il", "key": "il_subj", "wrong_ind": "il_ind", "lbl": "il / elle"},
+        {"prn": "nous", "key": "nous_subj", "wrong_ind": "nous_ind", "lbl": "nous"},
+        {"prn": "vous", "key": "vous_subj", "wrong_ind": "vous_ind", "lbl": "vous"},
+        {"prn": "ils", "key": "ils_subj", "wrong_ind": "ils_ind", "lbl": "ils / elles"}
+      ],
+      "contexts": [
+        "ce travail avec sérieux",
+        "à l'heure au rendez-vous",
+        "une décision courageuse",
+        "conscience de la situation",
+        "surmonter cette difficulté"
+      ]
+    },
+    {
+      "id": "tpl_si_satz",
+      "grade": "10",
+      "category": "conditionnel_si",
+      "types": [
+        {
+          "type_num": 1,
+          "grade": "9",
+          "rule_name": "Si-Satz Typ 1 (Reale Bedingung)",
+          "if_tense": "présent",
+          "then_tense": "futur simple",
+          "rule_tip": "Si + Présent -> Futur simple im Hauptsatz!",
+          "exp_de": "Typ 1 drückt eine erfüllbare Bedingung aus: Si + Présent -> Futur simple.",
+          "exp_zh": "第一类条件句：Si 从句用现在时，主句用简单将来时。"
+        },
+        {
+          "type_num": 2,
+          "grade": "10",
+          "rule_name": "Si-Satz Typ 2 (Potenzial / Irreal der Gegenwart)",
+          "if_tense": "imparfait",
+          "then_tense": "conditionnel présent",
+          "rule_tip": "Si + Imparfait -> Conditionnel présent im Hauptsatz!",
+          "exp_de": "Typ 2 drückt eine unwahrscheinliche oder gegenwärtig irreale Bedingung aus: Si + Imparfait -> Conditionnel présent.",
+          "exp_zh": "第二类条件句：对现在的虚拟假设，Si 从句用未完成过去时，主句用现在条件式。"
+        },
+        {
+          "type_num": 3,
+          "grade": "10",
+          "rule_name": "Si-Satz Typ 3 (Irreal der Vergangenheit)",
+          "if_tense": "plus-que-parfait",
+          "then_tense": "conditionnel passé",
+          "rule_tip": "Si + Plus-que-parfait -> Conditionnel passé im Hauptsatz!",
+          "exp_de": "Typ 3 drückt eine nicht mehr erfüllbare Bedingung der Vergangenheit aus: Si + Plus-que-parfait -> Conditionnel passé.",
+          "exp_zh": "第三类条件句：对过去的虚拟假设，Si 从句用愈过去时，主句用过去条件式。"
+        }
+      ]
+    },
+    {
+      "id": "tpl_pronoms_y_en",
+      "grade": "10",
+      "category": "pronoms_y_en",
+      "items": [
+        {
+          "question": "« Tu vas au lycée à vélo ? — Oui, j'______ vais tous les matins. »",
+          "answer": "y",
+          "options": ["y", "en", "le", "lui"],
+          "tip": "'au lycée' ist ein Ort (à + Ort) -> Pronomen 'y'!",
+          "de": "'au lycée' ist eine Ortsangabe mit 'à'. Ein solcher Ort wird durch 'y' ersetzt ('j'y vais').",
+          "zh": "'au lycée' 是由介词 à 引导的地点，用副代词 y 替代。"
+        },
+        {
+          "question": "« Tu as parlé de ce projet à tes amis ? — Oui, je leur ______ ai parlé. »",
+          "answer": "en",
+          "options": ["en", "y", "le", "les"],
+          "tip": "'de + Sache' (de ce projet) wird durch das Pronomen 'en' ersetzt!",
+          "de": "Ergänzungen mit 'de + Sache' werden im Französischen stets durch 'en' ersetzt.",
+          "zh": "'de + 事物'（de ce projet）由副代词 en 替代。"
+        },
+        {
+          "question": "« Vous buvez du café le matin ? — Oui, nous ______ buvons deux tasses. »",
+          "answer": "en",
+          "options": ["en", "le", "y", "lui"],
+          "tip": "Teilmengen und Mengenangaben mit 'du/de la/des' verlangen 'en'!",
+          "de": "Teilungsartikel ('du café') und Mengenangaben ('deux tasses') werden durch 'en' vertreten.",
+          "zh": "部分冠词（du café）与数量修饰语用副代词 en 替代。"
+        },
+        {
+          "question": "« Tu penses souvent à ton avenir ? — Oui, j'______ pense souvent. »",
+          "answer": "y",
+          "options": ["y", "en", "le", "lui"],
+          "tip": "'penser à + Sache' (à ton avenir) -> Pronomen 'y'!",
+          "de": "Bei 'penser à + Sache' wird die Sache durch das Pronomen 'y' ersetzt ('j'y pense').",
+          "zh": "动词固定搭配 penser à + 事物，事物由副代词 y 替代。"
+        }
+      ]
+    },
+    {
+      "id": "tpl_passe_compose_accord",
+      "grade": "8",
+      "category": "g8_pc_accord",
+      "subjects": [
+        {"subject": "Mes cousines", "aux": "sont", "part": "parties", "verb": "partir", "gender": "fem_pl", "options": ["sont parties", "ont parti", "sont partis", "ont partie"]},
+        {"subject": "Les élèves (f.)", "aux": "sont", "part": "venues", "verb": "venir", "gender": "fem_pl", "options": ["sont venues", "ont venu", "sont venus", "ont venue"]},
+        {"subject": "Lucas et Maxime", "aux": "sont", "part": "arrivés", "verb": "arriver", "gender": "masc_pl", "options": ["sont arrivés", "ont arrivé", "sont arrivé", "ont arrivés"]},
+        {"subject": "Sarah", "aux": "est", "part": "restée", "verb": "rester", "gender": "fem_sg", "options": ["est restée", "a resté", "est resté", "a restée"]}
+      ]
+    }
+  ]
+}

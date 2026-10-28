@@ -96,7 +96,18 @@
     <!-- TAB 1: Grammar & Practice -->
     <div id="tab-practice" class="tab-pane active">
       <div class="card">
-        <h3 style="margin-bottom: 0.75rem;">Wähle ein Grammatik- oder Übungsthema:</h3>
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <h3 id="grammar-header-title">Wähle ein Grammatik- oder Übungsthema:</h3>
+          <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+            <label style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.9rem; font-weight: 600; cursor: pointer; background: var(--primary-light); padding: 0.35rem 0.7rem; border-radius: 6px; border: 1px solid #bfdbfe;">
+              <input type="checkbox" id="toggle-infinite-mode" onchange="toggleInfiniteMode(this.checked)">
+              <span>♾️ Endlos-Modus (无限刷题)</span>
+            </label>
+            <button class="btn btn-outline" style="padding: 0.35rem 0.8rem; font-size: 0.85rem;" onclick="reshuffleAndRestartQuiz()">
+              🎲 换一批新题 / Mischen
+            </button>
+          </div>
+        </div>
         <div id="grammar-filter" style="display: flex; gap: 0.5rem; flex-wrap: wrap;"></div>
       </div>
       <div id="quiz-container"></div>

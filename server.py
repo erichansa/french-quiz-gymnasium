@@ -101,6 +101,13 @@ class AppRequestHandler(BaseHTTPRequestHandler):
             self._send_json(get_user_progress())
         elif path == '/api/custom_quizzes':
             self._send_json(get_custom_quizzes())
+        elif path == '/api/generators':
+            gen_path = os.path.join(BASE_DIR, 'data', 'grammar_generators.json')
+            if os.path.exists(gen_path):
+                with open(gen_path, 'r', encoding='utf-8') as f:
+                    self._send_json(json.load(f))
+            else:
+                self._send_json({})
         else:
             self.send_error(404, "API endpoint not found")
 

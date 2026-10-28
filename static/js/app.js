@@ -5,13 +5,14 @@
 const state = {
   config: {},
   grammar: { categories: [], questions: [] },
+  generators: { verb_database: [], procedural_templates: [] },
   vocabulary: { units: [] },
   exams: [],
   writing: {},
   progress: {},
   customQuizzes: [],
   
-  // Grade state (Klasse 9, 10, 11, 12)
+  // Grade state (Klasse 8, 9, 10, 11, 12, 13, C1, C2)
   currentGrade: localStorage.getItem('french_selected_grade') || '10',
 
   // Quiz running state
@@ -19,6 +20,10 @@ const state = {
   currentQuizIndex: 0,
   activeCategory: 'all',
   quizAnswered: false,
+
+  // Infinite mode state
+  infiniteMode: localStorage.getItem('french_infinite_mode') === 'true',
+  infiniteStreak: 0,
 
   // Exam state
   activeExam: null,
@@ -32,6 +37,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   setupNavigation();
   await loadAllData();
   applySelectedGrade();
+  const cb = document.getElementById('toggle-infinite-mode');
+  if (cb) cb.checked = state.infiniteMode;
   renderDashboardStats();
   initPracticeModule();
   initVocabModule();
@@ -130,14 +137,15 @@ async function fetchWithFallback(apiPath, staticPath, defaultVal = {}) {
 // --- Data Fetching ---
 async function loadAllData() {
   try {
-    const [cfg, gram, voc, ex, wr, prog, cust] = await Promise.all([
+    const [cfg, gram, voc, ex, wr, prog, cust, gen] = await Promise.all([
       fetchWithFallback('/api/config', 'data/config.json', {}),
       fetchWithFallback('/api/grammar', 'data/grammar_exercises.json', { categories: [], questions: [] }),
       fetchWithFallback('/api/vocabulary', 'data/vocabulary_decouvertes.json', { units: [] }),
       fetchWithFallback('/api/exams', 'data/exam_simulations.json', { exams: [] }),
       fetchWithFallback('/api/writing', 'data/writing_templates.json', {}),
       fetchWithFallback('/api/progress', 'data/user_progress.json', {}),
-      fetchWithFallback('/api/custom_quizzes', 'data/user_custom_quizzes.json', { custom_quizzes: [] })
+      fetchWithFallback('/api/custom_quizzes', 'data/user_custom_quizzes.json', { custom_quizzes: [] }),
+      fetchWithFallback('/api/generators', 'data/grammar_generators.json', { verb_database: [], procedural_templates: [] })
     ]);
 
     state.config = cfg;
@@ -146,6 +154,7 @@ async function loadAllData() {
     state.exams = ex.exams || [];
     state.writing = wr;
     state.customQuizzes = cust.custom_quizzes || [];
+    state.generators = gen || { verb_database: [], procedural_templates: [] };
 
     // Prioritize localStorage if existing, otherwise fallback to loaded JSON
     const localProg = loadProgressFromStorage();
@@ -185,14 +194,142 @@ function renderDashboardStats() {
 }
 
 // ==========================================
-// MODULE 1: Practice & Grammar Quiz
+// MODULE 1: Practice & Grammar Quiz (With Procedural Infinite Generator)
 // ==========================================
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function randomizeQuestion(q) {
+  if (!q || !q.options || q.options.length < 2) return q;
+  const originalOptions = [...q.options];
+  const correctOptionText = originalOptions[q.answer];
+  const shuffledOptions = [...originalOptions];
+  shuffleArray(shuffledOptions);
+  const newAnswerIndex = shuffledOptions.indexOf(correctOptionText);
+  return {
+    ...q,
+    options: shuffledOptions,
+    answer: newAnswerIndex
+  };
+}
+
+function generateProceduralQuestion(grade, category) {
+  const verbs = (state.generators && state.generators.verb_database && state.generators.verb_database.length > 0)
+    ? state.generators.verb_database
+    : [
+        {
+          verb: "faire",
+          forms: { il_subj: "fasse", nous_subj: "fassions", vous_subj: "fassiez", ils_subj: "fassent", il_cond: "ferait", il_fut: "fera", il_imp: "faisait", pc: "a fait" }
+        },
+        {
+          verb: "aller",
+          forms: { il_subj: "aille", nous_subj: "allions", vous_subj: "alliez", ils_subj: "aillent", il_cond: "irait", il_fut: "ira", il_imp: "allait", pc: "est allé" }
+        },
+        {
+          verb: "pouvoir",
+          forms: { il_subj: "puisse", nous_subj: "puissions", vous_subj: "puissiez", ils_subj: "puissent", il_cond: "pourrait", il_fut: "pourra", il_imp: "pouvait", pc: "a pu" }
+        },
+        {
+          verb: "savoir",
+          forms: { il_subj: "sache", nous_subj: "sachions", vous_subj: "sachiez", ils_subj: "sachent", il_cond: "saurait", il_fut: "saura", il_imp: "savait", pc: "a su" }
+        },
+        {
+          verb: "avoir",
+          forms: { il_subj: "ait", nous_subj: "ayons", vous_subj: "ayez", ils_subj: "aient", il_cond: "aurait", il_fut: "aura", il_imp: "avait", pc: "a eu" }
+        },
+        {
+          verb: "être",
+          forms: { il_subj: "soit", nous_subj: "soyons", vous_subj: "soyez", ils_subj: "soient", il_cond: "serait", il_fut: "sera", il_imp: "était", pc: "a été" }
+        }
+      ];
+
+  const randomVerb = verbs[Math.floor(Math.random() * verbs.length)];
+  const isSubjunctive = (category === 'subjonctif' || category === 'g11_sbj_inf' || category === 'g13_sbj_sup' || (!category || category === 'all'));
+
+  if (isSubjunctive) {
+    const triggers = [
+      { trigger: "Bien qu'", tip: "Bien que verlangt zwingend den Subjonctif!" },
+      { trigger: "Pour qu'", tip: "Pour que verlangt den Subjonctif (Zweck)!" },
+      { trigger: "Avant qu'", tip: "Avant que verlangt den Subjonctif!" },
+      { trigger: "Il est impératif qu'", tip: "Unpersönliche Notwendigkeit verlangt den Subjonctif!" },
+      { trigger: "Le professeur exige qu'", tip: "Forderung und Wille verlangen den Subjonctif!" }
+    ];
+    const subjects = [
+      { prn: "il", formKey: "il_subj", dist1: "il_fut", dist2: "il_imp" },
+      { prn: "nous", formKey: "nous_subj", dist1: "nous_fut", dist2: "nous_imp" },
+      { prn: "vous", formKey: "vous_subj", dist1: "vous_fut", dist2: "nous_imp" },
+      { prn: "ils", formKey: "ils_subj", dist1: "ils_fut", dist2: "ils_imp" }
+    ];
+
+    const trig = triggers[Math.floor(Math.random() * triggers.length)];
+    const subj = subjects[Math.floor(Math.random() * subjects.length)];
+    const correctForm = randomVerb.forms[subj.formKey] || randomVerb.forms.il_subj || "soit";
+    const dist1 = randomVerb.forms[subj.dist1] || "fera";
+    const dist2 = randomVerb.forms[subj.dist2] || "faisait";
+    const dist3 = randomVerb.forms.pc || "a fait";
+
+    const opts = Array.from(new Set([correctForm, dist1, dist2, dist3]));
+    while (opts.length < 4) opts.push("serait" + opts.length);
+
+    const promptText = `« ${trig.trigger}${subj.prn === 'il' || subj.prn === 'ils' ? subj.prn : ' ' + subj.prn} ______ (verbe '${randomVerb.verb}') de son mieux pour progresser rapidement. »`;
+
+    return randomizeQuestion({
+      id: "proc_sbj_" + Date.now() + "_" + Math.floor(Math.random() * 10000),
+      grade: grade,
+      category: "subjonctif",
+      prompt: promptText,
+      options: opts,
+      answer: opts.indexOf(correctForm),
+      rule_tip: `${trig.tip} ('${randomVerb.verb}' bei '${subj.prn}' -> ${correctForm})`,
+      explanation_de: `Nach '${trig.trigger.trim()}' folgt der Subjonctif. Die korrekte Konjugation von '${randomVerb.verb}' für '${subj.prn}' lautet '${correctForm}'.`,
+      explanation_zh: `在 '${trig.trigger.trim()}' 引导的从句中必须使用虚拟式。动词 '${randomVerb.verb}' 在 '${subj.prn}' 人称下的虚拟式变位是 '${correctForm}'。`
+    });
+  }
+
+  // Si-Satz Generator
+  const correctCond = randomVerb.forms.il_cond || "irait";
+  const distFut = randomVerb.forms.il_fut || "ira";
+  const distImp = randomVerb.forms.il_imp || "allait";
+  const distPC = randomVerb.forms.pc || "est allé";
+  const siOpts = Array.from(new Set([correctCond, distFut, distImp, distPC]));
+  while (siOpts.length < 4) siOpts.push("soit");
+
+  return randomizeQuestion({
+    id: "proc_si_" + Date.now() + "_" + Math.floor(Math.random() * 10000),
+    grade: grade,
+    category: "conditionnel_si",
+    prompt: `« Si nous avions la possibilité, nous ______ (verbe '${randomVerb.verb}') volontiers avec nos camarades. »`,
+    options: siOpts,
+    answer: siOpts.indexOf(correctCond),
+    rule_tip: "Si-Satz Typ 2: Si + Imparfait ('avions') -> Conditionnel présent!",
+    explanation_de: `Irreale Bedingung der Gegenwart: Nach 'Si + Imparfait' verlangt der Folgesatz das Conditionnel présent: '${correctCond}'.`,
+    explanation_zh: `第二类假设从句：Si 从句使用未完成过去时（avions），主句搭配现在条件式（'${correctCond}'）。`
+  });
+}
+
+function toggleInfiniteMode(enabled) {
+  state.infiniteMode = Boolean(enabled);
+  localStorage.setItem('french_infinite_mode', state.infiniteMode);
+  const cb = document.getElementById('toggle-infinite-mode');
+  if (cb) cb.checked = state.infiniteMode;
+  reshuffleAndRestartQuiz();
+}
+
+function reshuffleAndRestartQuiz() {
+  filterQuizCategory(state.activeCategory || 'all');
+}
+
 function initPracticeModule() {
   const filterContainer = document.getElementById('grammar-filter');
   if (!filterContainer) return;
 
   filterContainer.innerHTML = `
-    <button class="btn btn-outline active-filter btn-primary" data-cat="all" onclick="filterQuizCategory('all', this)">Alle Themen (Klasse ${state.currentGrade})</button>
+    <button class="btn btn-outline active-filter btn-primary" data-cat="all" onclick="filterQuizCategory('all', this)">Alle Themen (${state.currentGrade.startsWith('C') ? 'Niveau ' : 'Klasse '}${state.currentGrade})</button>
   `;
 
   const gradeCats = (state.grammar.categories || []).filter(cat => !cat.grade || String(cat.grade) === String(state.currentGrade));
@@ -206,7 +343,6 @@ function initPracticeModule() {
     filterContainer.appendChild(btn);
   });
 
-  // Include custom quizzes if any
   if (state.customQuizzes.length > 0) {
     const btn = document.createElement('button');
     btn.className = 'btn btn-outline';
@@ -237,7 +373,22 @@ function filterQuizCategory(catId, btnElement) {
     questions = questions.filter(q => q.category === catId);
   }
 
-  state.currentQuizList = questions;
+  // Randomize options for each question
+  let randomizedPool = questions.map(q => randomizeQuestion(q));
+  shuffleArray(randomizedPool);
+
+  // Generate dynamic procedural questions to enrich the quiz bank!
+  const targetBatchSize = state.infiniteMode ? 25 : 12;
+  while (randomizedPool.length < targetBatchSize) {
+    const dynQ = generateProceduralQuestion(state.currentGrade, catId);
+    if (dynQ) {
+      randomizedPool.push(dynQ);
+    } else {
+      break;
+    }
+  }
+
+  state.currentQuizList = randomizedPool;
   state.currentQuizIndex = 0;
   renderCurrentQuestion();
 }
@@ -248,8 +399,9 @@ function renderCurrentQuestion() {
 
   if (state.currentQuizList.length === 0) {
     container.innerHTML = `
-      <div style="text-align: center; padding: 3rem;">
+      <div class="card" style="text-align: center; padding: 3rem;">
         <h3>Keine Übungsfragen in dieser Kategorie gefunden.</h3>
+        <button class="btn btn-primary" style="margin-top: 1rem;" onclick="filterQuizCategory('all')">Alle Themen anzeigen</button>
       </div>
     `;
     return;
@@ -258,15 +410,26 @@ function renderCurrentQuestion() {
   const q = state.currentQuizList[state.currentQuizIndex];
   state.quizAnswered = false;
 
+  const headerLabel = state.infiniteMode
+    ? `<span style="background: var(--primary-light); color: var(--primary); padding: 4px 10px; border-radius: 6px; font-weight: 700;">
+         ♾️ Endlos-Modus • Frage ${state.currentQuizIndex + 1} ${state.infiniteStreak > 0 ? `• 🔥 Serie: ${state.infiniteStreak}` : ''}
+       </span>`
+    : `<span style="font-weight: 600; color: var(--text-muted);">
+         Frage ${state.currentQuizIndex + 1} von ${state.currentQuizList.length}
+       </span>`;
+
   container.innerHTML = `
     <div class="quiz-box">
       <div class="quiz-header">
-        <span style="font-weight: 600; color: var(--text-muted);">
-          Frage ${state.currentQuizIndex + 1} von ${state.currentQuizList.length}
-        </span>
-        <button class="speaker-btn" title="Vorlesen" onclick="speakFrench('${q.prompt.replace(/'/g, "\\'")}')">
-          🔊 Vorlesen
-        </button>
+        ${headerLabel}
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <button class="btn btn-outline" style="font-size: 0.8rem; padding: 4px 8px;" onclick="reshuffleAndRestartQuiz()" title="Fragen neu durchmischen">
+            🎲 Neu mischen
+          </button>
+          <button class="speaker-btn" title="Vorlesen" onclick="speakFrench('${q.prompt.replace(/'/g, "\\'")}')">
+            🔊 Vorlesen
+          </button>
+        </div>
       </div>
 
       <div class="quiz-prompt">${q.prompt}</div>
@@ -307,6 +470,13 @@ async function submitAnswer(chosenIdx) {
     }
   });
 
+  // Track streak
+  if (isCorrect) {
+    state.infiniteStreak = (state.infiniteStreak || 0) + 1;
+  } else {
+    state.infiniteStreak = 0;
+  }
+
   // Update stats and mistakes in state & localStorage immediately
   if (!state.progress.stats) {
     state.progress.stats = { total_answered: 0, correct_count: 0, accuracy_percent: 0, streak_days: 1 };
@@ -332,7 +502,6 @@ async function submitAnswer(chosenIdx) {
       existing.wrong_count = (existing.wrong_count || 1) + 1;
     }
   } else if (existing) {
-    // If answered correctly during review, decrement error count
     existing.wrong_count = (existing.wrong_count || 1) - 1;
     if (existing.wrong_count <= 0) {
       state.progress.wrong_notebook = wn.filter(w => w.id !== q.id);
@@ -343,7 +512,7 @@ async function submitAnswer(chosenIdx) {
   updateBadgeCounts();
   renderDashboardStats();
 
-  // Also sync to server if available
+  // Sync to server if available
   try {
     fetch('/api/answer', {
       method: 'POST',
@@ -363,6 +532,7 @@ async function submitAnswer(chosenIdx) {
     <div class="explanation-card">
       <div style="margin-bottom: 0.5rem; font-weight: 700; color: ${isCorrect ? 'var(--success)' : 'var(--danger)'};">
         ${isCorrect ? '✅ Richtig! Très bien !' : '❌ Leider falsch.'}
+        ${state.infiniteStreak > 1 ? `<span style="color: var(--warning); margin-left: 0.5rem;">🔥 ${state.infiniteStreak} Richtige in Folge!</span>` : ''}
       </div>
       ${q.rule_tip ? `<div class="rule-tip-badge">💡 Merkhilfe: ${q.rule_tip}</div>` : ''}
       <div style="margin-top: 0.5rem; font-size: 0.95rem; line-height: 1.5;">
@@ -380,21 +550,39 @@ async function submitAnswer(chosenIdx) {
 }
 
 function nextQuestion() {
+  // If in infinite mode and approaching end of batch, generate more questions seamlessly!
+  if (state.infiniteMode) {
+    if (state.currentQuizIndex >= state.currentQuizList.length - 2) {
+      for (let i = 0; i < 5; i++) {
+        const dynQ = generateProceduralQuestion(state.currentGrade, state.activeCategory);
+        if (dynQ) state.currentQuizList.push(dynQ);
+      }
+    }
+    state.currentQuizIndex++;
+    renderCurrentQuestion();
+    return;
+  }
+
   if (state.currentQuizIndex < state.currentQuizList.length - 1) {
     state.currentQuizIndex++;
     renderCurrentQuestion();
   } else {
-    // End of set
+    // End of fixed round
     const container = document.getElementById('quiz-container');
     container.innerHTML = `
       <div class="card" style="text-align: center; padding: 3rem;">
-        <h2>🎉 Glückwunsch! Alle Fragen durchgearbeitet!</h2>
-        <p style="margin: 1rem 0; color: var(--text-muted);">
-          Du hast alle ${state.currentQuizList.length} Fragen dieses Themengebiets abgeschlossen.
+        <h2>🎉 Glückwunsch! Runde erfolgreich beendet!</h2>
+        <p style="margin: 1rem 0; color: var(--text-muted); font-size: 1.05rem;">
+          Du hast alle ${state.currentQuizList.length} Fragen dieser Runde gemeistert.
         </p>
-        <button class="btn btn-primary" onclick="filterQuizCategory('${state.activeCategory}')">
-          Wiederholen ↺
-        </button>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+          <button class="btn btn-primary" onclick="reshuffleAndRestartQuiz()">
+            🎲 Nächste Runde mit neuen Fragen mischen ↺
+          </button>
+          <button class="btn btn-success" onclick="toggleInfiniteMode(true)">
+            ♾️ In den Endlos-Modus wechseln (无限刷题流)
+          </button>
+        </div>
       </div>
     `;
   }

@@ -691,6 +691,230 @@
       "rule_tip": "Das vorausgehende COD ('les musiciens') führt die Handlung des Infinitivs selbst aus ('ils chantent') -> Accord!",
       "explanation_de": "Wenn das vorangestellte direkte Objekt (COD: que = les musiciens) das Subjekt der Handlung des Infinitivs ist (die Musiker singen selbst), stimmt das Participe passé überein: 'entendus'. Wenn das COD das Objekt des Infinitivs wäre ('les chansons que j'ai entendu chanter'), bliebe es unveränderlich.",
       "explanation_zh": "过去分词与后续动词不定式的配合高难法则：先行词 COD（les musiciens）自身是不定式动作的施动者（音乐家自己在演唱），过去分词必须配合变为复数 'entendus'！"
+    },
+    {
+      "id": "g8_q04",
+      "grade": "8",
+      "category": "g8_pc_accord",
+      "prompt": "« Elle ______ (se réveiller) à sept heures ce matin. (Verbe pronominal au passé composé) »",
+      "options": [
+        "s'est réveillée",
+        "s'a réveillé",
+        "s'est réveillé",
+        "s'a réveillée"
+      ],
+      "answer": 0,
+      "rule_tip": "Alle reflexiven Verben (verbes pronominaux) bilden das Passé composé mit 'être'!",
+      "explanation_de": "Bei reflexiven Verben wird immer 'être' als Hilfsverb verwendet. Das Participe passé passt sich an das Subjekt (elle = feminin Singular) an: 's'est réveillée'.",
+      "explanation_zh": "所有代词式动词（自反动词）在复合过去时中一律使用 être 作为助动词。主语为 elle（阴性单数），过去分词后加 e 配合：'s'est réveillée'。"
+    },
+    {
+      "id": "g8_q05",
+      "grade": "8",
+      "category": "g8_negation",
+      "prompt": "« Tu as vu quelqu'un dans le couloir ? — Non, je n'ai vu ______. »",
+      "options": [
+        "personne",
+        "rien",
+        "jamais",
+        "plus"
+      ],
+      "answer": 0,
+      "rule_tip": "'quelqu'un' (jemand) wird verneint mit 'ne... personne' (niemand)!",
+      "explanation_de": "Auf 'quelqu'un' (jemand) folgt im verneinten Satz 'ne... personne'. Bei 'personne' steht das Participe vor personne: 'je n'ai vu personne'.",
+      "explanation_zh": "'quelqu'un'（某人）的否定形式为 'ne... personne'（没有人）。注意复合时态中 personne 放在过去分词之后：'je n'ai vu personne'。"
+    },
+    {
+      "id": "g9_q05",
+      "grade": "9",
+      "category": "g9_passé",
+      "prompt": "« Quand nous étions petits, nous ______ (passer) toujours nos vacances en Bretagne. »",
+      "options": [
+        "passions",
+        "avons passé",
+        "avions passé",
+        "passerons"
+      ],
+      "answer": 0,
+      "rule_tip": "Gewohnheit in der Vergangenheit ('toujours', 'quand nous étions petits') verlangt das Imparfait!",
+      "explanation_de": "Wiederholte Gewohnheiten und Zustände in der Vergangenheit werden mit dem Imparfait ausgedrückt: 'nous passions'.",
+      "explanation_zh": "过去反复发生的习惯性、经常性动作（toujours, quand nous étions petits），必须使用未完成过去时（Imparfait）：'nous passions'。"
+    },
+    {
+      "id": "g9_q06",
+      "grade": "9",
+      "category": "g9_pronoms",
+      "prompt": "« Tu as acheté des fruits ? — Oui, j'______ ai acheté un kilo. »",
+      "options": [
+        "en",
+        "y",
+        "les",
+        "le"
+      ],
+      "answer": 0,
+      "rule_tip": "'des fruits' + Mengenangabe ('un kilo') wird durch 'en' ersetzt!",
+      "explanation_de": "Mengenangaben und unbestimmte Mengen verlangen das Adverbialpronomen 'en'.",
+      "explanation_zh": "部分冠词（des fruits）及定量词（un kilo）修饰的名词由代词 'en' 替代。"
+    },
+    {
+      "id": "g_sbj_05",
+      "grade": "10",
+      "category": "subjonctif",
+      "prompt": "« Je suis vraiment ravi que vous ______ (pouvoir) venir à notre fête samedi. »",
+      "options": [
+        "puissiez",
+        "pouvez",
+        "pourrez",
+        "pouviez"
+      ],
+      "answer": 0,
+      "rule_tip": "Gefühlsverben ('être ravi que', 'être triste que') verlangen zwingend den Subjonctif!",
+      "explanation_de": "Ausdrücke des Gefühls ('être ravi que') verlangen den Subjonctif. Der Stamm von 'pouvoir' im Subjonctif ist 'puiss-' -> 'que vous puissiez'.",
+      "explanation_zh": "表示情感的形容词句型（être ravi que，感到非常高兴）必须接虚拟式。pouvoir 在 vous 人称下的虚拟式变位是 'puissiez'。"
+    },
+    {
+      "id": "g_sbj_06",
+      "grade": "10",
+      "category": "subjonctif",
+      "prompt": "« Il est indispensable que les citoyens ______ (savoir) la vérité sur ce scandale. »",
+      "options": [
+        "sachent",
+        "savent",
+        "sauront",
+        "sussent"
+      ],
+      "answer": 0,
+      "rule_tip": "'savoir' im Subjonctif bildet den Stamm 'sach-'! (ils sachent)",
+      "explanation_de": "Nach 'il est indispensable que' folgt der Subjonctif. Das unregelmäßige Verb 'savoir' lautet in der 3. Person Plural Subjonctif: 'qu'ils sachent'.",
+      "explanation_zh": "无人称句型 il est indispensable que（必须/不可或缺）接虚拟式。不规则动词 savoir 的虚拟式复数第三人称形式为 'sachent'。"
+    },
+    {
+      "id": "g_si_04",
+      "grade": "10",
+      "category": "conditionnel_si",
+      "prompt": "« Si nous avions écouté la météo, nous ______ (prendre) nos imperméables. (Si-Satz Typ 3) »",
+      "options": [
+        "aurions pris",
+        "avions pris",
+        "prendrions",
+        "prendrons"
+      ],
+      "answer": 0,
+      "rule_tip": "Typ 3 (Vergangenheit): Si + Plus-que-parfait ('avions écouté') -> Conditionnel passé ('aurions pris')!",
+      "explanation_de": "Da die Bedingung in der Vergangenheit unerfüllt blieb (Typ 3), steht im Hauptsatz das Conditionnel passé: 'aurions pris'.",
+      "explanation_zh": "第三类假设句（对过去已发生事实的假设）：Si 从句用愈过去时（avions écouté），主句必须用过去条件式（aurions pris）。"
+    },
+    {
+      "id": "g_rel_03",
+      "grade": "10",
+      "category": "relatifs_composes",
+      "prompt": "« Voici les amis avec ______ j'ai passé mes vacances en Italie. »",
+      "options": [
+        "lesquels",
+        "qui",
+        "auquel",
+        "duquel"
+      ],
+      "answer": 0,
+      "rule_tip": "'avec' + maskulin Plural ('les amis') -> 'lesquels' (oder 'avec qui')!",
+      "explanation_de": "'Les amis' ist männlich Plural. Mit der Präposition 'avec' heißt das Relativpronomen 'avec lesquels' (oder 'avec qui').",
+      "explanation_zh": "先行词 'les amis' 为阳性复数，与介词 avec 搭配的关系代词复数形式为 'lesquels'（也可用 avec qui）。"
+    },
+    {
+      "id": "g11_q05",
+      "grade": "11",
+      "category": "g11_passif",
+      "prompt": "« Les résultats de l'enquête ______ (publier) dans la presse demain matin. (Passiv im Futur simple) »",
+      "options": [
+        "seront publiés",
+        "seraient publiés",
+        "vont publier",
+        "auront été publiés"
+      ],
+      "answer": 0,
+      "rule_tip": "Passiv im Futur simple: Futur simple von être ('seront') + Participe passé ('publiés')!",
+      "explanation_de": "Das Passiv im Futur simple wird mit 'seront' (être im Futur) und dem Participe passé gebildet, das mit dem Subjekt 'les résultats' (m.pl.) übereinstimmt: 'seront publiés'.",
+      "explanation_zh": "被动态在简单将来时中的结构为：être 的简单将来时（seront）+ 过去分词（publiés，与阳性复数主语配合）：'seront publiés'。"
+    },
+    {
+      "id": "g11_q06",
+      "grade": "11",
+      "category": "g11_participe",
+      "prompt": "« C'est en ______ (s'entraîner) quotidiennement qu'on progresse en français. (Le gérondif) »",
+      "options": [
+        "s'entraînant",
+        "s'entraîner",
+        "s'entraîné",
+        "s'entraînera"
+      ],
+      "answer": 0,
+      "rule_tip": "Le Gérondif = 'en' + Stamm der 1. Person Plural Präsens + '-ant' ('en vous entraînant' / 'en s'entraînant')!",
+      "explanation_de": "Das Gérondif wird mit 'en' und der Endung '-ant' gebildet. Es drückt hier die Art und Weise (das Mittel) aus: 'en s'entraînant'.",
+      "explanation_zh": "副动词（Gérondif）结构为 'en + 现在分词（-ant 结尾）'，此处表示取得进步的方式和手段（'通过日复一日的刻苦训练'）：'en s'entraînant'。"
+    },
+    {
+      "id": "g12_q04",
+      "grade": "12",
+      "category": "g12_style",
+      "prompt": "« Va, je ne te hais point ! » (Corneille, Le Cid). Quelle figure de style consiste à dire moins pour suggérer davantage ('je t'aime') ?",
+      "options": [
+        "Une litote",
+        "Un oxymore",
+        "Une hyperbole",
+        "Un euphémisme"
+      ],
+      "answer": 0,
+      "rule_tip": "Sagen von weniger, um mehr zu meinen (doppelte Verneinung für ein starkes Geständnis) = La litote!",
+      "explanation_de": "Die Litotes (la litote) schwächt einen Ausdruck ab ('ich hasse dich nicht'), um das Gegenteil umso eindringlicher hervorzuheben ('ich liebe dich'). Dies ist das berühmteste Beispiel der französischen Literaturgeschichte.",
+      "explanation_zh": "低调陈述/曲意表白（la litote）：通过说出较弱的否定（'去吧，我绝不恨你'）来委婉却强烈地表达浓烈的深意（'我深爱着你'），是法国古典戏剧中最著名的修辞范例。"
+    },
+    {
+      "id": "g13_q04",
+      "grade": "13",
+      "category": "g13_concordance",
+      "prompt": "« L'historien a démontré que le traité ______ (signer) bien avant le déclenchement des hostilités. »",
+      "options": [
+        "avait été signé",
+        "a été signé",
+        "serait signé",
+        "fut signé"
+      ],
+      "answer": 0,
+      "rule_tip": "Vorzeitigkeit in der Vergangenheit (Plus-que-parfait im Passiv): avait été signé!",
+      "explanation_de": "Da das Unterzeichnen des Vertrags zeitlich vor der Demonstration des Historikers (passé) stattfand, verlangt die Concordance des temps das Plus-que-parfait du passif: 'avait été signé'.",
+      "explanation_zh": "过去时态序列中的先时动作（过去之前已完成，即被动态愈过去时）：'avait été signé'。"
+    },
+    {
+      "id": "c1_q03",
+      "grade": "C1",
+      "category": "c1_inversion",
+      "prompt": "« À peine ______ -il franchi le seuil de la porte qu'une acclamation retentit dans toute la salle. »",
+      "options": [
+        "eut",
+        "a",
+        "avait",
+        "aura"
+      ],
+      "answer": 0,
+      "rule_tip": "'À peine' am Satzanfang verlangt Passé antérieur ('eut-il franchi') oder Passé composé mit Inversion!",
+      "explanation_de": "In der klassischen literarischen Hochsprache steht nach 'À peine' am Satzanfang das Passé antérieur mit Inversion des Hilfsverbs: 'À peine eut-il franchi... que'.",
+      "explanation_zh": "句首短语 'À peine'（刚一……就……）后接经典文学时态先过去时（Passé antérieur）并主谓倒装：'À peine eut-il franchi... que'。"
+    },
+    {
+      "id": "c2_q03",
+      "grade": "C2",
+      "category": "c2_concession_sup",
+      "prompt": "« Si savant qu'il ______, il ne saurait prétendre embrasser la totalité du savoir humain. »",
+      "options": [
+        "fût",
+        "serait",
+        "est",
+        "soit"
+      ],
+      "answer": 0,
+      "rule_tip": "'Si... que' suivi du Subjonctif imparfait (fût) dans la haute prose académique!",
+      "explanation_de": "Die Konstruktion 'Si + Adjektiv + que' drückt eine Einräumung (Konzession) aus ('so gelehrt er auch sein mochte') und verlangt traditionell den Subjonctif (hier das Subjonctif imparfait: 'fût').",
+      "explanation_zh": "高等典雅学术让步句型 'Si + 形容词 + que'（无论多么学识渊博），后接虚拟式未完成过去时 'fût'，展现极高的法语文学功底。"
     }
   ]
 }
