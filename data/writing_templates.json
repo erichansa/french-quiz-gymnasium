@@ -140,6 +140,13 @@
   ],
   "essay_prompts": [
     {
+      "id": "prompt_7_1",
+      "grade": "7",
+      "title": "Klasse 7 : Présentez-vous (Nom, âge, ville, famille)",
+      "theme": "Présentation personnelle (A1)",
+      "starter_tips": "Utilisez 'Je m'appelle', 'J'ai ... ans', 'J'habite à...', 'J'aime...' (40-60 mots)."
+    },
+    {
       "id": "prompt_8_1",
       "grade": "8",
       "title": "Klasse 8 : Présentez votre collège et vos matières préférées",

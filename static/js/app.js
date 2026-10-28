@@ -219,6 +219,48 @@ function randomizeQuestion(q) {
 }
 
 function generateProceduralQuestion(grade, category) {
+  // Klasse 7: Présent des verbes réguliers en -er / A1 Basis
+  if (String(grade) === '7' || (category && category.startsWith('g7_'))) {
+    const erVerbs = [
+      { inf: "parler", base: "parl", meaning_de: "sprechen", meaning_zh: "说话/讲" },
+      { inf: "habiter", base: "habit", elision: true, meaning_de: "wohnen", meaning_zh: "居住" },
+      { inf: "écouter", base: "écout", elision: true, meaning_de: "hören", meaning_zh: "听" },
+      { inf: "aimer", base: "aim", elision: true, meaning_de: "lieben/mögen", meaning_zh: "喜欢/爱" },
+      { inf: "chercher", base: "cherch", meaning_de: "suchen", meaning_zh: "寻找" },
+      { inf: "travailler", base: "travaill", meaning_de: "arbeiten", meaning_zh: "工作/学习" },
+      { inf: "regarder", base: "regard", meaning_de: "anschauen", meaning_zh: "观看" }
+    ];
+    const endings = [
+      { prn: "je", ending: "e", dist: ["es", "ons", "ez"] },
+      { prn: "tu", ending: "es", dist: ["e", "ent", "ez"] },
+      { prn: "il/elle", ending: "e", dist: ["es", "ent", "ons"] },
+      { prn: "nous", ending: "ons", dist: ["ez", "ent", "e"] },
+      { prn: "vous", ending: "ez", dist: ["ons", "ent", "es"] },
+      { prn: "ils/elles", ending: "ent", dist: ["ons", "ez", "e"] }
+    ];
+    const vb = erVerbs[Math.floor(Math.random() * erVerbs.length)];
+    const ed = endings[Math.floor(Math.random() * endings.length)];
+    const subject = (vb.elision && ed.prn === 'je') ? "j'" : ed.prn + " ";
+    const correct = vb.base + ed.ending;
+    const dist1 = vb.base + ed.dist[0];
+    const dist2 = vb.base + ed.dist[1];
+    const dist3 = vb.base + ed.dist[2];
+    const opts = Array.from(new Set([correct, dist1, dist2, dist3]));
+    while (opts.length < 4) opts.push(vb.inf);
+
+    return randomizeQuestion({
+      id: "proc_g7_" + Date.now() + "_" + Math.floor(Math.random() * 10000),
+      grade: "7",
+      category: "g7_present_er",
+      prompt: `« ${subject.charAt(0).toUpperCase() + subject.slice(1)}______ (${vb.inf}) beaucoup pendant le cours de français. »`,
+      options: opts,
+      answer: opts.indexOf(correct),
+      rule_tip: `Verben auf -er im Présent: je -e, tu -es, il/elle -e, nous -ons, vous -ez, ils/elles -ent.`,
+      explanation_de: `Regelmäßige Verben auf -er: Bei '${ed.prn}' lautet die Endung '-${ed.ending}'. Richtig ist: '${correct}'.`,
+      explanation_zh: `第一组规则动词（-er结尾）直陈式现在时：人称 '${ed.prn}' 对应的词尾是 '-${ed.ending}'，正确形式为 '${correct}'。`
+    });
+  }
+
   const verbs = (state.generators && state.generators.verb_database && state.generators.verb_database.length > 0)
     ? state.generators.verb_database
     : [
@@ -725,6 +767,7 @@ function initWritingModule() {
   const wordGuide = document.getElementById('essay-word-guide');
   if (wordGuide) {
     const guides = {
+      '7': '40-60',
       '8': '60-80',
       '9': '80-100',
       '10': '120-150',

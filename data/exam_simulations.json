@@ -1,6 +1,108 @@
 {
   "exams": [
     {
+      "id": "exam_07_01",
+      "grade": "7",
+      "title": "Klassenarbeit 7 : Premiers Pas en Français",
+      "level": "Gymnasium Klasse 7 (Niveau A1)",
+      "time_minutes": 25,
+      "max_score": 30,
+      "sections": [
+        {
+          "type": "reading",
+          "title": "Partie I : Compréhension écrite (10 points)",
+          "passage": "« Bonjour ! Je m'appelle Maxime. J'ai 12 ans et j'habite à Strasbourg. J'adore les animaux : à la maison, j'ai un petit chat noir qui s'appelle Minou. Mon père s'appelle Pierre et ma mère s'appelle Claire. Le mercredi après-midi, je n'ai pas école : je joue au football avec mes copains. »",
+          "questions": [
+            {
+              "id": "ex7_q1",
+              "prompt": "Où habite Maxime ?",
+              "options": [
+                "À Paris",
+                "À Strasbourg",
+                "À Nice",
+                "À Bordeaux"
+              ],
+              "answer": 1,
+              "points": 5,
+              "explanation": "Maxime dit : « j'habite à Strasbourg »."
+            },
+            {
+              "id": "ex7_q2",
+              "prompt": "Quel animal Maxime a-t-il à la maison ?",
+              "options": [
+                "Un chien blanc",
+                "Un chat noir",
+                "Un oiseau",
+                "Un cheval"
+              ],
+              "answer": 1,
+              "points": 5,
+              "explanation": "Maxime a « un petit chat noir »."
+            }
+          ]
+        },
+        {
+          "type": "grammar_vocab",
+          "title": "Partie II : Grammaire & Vocabulaire (15 points)",
+          "questions": [
+            {
+              "id": "ex7_g1",
+              "prompt": "« Les élèves ______ (aimer) beaucoup leur professeur de français. »",
+              "options": [
+                "aiment",
+                "aimons",
+                "aimez",
+                "aime"
+              ],
+              "answer": 0,
+              "points": 5,
+              "rule_tip": "'Les élèves' = ils -> Endung '-ent'!",
+              "explanation": "3. Person Plural: aiment."
+            },
+            {
+              "id": "ex7_g2",
+              "prompt": "« Julien n'a ______ de devoirs aujourd'hui. (pas / rien) »",
+              "options": [
+                "pas",
+                "rien",
+                "jamais",
+                "personne"
+              ],
+              "answer": 0,
+              "points": 5,
+              "rule_tip": "Einfache Verneinung: ne... pas!",
+              "explanation": "Ne... pas de devoirs."
+            },
+            {
+              "id": "ex7_g3",
+              "prompt": "« C'est la rentrée : voici ______ trousse et mes stylos. (mon, ma ou mes ?) »",
+              "options": [
+                "ma",
+                "mon",
+                "mes",
+                "sa"
+              ],
+              "answer": 0,
+              "points": 5,
+              "rule_tip": "'une trousse' ist feminin -> 'ma trousse'!",
+              "explanation": "Une trousse (f) -> ma trousse."
+            }
+          ]
+        },
+        {
+          "type": "writing",
+          "title": "Partie III : Expression écrite (5 points)",
+          "prompt": "Présentez-vous en quelques phrases simples (prénom, âge, ville, un animal ou passe-temps) (environ 40 à 60 mots).",
+          "criteria": [
+            "Je m'appelle...",
+            "J'ai ... ans",
+            "J'habite à..."
+          ],
+          "sample_solution": "Bonjour ! Je m'appelle Sarah, j'ai 12 ans et j'habite à Cologne en Allemagne. J'aime le dessin et la musique. À la maison, j'ai un petit chien. Et toi, comment tu t'appelles ?"
+        }
+      ]
+    },
+    {
       "id": "exam_08_01",
       "grade": "8",
       "title": "Klassenarbeit 8 : Le Collège, les Amis et les Loisirs",

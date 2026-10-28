@@ -1,6 +1,11 @@
 {
   "grades": [
     {
+      "id": "7",
+      "name": "Klasse 7",
+      "level": "Niveau A1 (Einstieg & Grundlagen / Découvertes 1 & 2)"
+    },
+    {
       "id": "8",
       "name": "Klasse 8",
       "level": "Niveau A2 (Mittelstufe Grundlagen / Découvertes 3)"
@@ -42,6 +47,30 @@
     }
   ],
   "categories": [
+    {
+      "id": "g7_possessifs",
+      "grade": "7",
+      "name": "Possessivbegleiter",
+      "description": "mon/ma/mes, ton/ta/tes, son/sa/ses"
+    },
+    {
+      "id": "g7_negation_pas",
+      "grade": "7",
+      "name": "Einfache Verneinung: ne... pas",
+      "description": "Klammerung des konjugierten Verbs"
+    },
+    {
+      "id": "g7_avoir_etre",
+      "grade": "7",
+      "name": "Verben être & avoir",
+      "description": "Die unregelmäßigen Grundverben im Präsens"
+    },
+    {
+      "id": "g7_present_er",
+      "grade": "7",
+      "name": "Verbes réguliers en -er",
+      "description": "Präsens-Endungen (-e, -es, -e, -ons, -ez, -ent)"
+    },
     {
       "id": "g9_passé",
       "grade": "9",
@@ -212,6 +241,86 @@
     }
   ],
   "questions": [
+    {
+      "id": "g7_q05",
+      "grade": "7",
+      "category": "g7_possessifs",
+      "prompt": "« Voici Léa avec ______ frère Maxime. (son, sa ou ses ?) »",
+      "options": [
+        "son",
+        "sa",
+        "ses",
+        "leur"
+      ],
+      "answer": 0,
+      "rule_tip": "Der Possessivbegleiter richtet sich nach dem Besitztum ('un frère' = maskulin -> 'son frère')!",
+      "explanation_de": "Im Französischen richtet sich der Possessivbegleiter nach dem Geschlecht des Nomens, das danach folgt: 'frère' ist männlich, also 'son frère' (auch wenn Léa ein Mädchen ist).",
+      "explanation_zh": "主有形容词的性数配合取决于其后修饰的名词：'frère' 是阳性单数名词，因此必须用阳性形式 'son frère'（即使拥有者 Léa 是女孩也是 son）。"
+    },
+    {
+      "id": "g7_q04",
+      "grade": "7",
+      "category": "g7_negation_pas",
+      "prompt": "Transformez à la forme négative : « Marie aime le chocolat. » -> « Marie ______ le chocolat. »",
+      "options": [
+        "n'aime pas",
+        "ne aime pas",
+        "aime pas",
+        "pas aime"
+      ],
+      "answer": 0,
+      "rule_tip": "Vor Vokal wird 'ne' zu 'n'' apostrophiert: 'n'aime pas'!",
+      "explanation_de": "Die Verneinung 'ne... pas' umschließt das konjugierte Verb. Da 'aime' mit einem Vokal beginnt, wird 'ne' zu 'n'': 'n'aime pas'.",
+      "explanation_zh": "否定结构 'ne... pas' 夹住变位动词。动词 aime 以元音字母开头，ne 必须省音为 n'：'n'aime pas'。"
+    },
+    {
+      "id": "g7_q03",
+      "grade": "7",
+      "category": "g7_avoir_etre",
+      "prompt": "« Quel âge as-tu ? — J'______ treize ans. (verbe avoir) »",
+      "options": [
+        "ai",
+        "suis",
+        "as",
+        "a"
+      ],
+      "answer": 0,
+      "rule_tip": "Altersangaben im Französischen IMMER mit 'avoir' ('j'ai 13 ans')!",
+      "explanation_de": "Im Französischen drückt man das Alter mit dem Verb 'avoir' aus ('J'ai 13 ans' = Ich habe 13 Jahre, wörtlich), niemals mit 'être'!",
+      "explanation_zh": "法语中表达年龄必须使用动词 avoir（有……岁）：'J'ai 13 ans'，绝对不能用 être！"
+    },
+    {
+      "id": "g7_q02",
+      "grade": "7",
+      "category": "g7_avoir_etre",
+      "prompt": "« Julien et Lucas ______ très contents d'être dans la même classe cette année. (verbe être) »",
+      "options": [
+        "sont",
+        "ont",
+        "sommes",
+        "êtes"
+      ],
+      "answer": 0,
+      "rule_tip": "'être' in der 3. Person Plural (ils) heißt 'sont'!",
+      "explanation_de": "Das Subjekt 'Julien et Lucas' entspricht 'ils' (3. Person Plural). Das unregelmäßige Verb 'être' lautet hier 'sont'.",
+      "explanation_zh": "主语 'Julien et Lucas' 对应第三人称复数 ils。动词 être 在复数第三人称下的变位是 'sont'。"
+    },
+    {
+      "id": "g7_q01",
+      "grade": "7",
+      "category": "g7_present_er",
+      "prompt": "Complétez avec la bonne forme du verbe 'habiter' : « Nous ______ à Strasbourg depuis deux ans. »",
+      "options": [
+        "habitons",
+        "habitez",
+        "habitent",
+        "habite"
+      ],
+      "answer": 0,
+      "rule_tip": "Regelmäßige Verben auf -er: Endung für 'nous' ist immer '-ons'!",
+      "explanation_de": "Bei regelmäßigen Verben auf -er (habiter) lautet die Endung für die 1. Person Plural (nous) stets '-ons': 'nous habitons'.",
+      "explanation_zh": "以 -er 结尾的第一组规则动词（habiter），第一人称复数 nous 的词尾固定为 '-ons'：'nous habitons'。"
+    },
     {
       "id": "g9_q01",
       "grade": "9",

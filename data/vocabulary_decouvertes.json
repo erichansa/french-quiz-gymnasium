@@ -1,6 +1,68 @@
 {
   "units": [
     {
+      "id": "unit_7_presentation",
+      "grade": "7",
+      "title": "Klasse 7 : Se Présenter, La Famille & Les Loisirs",
+      "subtitle": "Einstieg: Begrüßung, Familie, Schulsachen und Hobbys (A1 / Découvertes 1)",
+      "words": [
+        {
+          "id": "v7_01",
+          "french": "s'appeler",
+          "word_type": "verbe pronominal",
+          "german": "heißen",
+          "chinese": "名叫/名字叫",
+          "collocations": [
+            "Comment tu t'appelles ?",
+            "Je m'appelle..."
+          ],
+          "word_family": [
+            "le nom (n.m.)",
+            "le prénom (n.m.)"
+          ],
+          "example_fr": "Bonjour, je m'appelle Julien et j'ai douze ans.",
+          "example_de": "Hallo, ich heiße Julien und bin zwölf Jahre alt.",
+          "example_zh": "你好，我叫朱利安，今年12岁。"
+        },
+        {
+          "id": "v7_02",
+          "french": "habiter à",
+          "word_type": "verbe + préposition",
+          "german": "wohnen in",
+          "chinese": "住在（某城市）",
+          "collocations": [
+            "habiter dans une maison",
+            "habiter en ville"
+          ],
+          "word_family": [
+            "l'habitation (n.f.)",
+            "un habitant (n.m.)"
+          ],
+          "example_fr": "J'habite à Lyon avec mes parents et mon chien.",
+          "example_de": "Ich wohne mit meinen Eltern und meinem Hund in Lyon.",
+          "example_zh": "我和父母以及我的小狗住在里昂。"
+        },
+        {
+          "id": "v7_03",
+          "french": "aimer faire du vélo",
+          "word_type": "locution verbale",
+          "german": "gerne Fahrrad fahren",
+          "chinese": "喜欢骑自行车",
+          "collocations": [
+            "faire du sport",
+            "jouer au football"
+          ],
+          "word_family": [
+            "l'amour (n.m.)",
+            "amateur (n.m.)"
+          ],
+          "example_fr": "Pendant le week-end, j'aime faire du vélo dans le parc.",
+          "example_de": "Am Wochenende fahre ich gerne im Park Fahrrad.",
+          "example_zh": "周末的时候，我喜欢在公园里骑自行车。"
+        }
+      ]
+    },
+    {
       "id": "unit_8_college",
       "grade": "8",
       "title": "Klasse 8 : La Vie au Collège, Famille & Loisirs",

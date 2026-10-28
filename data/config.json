@@ -1,9 +1,10 @@
 {
-  "app_name": "Gymnasium Français Studio (Klasse 8 - 13 & C1/C2)",
+  "app_name": "Gymnasium Français Studio (Klasse 7 - 13 & Niveau A - C)",
   "version": "2.1.0",
   "port": 8765,
   "selected_grade": "10",
   "supported_grades": [
+    "7",
     "8",
     "9",
     "10",
